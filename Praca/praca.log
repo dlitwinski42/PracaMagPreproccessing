@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.8)  14 MAY 2023 20:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.8)  21 MAY 2023 18:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -100,22 +100,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 13.
  [1
 
-{C:/Users/Darek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \vbox (67.90756pt too high) has occurred while \output is active []
-
- [2] (praca.aux) ) 
+{C:/Users/Darek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3] [4] (praca.aux) ) 
 Here is how much of TeX's memory you used:
- 1986 strings out of 476331
- 34724 string characters out of 5787766
- 1854660 words of memory out of 5000000
- 22455 multiletter control sequences out of 15000+600000
+ 1993 strings out of 476331
+ 34814 string characters out of 5787766
+ 1857660 words of memory out of 5000000
+ 22462 multiletter control sequences out of 15000+600000
  520413 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,52p,237b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk>
-Output written on praca.pdf (2 pages, 62701 bytes).
+ 42i,6n,52p,799b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk>
+Output written on praca.pdf (4 pages, 92289 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
+ 275 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

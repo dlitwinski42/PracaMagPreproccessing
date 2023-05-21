@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1684087853 "c:/Users/Darek/Documents/Magisterka/PracaMagPreproccessing/Praca/praca.tex" "praca.pdf" "praca" 1684087854 0
+["pdflatex"] 1684686418 "c:/Users/Darek/Documents/Magisterka/PracaMagPreproccessing/Praca/praca.tex" "praca.pdf" "praca" 1684686419 0
   "C:/Users/Darek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1684087255 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Darek/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1684087262 25420 e577ed7d1c234daed36040739606f8ed ""
   "C:/Users/Darek/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1684087264 31952 92a4933965f07fd002f69ff49fb00b30 ""
@@ -37,9 +37,9 @@
   "C:/Users/Darek/AppData/Local/Programs/MiKTeX/tex/latex/blindtext/blindtext.sty" 1623002099 47295 de48b7f8ebf4b54709a2f6b2c7106dd5 ""
   "C:/Users/Darek/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1680182075 29768 5600b3a98028e2e01b60e7f98fbf4b9c ""
   "C:/Users/Darek/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1667245866 4545 4c279ac9292a1be8afa9ab2f1d3299c2 ""
-  "c:/Users/Darek/Documents/Magisterka/PracaMagPreproccessing/Praca/praca.tex" 1684087851 1333 a80a7683ff6015897f11a85e2076bf56 ""
-  "praca.aux" 1684087853 3435 b9510cc3e02ac81e325617e311a73ab9 "pdflatex"
-  "praca.tex" 1684087851 1333 a80a7683ff6015897f11a85e2076bf56 ""
+  "c:/Users/Darek/Documents/Magisterka/PracaMagPreproccessing/Praca/praca.tex" 1684686417 6589 426b1f0c41b864c14b254bdc8a42a690 ""
+  "praca.aux" 1684686418 3944 80760bf23d3125ea5aa1f46ab6121054 "pdflatex"
+  "praca.tex" 1684686417 6589 426b1f0c41b864c14b254bdc8a42a690 ""
   (generated)
   "praca.aux"
   "praca.log"
