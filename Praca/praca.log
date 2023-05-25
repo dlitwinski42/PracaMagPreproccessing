@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.8)  24 MAY 2023 21:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.8)  25 MAY 2023 23:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -170,77 +170,77 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {C:/Users/Darek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3] (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 109--110
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 170--171
 [][][][][][][][][][][][][][][][][][] 
  []
 
 [4] [5]
-Overfull \hbox (104.89357pt too wide) in paragraph at lines 207--208
+Overfull \hbox (104.89357pt too wide) in paragraph at lines 274--275
 [][][][][][][][][][][][][][][][][] 
  []
 
 [6] [7]
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 266--267
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 341--342
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 286--287
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 364--365
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (26.91202pt too wide) in paragraph at lines 287--288
+Overfull \hbox (26.91202pt too wide) in paragraph at lines 365--366
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.9177pt too wide) in paragraph at lines 288--289
+Overfull \hbox (2.9177pt too wide) in paragraph at lines 366--367
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [8]
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 303--304
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 381--382
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.9177pt too wide) in paragraph at lines 325--326
+Overfull \hbox (2.9177pt too wide) in paragraph at lines 407--408
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (32.9106pt too wide) in paragraph at lines 326--327
+Overfull \hbox (32.9106pt too wide) in paragraph at lines 408--409
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (32.9106pt too wide) in paragraph at lines 327--328
+Overfull \hbox (32.9106pt too wide) in paragraph at lines 409--410
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (20.91344pt too wide) in paragraph at lines 328--329
+Overfull \hbox (20.91344pt too wide) in paragraph at lines 410--411
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (20.91344pt too wide) in paragraph at lines 329--330
+Overfull \hbox (20.91344pt too wide) in paragraph at lines 411--412
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.90634pt too wide) in paragraph at lines 330--331
+Overfull \hbox (50.90634pt too wide) in paragraph at lines 412--413
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.9177pt too wide) in paragraph at lines 335--336
+Overfull \hbox (2.9177pt too wide) in paragraph at lines 417--418
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 340--341
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 422--423
 [][][][][][][][][][][][][][][][][][] 
  []
 
@@ -248,70 +248,70 @@ Overfull \hbox (14.91486pt too wide) in paragraph at lines 340--341
 <./Wykresy//Lol_Stats_1.png, id=38, 498.86375pt x 455.7025pt>
 File: ./Wykresy//Lol_Stats_1.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_1.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_1.png  used on input line 350.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_1.png  used on input line 432.
 (pdftex.def)             Requested size: 498.86253pt x 455.70137pt.
  [10]
 <./Wykresy//Lol_Stats_2.png, id=43, 505.89pt x 455.7025pt>
 File: ./Wykresy//Lol_Stats_2.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_2.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_2.png  used on input line 357.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_2.png  used on input line 440.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
  [11 <./Wykresy//Lol_Stats_1.png>]
 <./Wykresy//Lol_Stats_3.png, id=48, 505.89pt x 455.7025pt>
 File: ./Wykresy//Lol_Stats_3.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_3.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_3.png  used on input line 363.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_3.png  used on input line 447.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
  [12 <./Wykresy//Lol_Stats_2.png>]
 <./Wykresy//Aus_Weather_1.png, id=53, 511.9125pt x 455.7025pt>
 File: ./Wykresy//Aus_Weather_1.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_1.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_1.png  used on input line 371.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_1.png  used on input line 456.
 (pdftex.def)             Requested size: 511.91125pt x 455.70137pt.
  [13 <./Wykresy//Lol_Stats_3.png>]
 <./Wykresy//Aus_Weather_2.png, id=59, 511.9125pt x 455.7025pt>
 File: ./Wykresy//Aus_Weather_2.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_2.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_2.png  used on input line 377.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_2.png  used on input line 463.
 (pdftex.def)             Requested size: 511.91125pt x 455.70137pt.
  [14 <./Wykresy//Aus_Weather_1.png>]
 <./Wykresy//Aus_Weather_3.png, id=64, 505.89pt x 455.7025pt>
 File: ./Wykresy//Aus_Weather_3.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_3.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_3.png  used on input line 383.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_3.png  used on input line 470.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
  [15 <./Wykresy//Aus_Weather_2.png>]
 File: ./Wykresy//Lol_Stats_1.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_1.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_1.png  used on input line 392.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_1.png  used on input line 480.
 (pdftex.def)             Requested size: 498.86253pt x 455.70137pt.
  [16 <./Wykresy//Aus_Weather_3.png>]
 File: ./Wykresy//Lol_Stats_2.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_2.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_2.png  used on input line 398.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_2.png  used on input line 487.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
  [17]
 File: ./Wykresy//Lol_Stats_3.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_3.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_3.png  used on input line 404.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_3.png  used on input line 494.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
  [18]
 <./Wykresy//Titanic_Avg.png, id=79, 505.89pt x 455.7025pt>
 File: ./Wykresy//Titanic_Avg.png Graphic file (type png)
 <use ./Wykresy//Titanic_Avg.png>
-Package pdftex.def Info: ./Wykresy//Titanic_Avg.png  used on input line 412.
+Package pdftex.def Info: ./Wykresy//Titanic_Avg.png  used on input line 503.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
  [19]
 <./Wykresy//Aus_Weather_Avg.png, id=84, 505.89pt x 455.7025pt>
 File: ./Wykresy//Aus_Weather_Avg.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_Avg.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg.png  used on input line 418.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg.png  used on input line 510.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
  [20 <./Wykresy//Titanic_Avg.png>]
 <./Wykresy//Lol_Stats_Avg.png, id=89, 511.9125pt x 455.7025pt>
 File: ./Wykresy//Lol_Stats_Avg.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_Avg.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg.png  used on input line 424.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg.png  used on input line 517.
 (pdftex.def)             Requested size: 511.91125pt x 455.70137pt.
  [21 <./Wykresy//Aus_Weather_Avg.png>] [22 <./Wykresy//Lol_Stats_Avg.png>] [23] (praca.aux) ) 
 Here is how much of TeX's memory you used:
@@ -321,11 +321,11 @@ Here is how much of TeX's memory you used:
  25301 multiletter control sequences out of 15000+600000
  521434 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,62p,799b,1627s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,62p,498b,1627s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk>
-Output written on praca.pdf (23 pages, 378266 bytes).
+Output written on praca.pdf (23 pages, 378829 bytes).
 PDF statistics:
- 413 PDF objects out of 1000 (max. 8388607)
+ 414 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
