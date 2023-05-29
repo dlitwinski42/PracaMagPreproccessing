@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.8)  25 MAY 2023 23:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.8)  27 MAY 2023 15:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,19 +6,20 @@ entering extended mode
 **c:/Users/Darek/Documents/Magisterka/PracaMagPreproccessing/Praca/praca.tex
 (c:/Users/Darek/Documents/Magisterka/PracaMagPreproccessing/Praca/praca.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-03-30> (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
-(C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+L3 programming layer <2023-03-30> (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2022/07/02 v1.4n Standard LaTeX document class
+(C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
+File: bk10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
-\c@section=\count186
-\c@subsection=\count187
-\c@subsubsection=\count188
-\c@paragraph=\count189
-\c@subparagraph=\count190
-\c@figure=\count191
-\c@table=\count192
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
@@ -27,34 +28,34 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
  (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count193
-\c@Blindtext=\count194
-\c@blind@countparstart=\count195
-\blind@countxx=\count196
-\blindtext@numBlindtext=\count197
-\blind@countyy=\count198
-\c@blindlist=\count199
-\c@blindlistlevel=\count266
-\c@blindlist@level=\count267
-\blind@listitem=\count268
-\c@blind@listcount=\count269
-\c@blind@levelcount=\count270
-\blind@mathformula=\count271
-\blind@Mathformula=\count272
-\c@blind@randomcount=\count273
-\c@blind@randommax=\count274
-\c@blind@pangramcount=\count275
-\c@blind@pangrammax=\count276
+\c@blindtext=\count194
+\c@Blindtext=\count195
+\c@blind@countparstart=\count196
+\blind@countxx=\count197
+\blindtext@numBlindtext=\count198
+\blind@countyy=\count199
+\c@blindlist=\count266
+\c@blindlistlevel=\count267
+\c@blindlist@level=\count268
+\blind@listitem=\count269
+\c@blind@listcount=\count270
+\c@blind@levelcount=\count271
+\blind@mathformula=\count272
+\blind@Mathformula=\count273
+\c@blind@randomcount=\count274
+\c@blind@randommax=\count275
+\c@blind@pangramcount=\count276
+\c@blind@pangrammax=\count277
 ) (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2023/03/28 3.87 The Babel package
-\babel@savecnt=\count277
+\babel@savecnt=\count278
 \U@D=\dimen141
 \l@unhyphenated=\language79
  (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count278
+\bbl@dirlevel=\count279
 
 *************************************
 * Local config file bblopts.cfg used
@@ -75,22 +76,22 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks18
 )
-\lst@mode=\count279
+\lst@mode=\count280
 \lst@gtempboxa=\box51
 \lst@token=\toks19
-\lst@length=\count280
+\lst@length=\count281
 \lst@currlwidth=\dimen142
-\lst@column=\count281
-\lst@pos=\count282
+\lst@column=\count282
+\lst@pos=\count283
 \lst@lostspace=\dimen143
 \lst@width=\dimen144
-\lst@newlines=\count283
-\lst@lineno=\count284
+\lst@newlines=\count284
+\lst@lineno=\count285
 \lst@maxwidth=\dimen145
  (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count285
-\lst@skipnumbers=\count286
+\c@lstnumber=\count286
+\lst@skipnumbers=\count287
 \lst@framebox=\box52
 ) (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
@@ -113,14 +114,14 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 \Gin@req@width=\dimen147
 ) (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count287
+\c@float@type=\count288
 \float@exts=\toks20
 \float@box=\box53
 \@float@everytoks=\toks21
 \@floatcapt=\box54
 ) (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count288
+\l__color_backend_stack_int=\count289
 \l__pdf_internal_box=\box55
 ) (praca.aux)
 \openout1 = `praca.aux'.
@@ -139,19 +140,19 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
-\c@lstlisting=\count289
+\c@lstlisting=\count290
  (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count290
+\scratchcounter=\count291
 \scratchdimen=\dimen148
 \scratchbox=\box56
-\nofMPsegments=\count291
-\nofMParguments=\count292
+\nofMPsegments=\count292
+\nofMParguments=\count293
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count293
+\MPscratchCnt=\count294
 \MPscratchDim=\dimen149
-\MPnumerator=\count294
-\makeMPintoPDFobject=\count295
+\MPnumerator=\count295
+\makeMPintoPDFobject=\count296
 \everyMPtoPDFconversion=\toks23
 ) (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -167,60 +168,56 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 18.
  [1
 
-{C:/Users/Darek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3] (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+
+{C:/Users/Darek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3] [4] (C:\Users\Darek\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 170--171
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 171--172
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[4] [5]
-Overfull \hbox (104.89357pt too wide) in paragraph at lines 274--275
+[5] [6]
+Overfull \hbox (104.89357pt too wide) in paragraph at lines 275--276
 [][][][][][][][][][][][][][][][][] 
  []
 
-[6] [7]
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 341--342
+[7] [8]
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 342--343
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 364--365
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 365--366
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (26.91202pt too wide) in paragraph at lines 365--366
+Overfull \hbox (26.91202pt too wide) in paragraph at lines 366--367
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.9177pt too wide) in paragraph at lines 366--367
+Overfull \hbox (2.9177pt too wide) in paragraph at lines 367--368
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[8]
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 381--382
+
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 382--383
 [][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (2.9177pt too wide) in paragraph at lines 407--408
+[9]
+Overfull \hbox (2.9177pt too wide) in paragraph at lines 408--409
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (32.9106pt too wide) in paragraph at lines 408--409
+Overfull \hbox (32.9106pt too wide) in paragraph at lines 409--410
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (32.9106pt too wide) in paragraph at lines 409--410
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (20.91344pt too wide) in paragraph at lines 410--411
+Overfull \hbox (32.9106pt too wide) in paragraph at lines 410--411
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -230,102 +227,139 @@ Overfull \hbox (20.91344pt too wide) in paragraph at lines 411--412
  []
 
 
-Overfull \hbox (50.90634pt too wide) in paragraph at lines 412--413
+Overfull \hbox (20.91344pt too wide) in paragraph at lines 412--413
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.90634pt too wide) in paragraph at lines 413--414
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.9177pt too wide) in paragraph at lines 417--418
+Overfull \hbox (2.9177pt too wide) in paragraph at lines 418--419
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 422--423
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 423--424
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[9]
-<./Wykresy//Lol_Stats_1.png, id=38, 498.86375pt x 455.7025pt>
+<./Wykresy//Lol_Stats_1.png, id=39, 498.86375pt x 455.7025pt>
 File: ./Wykresy//Lol_Stats_1.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_1.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_1.png  used on input line 432.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_1.png  used on input line 433.
 (pdftex.def)             Requested size: 498.86253pt x 455.70137pt.
- [10]
-<./Wykresy//Lol_Stats_2.png, id=43, 505.89pt x 455.7025pt>
+[10]
+<./Wykresy//Lol_Stats_2.png, id=44, 505.89pt x 455.7025pt>
 File: ./Wykresy//Lol_Stats_2.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_2.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_2.png  used on input line 440.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_2.png  used on input line 441.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
  [11 <./Wykresy//Lol_Stats_1.png>]
-<./Wykresy//Lol_Stats_3.png, id=48, 505.89pt x 455.7025pt>
+<./Wykresy//Lol_Stats_3.png, id=49, 505.89pt x 455.7025pt>
 File: ./Wykresy//Lol_Stats_3.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_3.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_3.png  used on input line 447.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_3.png  used on input line 448.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [12 <./Wykresy//Lol_Stats_2.png>]
-<./Wykresy//Aus_Weather_1.png, id=53, 511.9125pt x 455.7025pt>
+<./Wykresy//Aus_Weather_1.png, id=54, 511.9125pt x 455.7025pt>
 File: ./Wykresy//Aus_Weather_1.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_1.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_1.png  used on input line 456.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_1.png  used on input line 457.
 (pdftex.def)             Requested size: 511.91125pt x 455.70137pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [13 <./Wykresy//Lol_Stats_3.png>]
-<./Wykresy//Aus_Weather_2.png, id=59, 511.9125pt x 455.7025pt>
+<./Wykresy//Aus_Weather_2.png, id=60, 511.9125pt x 455.7025pt>
 File: ./Wykresy//Aus_Weather_2.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_2.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_2.png  used on input line 463.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_2.png  used on input line 464.
 (pdftex.def)             Requested size: 511.91125pt x 455.70137pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [14 <./Wykresy//Aus_Weather_1.png>]
-<./Wykresy//Aus_Weather_3.png, id=64, 505.89pt x 455.7025pt>
+<./Wykresy//Aus_Weather_3.png, id=65, 505.89pt x 455.7025pt>
 File: ./Wykresy//Aus_Weather_3.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_3.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_3.png  used on input line 470.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_3.png  used on input line 471.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [15 <./Wykresy//Aus_Weather_2.png>]
 File: ./Wykresy//Lol_Stats_1.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_1.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_1.png  used on input line 480.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_1.png  used on input line 481.
 (pdftex.def)             Requested size: 498.86253pt x 455.70137pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [16 <./Wykresy//Aus_Weather_3.png>]
 File: ./Wykresy//Lol_Stats_2.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_2.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_2.png  used on input line 487.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_2.png  used on input line 488.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [17]
 File: ./Wykresy//Lol_Stats_3.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_3.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_3.png  used on input line 494.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_3.png  used on input line 495.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [18]
-<./Wykresy//Titanic_Avg.png, id=79, 505.89pt x 455.7025pt>
+<./Wykresy//Titanic_Avg.png, id=80, 505.89pt x 455.7025pt>
 File: ./Wykresy//Titanic_Avg.png Graphic file (type png)
 <use ./Wykresy//Titanic_Avg.png>
-Package pdftex.def Info: ./Wykresy//Titanic_Avg.png  used on input line 503.
+Package pdftex.def Info: ./Wykresy//Titanic_Avg.png  used on input line 504.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [19]
-<./Wykresy//Aus_Weather_Avg.png, id=84, 505.89pt x 455.7025pt>
+<./Wykresy//Aus_Weather_Avg.png, id=85, 505.89pt x 455.7025pt>
 File: ./Wykresy//Aus_Weather_Avg.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_Avg.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg.png  used on input line 510.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg.png  used on input line 511.
 (pdftex.def)             Requested size: 505.88875pt x 455.70137pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [20 <./Wykresy//Titanic_Avg.png>]
-<./Wykresy//Lol_Stats_Avg.png, id=89, 511.9125pt x 455.7025pt>
+<./Wykresy//Lol_Stats_Avg.png, id=90, 511.9125pt x 455.7025pt>
 File: ./Wykresy//Lol_Stats_Avg.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_Avg.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg.png  used on input line 517.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg.png  used on input line 518.
 (pdftex.def)             Requested size: 511.91125pt x 455.70137pt.
- [21 <./Wykresy//Aus_Weather_Avg.png>] [22 <./Wykresy//Lol_Stats_Avg.png>] [23] (praca.aux) ) 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21 <./Wykresy//Aus_Weather_Avg.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22 <./Wykresy//Lol_Stats_Avg.png>] [23] (praca.aux) ) 
 Here is how much of TeX's memory you used:
- 4891 strings out of 476331
- 77019 string characters out of 5787766
- 1905660 words of memory out of 5000000
- 25301 multiletter control sequences out of 15000+600000
- 521434 words of font info for 50 fonts, out of 8000000 for 9000
+ 4915 strings out of 476331
+ 77242 string characters out of 5787766
+ 1899660 words of memory out of 5000000
+ 25324 multiletter control sequences out of 15000+600000
+ 522253 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,62p,498b,1627s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk>
-Output written on praca.pdf (23 pages, 378829 bytes).
+ 57i,6n,62p,498b,1703s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Darek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk>
+Output written on praca.pdf (23 pages, 389290 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
+ 441 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
