@@ -16,44 +16,44 @@
 
 \begin{document}
 \maketitle
-\section{Problem Analizy Danych}
+\chapter{Problem Analizy Danych}
 
-\subsection{Analiza Danych}
+\section{Analiza Danych}
 Analiza danych to proces, 
 w którym przekształcamy surowe dane w wiedzę i 
 wnioski, dzięki którym jesteśmy w stanie podejmować lepsze decyzje. 
 Wewnątrz tego procesu można wyróżnić następujące fazy:\
-==== Podrozdziały albo bardziej treściwe albo zamienić na akapity ====
-\subsubsection{Pozyskiwanie: gromadzenie danych}
+==== Podrozdziały albo bardziej treściwe  a albo zamienić na akapity ====
+\subsection{Pozyskiwanie: gromadzenie danych}
 Zanim analiza danych będzie możliwa należy pozyskać dane.
 Źródła danych mogą być: czujniki, ankiety bądź statystyki, 
 a także mogą być przechowywane w różnoraki sposób, w postaci 
 plików o różnych formatac (np. csv), w bazach danych, 
 bądź nawet w formie fizycznej w przypadku danych historycznych
-\subsubsection{Przygotowanie: przetwarzanie danych}
+\subsection{Przygotowanie: przetwarzanie danych}
 Aby móc w pełni korzystać ze zgromadzonych danych, 
 należy je przygotować, odpowiednio sformatować. 
 To głównie tą częścią analizy danych będziemy się 
 zajmować w dalszej części pracy. 
-\subsubsection{Analiza: modelowanie danych}
+\subsection{Analiza: modelowanie danych}
 Najczęsciej kiedy ktoś mówi "Analiza danych" to ma 
 na myśli własnie tą część całego procesu, jakim jest Analiza Danych.
 To właśnie tu wykorzystywane są techniki trenowania sztucznej 
 inteligencji, tworzone są klasyfikatory, 
 które później możemy wykorzystywać do różnych zadań
-\subsubsection{Działanie: podejmowanie decyzji}
+\subsection{Działanie: podejmowanie decyzji}
 Kiedy mamy już gotowe wyniki analizy, 
 wtedy możemy je wykorzystać aby podjąć 
 konkretne decyzje w prawdziwym świecie: Wykorzystać stworzony 
 klasyfikator w diagnostyce chorób, w systemach rekomendacji 
 bądź w wielu innych dziedzinach
 
-\subsection{Problemy z Danymi}
+\section{Problemy z Danymi}
 
 Bardzo często zebrane dane nie nadają się bezpośrednio do pracy z nimi. 
 Należy najpierw wykonać szereg operacji aby pozbyć się następujących 
 problemów:   
-\subsubsection{Brakujące wartości}
+\subsection{Brakujące wartości}
 W danych mogą występować brakujące wartości, na przykład czujniki 
 mogą różnić się między sobą ilością pobieranych parametrów, 
 ankietowani mogą pozostawić niektóre pytania bez odpowiedzi. 
@@ -67,7 +67,7 @@ minimum, maksimum, lub też inna arbitralnie wybrana wartość.
 Pozornie wartości wstawiane w puste miejsca są kompletnie arbitralne, 
 jednak bardzo często takie podejście skutkuje najlepszymi rezultatami, 
 pod warunkiem że dobierzemy odpowiednią wartość do wstawiania. 
-\subsubsection{Wartości odstające}
+\subsection{Wartości odstające}
 W niektórych przypadkach w danych mogą pojawić się takie wartości, 
 które wyraźnie odstają od reszty i nie wnoszą sobą zbyt wiele 
 informacji w kontekście analizy danych. Co więcej, mogą one 
@@ -75,7 +75,7 @@ zaciemniać pozostałą część danych, maskując trendy bądź prowadząc
 do błędnych wniosków. Dlatego najlepszym podejściem jest wykrywanie 
 oraz usuwanie wartości, które możemy uznać za odstające. 
 Istnieją algorytmy pozwalające nam na odrzucenie wartości odstających.
-\subsubsection{Kolumny kategoryczne}
+\subsection{Kolumny kategoryczne}
 Wiele z modeli może pracować jedynie na wartościach liczbowych, 
 podczas kiedy w zbiorach danych możemy znaleźć nie tylko takie wartości, 
 ale również kategoryczne. Rezygnując z analizy tych danych tracilibyśmy 
@@ -84,23 +84,23 @@ gdyż istnieją sposoby, aby zamienić te dane na postać liczbową za
 pomocą kodowania
 
 
-\section{Metody Przygotowania Danych}
+\chapter{Metody Przygotowania Danych}
 Istnieje kilka najczęściej używanych metod przygotowania danych, 
 które dzielą się na następujące grupy:
 
-\subsection{Uzupełnianie brakujących wartości}
+\section{Uzupełnianie brakujących wartości}
 Najczęściej brakujące wartości w zbiorach danych uzupełnia się średnią 
 lub najczęściej występującą wartością, jednak może zdarzyć się tak, 
 że najlepszym rozwiązaniem jest uzupełnienie braków minimum, maksimum, 
 zerem bądź inną arbitralnie wybraną wartością
-\subsection{Wykrywanie wartości odstających}
+\section{Wykrywanie wartości odstających}
 Do wykrywania wartości odstających możemy wykorzystać manualne metody, 
 ale również i algorytmy, które wykryją te wartości za nas. 
 Do manualnych metod możemy zaliczyć: Wykrywanie za pomocą rozkładu 
 normalnego, Z-score, IQR, wykrywanie za pomocą percentyli. 
 Natomiast spośród automatycznych metod mamy do dyspozycji między innymi 
 Las Izolacji lub Local Outlier Factor
-\subsection{Kodowanie wartości kategorycznych}
+\section{Kodowanie wartości kategorycznych}
 Jeżeli znamy zależności między klasami i możemy je uporządkować, 
 wtedy jesteśmy w stanie dokonać kodowania ręcznie, na przykład 
 najmniejszą wartość dla edukacji podstawowej, a najwyższą dla 
@@ -112,7 +112,7 @@ tworzy osobną kolumnę z wartością logiczną opisującą, czy dany
 rekord należy do tej klasy. Powoduje to wygenerowanie sporej 
 ilości kolumn, jednak mamy wtedy pewność, że nie stworzymy 
 nowych zależności między klasami
-\subsection{Standaryzacja}
+\section{Standaryzacja}
 Standaryzacja jest procesem, po zakończeniu którego zmienna 
 ma średnią wartość oczekiwaną zero oraz odchylenie standardowe 
 równe jeden, dzięki czemu zyskujemy większą przejrzystość w 
@@ -123,8 +123,8 @@ wpływ na zmienną po standaryzacji
 
 
 
-\section{Środowisko wykonawcze}
-\subsection{Specyfikacja sprzetowa, system i środowisko}
+\chapter{Środowisko wykonawcze}
+\section{Specyfikacja sprzetowa, system i środowisko}
 Sprzęt: Laptop wyposażony w procesor Intel Core i5-1135G7 
 (2.4Ghz) ze zintegrowaną grafiką oraz 16GB pamięci RAM
 System operacyjny: Windows 10 Education
@@ -132,29 +132,29 @@ Menadżer środowisk: Anaconda Navigator
 Python: 3.9.12
 Edytor kodu: Visual Studio Code z dodatkami do edycji plików w 
 formacie Jupyter notebook
-\subsection{Zbiory danych}
+\section{Zbiory danych}
 Zbiory na których będziemy sprawdzać wpływ przygotowania danych 
 są zbiorami do klasyfikacji. Do eksperymentów wybrano następujące 
 zestawy danych:
-\subsubsection{League of Legends stats}
+\subsection{League of Legends stats}
 Zbiór zawierający statystyki postaci z gry League of Legends z 
 dwóch wersji obecnego sezonu (13.1 oraz 13.3)
-\subsubsection{Australian Rain Forecast}
+\subsection{Australian Rain Forecast}
 Zbiór zawiera codzienne obserwacje dotyczące pogody z różnych 
 lokalizacji na terenie Australii
-\subsubsection{Titanic Survival}
+\subsection{Titanic Survival}
 Jest to zestaw informacji na temat pasażerów Titanica oraz tego, 
 czy udało im się przeżyć, na podstawie czego budujemy model, 
 który próbuje przewidzieć na podstawie informacji które mu przekażemy, 
 czy dana osoba przeżyła katastrofę
 
-\section{Wykonane Eksperymenty}
+\chapter{Wykonane Eksperymenty}
 Dla każdego z wybranych zbiorów danych przeprowadzono 
 przygotowanie danych według ustalonego scenariusza, 
 a także dodatkowego scenariusza w którym głównym celem było 
 indywidualne podejście do zbioru oraz wyciągnięcie możliwie 
 jak najwięcej informacji z dostępnych danych
-\subsection{Brak Preprocessingu}
+\section{Brak Preprocessingu}
 Pierwszy scenariusz, który w przyszłości 
 będzie punktem odniesienia polegał na usunięciu rekordów, 
 w których występowały jakiekolwiek brakujące wartości
@@ -176,7 +176,7 @@ w których występowały jakiekolwiek brakujące wartości
             X_train,y_train,X_test,y_test)
     \end{lstlisting}
 
-\subsection{Wypełeninie brakujących wartości średnią}
+\section{Wypełeninie brakujących wartości średnią}
 Drugi scenariusz zakładał wypełnienie brakujących 
 wartości średnią za pomocą metod biblioteki pandas 
 fillna() oraz mean()
@@ -189,7 +189,7 @@ fillna() oraz mean()
         return df
 \end{lstlisting}
 
-\subsection{Wypełeninie brakujących wartości minimum}
+\section{Wypełeninie brakujących wartości minimum}
 Kolejny scenariusz zakładał wypełnienie brakujących 
 wartości średnią za pomocą metod biblioteki pandas fillna() 
 oraz min()
@@ -202,7 +202,7 @@ oraz min()
         return df
 \end{lstlisting}
 
-\subsection{Wypełeninie brakujących wartości maksimum}
+\section{Wypełeninie brakujących wartości maksimum}
 Czwarty scenariusz zakładał wypełnienie brakujących 
 wartości średnią za pomocą metod biblioteki pandas 
 fillna() oraz max()
@@ -215,7 +215,7 @@ fillna() oraz max()
         return df
 \end{lstlisting}
 
-\subsection{Wypełeninie brakujących wartości za pomocą regresji liniowej}
+\section{Wypełeninie brakujących wartości za pomocą regresji liniowej}
 W tym scenariuszu wykorzystano pozostałe rekordy, 
 aby przy pomocy regresji liniowej wygenerować 
 brakujące wartości
@@ -244,7 +244,7 @@ brakujące wartości
             return df
 \end{lstlisting}
 
-\subsection{Standaryzacja}
+\section{Standaryzacja}
 Dzięki StandardScaler z biblioteki sklearn dokonano 
 standaryzacji kolumn liczbowych
 
@@ -261,7 +261,7 @@ standaryzacji kolumn liczbowych
         return df
 \end{lstlisting}
 
-\subsection{Standaryzacja oraz skalowanie do przedziału (0,1)}
+\section{Standaryzacja oraz skalowanie do przedziału (0,1)}
 Dzięki StandardScaler z biblioteki sklearn dokonano 
 standaryzacji wraz ze skalowaniem do przedziału (0,1) 
 kolumn liczbowych
@@ -278,7 +278,7 @@ kolumn liczbowych
         return df
 \end{lstlisting}
 
-\subsection{Skalowanie do przedziału (0,1) oraz usunięcie 
+\section{Skalowanie do przedziału (0,1) oraz usunięcie 
 wartości odstających}
 Poza skalowaniem z poprzedniego scenariusza, 
 wykorzystano algorytm LocalOutlierFactor do usunięcia 
@@ -301,7 +301,7 @@ wartości odstających
         return df
 \end{lstlisting}
 
-\subsection{Kodowanie wartości kategorycznych}
+\section{Kodowanie wartości kategorycznych}
 Wykorzystano LabelEncoder z biblioteki sklearn do 
 zakodowania wartości kategorycznych na liczbowe. 
 W przypadku, kiedy dla danej kolumny brakowało wartości, 
@@ -316,12 +316,12 @@ rekord usuwano
         return df
 \end{lstlisting}
 
-\subsection{Kodowanie wartości kategorycznych oraz wypełnienie 
+\section{Kodowanie wartości kategorycznych oraz wypełnienie 
 brakujących wartości średnią}
 Po wykonaniu kodowania z poprzedniego scenariusza, 
 wypełniono brakujące wartości wartością średnią
-\subsection{Scenariusz indywidualnego podejścia do zbioru danych}
-\subsubsection{League of Legends stats}
+\section{Scenariusz indywidualnego podejścia do zbioru danych}
+\subsection{League of Legends stats}
 Dla statystyk z gry League of Legends jedyne co mogło być zrobione 
 poza operacjami z poprzednich scenariuszy było usunięcie kolumny z 
 imieniem postaci, jako że nie wnosiła ona konkretnych informacji, 
@@ -348,7 +348,7 @@ a głównie identyfikowała dany rekord
             X_train,y_train,X_test,y_test)
 \end{lstlisting}
 
-\subsubsection{Australian Rain Forecast}
+\subsection{Australian Rain Forecast}
 Dla Australian Rain Forecast rozbito datę na dzień miesiąca, 
 miesiąc oraz rok, dzięki czemu w teorii możemy zaobserwować 
 trendy dotyczące na przykład poszczególnych miesięcy na przestrzeni 
@@ -386,7 +386,7 @@ wielu lat
             X_train,y_train,X_test,y_test)
 \end{lstlisting}
 
-\subsubsection{Titanic Survival}
+\subsection{Titanic Survival}
 Dla zestawu danych Titanic wyciągnięto informację o tytule, 
 jakim posługiwał się dany pasażer, dzięki czemu uzyskaliśmy 
 informację o grupie społecznej, do której należeli pasażerowie. 
@@ -427,8 +427,8 @@ określa sektor
             X_train,y_train,X_test,y_test)
 \end{lstlisting}
 
-\section{Wyniki Eksperymentów}
-\subsection{League of Legends stats}
+\chapter{Wyniki Eksperymentów}
+\section{League of Legends stats}
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_1}}
 \centering
@@ -451,7 +451,7 @@ według danego scenariusza}
 według danego scenariusza}
 \end{figure}
 
-\subsection{Australian Rain Forecast}
+\section{Australian Rain Forecast}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Aus_Weather_1}}
@@ -475,7 +475,7 @@ według danego scenariusza}
 \end{figure}
 
 
-\subsection{Titanic Survival}
+\section{Titanic Survival}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_1}}
@@ -498,7 +498,7 @@ według danego scenariusza}
 według danego scenariusza}
 \end{figure}
     
-\subsection{Średnie wyniki}
+\section{Średnie wyniki}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Titanic_Avg}}
@@ -521,7 +521,7 @@ danych według danego scenariusza}
 danych według danego scenariusza}
 \end{figure}
 
-\section{Podsumowanie}
+\chapter{Podsumowanie}
 Z przeprowadzonych eksperymentów wynika, 
 że odpowiednie przygotowanie danych zwiększa trafność 
 klasyfikatorów. Należy jednak zwrócić uwagę, że nie wszystkie 
