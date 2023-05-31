@@ -22,31 +22,59 @@
 Analiza danych to proces, 
 w którym przekształcamy surowe dane w wiedzę i 
 wnioski, dzięki którym jesteśmy w stanie podejmować lepsze decyzje. 
-Wewnątrz tego procesu można wyróżnić następujące fazy:\
-==== Podrozdziały albo bardziej treściwe  a albo zamienić na akapity ====
+Wewnątrz tego procesu można wyróżnić następujące fazy:
+
+
 \subsection{Pozyskiwanie: gromadzenie danych}
-Zanim analiza danych będzie możliwa należy pozyskać dane.
-Źródła danych mogą być: czujniki, ankiety bądź statystyki, 
-a także mogą być przechowywane w różnoraki sposób, w postaci 
-plików o różnych formatac (np. csv), w bazach danych, 
-bądź nawet w formie fizycznej w przypadku danych historycznych
+Zanim analiza danych będzie możliwa należy pozyskać dane, 
+jest to istotna cześć procesu, ponieważ to od niej zależy to, 
+jak trafne wnioski będziemy mogli wysnuć na późniejszych etapach.
+Bardzo ważne jest to, jak dużą ilość danych uda nam się zebrać, a także jak dokładne one będą.
+Możemy pozyskiwać dane z różnorakich źródeł, na przykład: 
+\begin{itemize}
+    \item Zapisywać wartości zbierane przez czujniki 
+    \item Korzystać z ankiet wśród danej populacji
+    \item Zbierać dane o zachowaniach użytkowników w trakcie korzystania ze strony internetowej
+  \end{itemize}
+Jesteśmy w tej kwestii ograniczeni jedynie przez dziedzinę, w jakiej przeprowadzamy analizę danych
+Istotną kwestią jest również to, w jakim formacie są 
+przechowywane dane. Może okazać się, że pierwszym etapem przetwarzania danych 
+będzie odpowiednie ich sformatowanie, bądź nawet ich cyfryzacja, jeśli były 
+by przechowywane w formie fizycznej, na przykład jako papierowe archiwa
+
+
 \subsection{Przygotowanie: przetwarzanie danych}
 Aby móc w pełni korzystać ze zgromadzonych danych, 
 należy je przygotować, odpowiednio sformatować. 
-To głównie tą częścią analizy danych będziemy się 
-zajmować w dalszej części pracy. 
+Poza przygotowaniem odpowiedniego formatu danych, 
+możemy wyróżnić następujące sposoby na przygotowanie danych do analizy:
+\begin{itemize}
+    \item Wypełnienie brakujących wartości 
+    \item Standaryzacja danych liczbowych
+    \item Kodowanie wartości kategorycznych jako liczbowe
+  \end{itemize}
+Dzięki wykorzystaniu powyższych sposobów możemy znacznie zwiększyć jakość analizy danych, 
+a co za tym idzie wnioski do których dojdziemy w trakcie procesu będą 
+trafniejsze i przyniosą lepsze rezultaty
+
+
 \subsection{Analiza: modelowanie danych}
-Najczęsciej kiedy ktoś mówi "Analiza danych" to ma 
-na myśli własnie tą część całego procesu, jakim jest Analiza Danych.
-To właśnie tu wykorzystywane są techniki trenowania sztucznej 
-inteligencji, tworzone są klasyfikatory, 
-które później możemy wykorzystywać do różnych zadań
+Mając do dyspozycji przygotowane dane możemy przejść do ich właściwej analizy, 
+na podstawie której tworzymy modele, klasyfikatory, systemy rekomendacji, dokonujemy klasteryzacji. 
+Najczęsciej nie tworzymy ich od zera, a wspomagamy się dostępnymi bibliotekami, które zawierają 
+najpopularniejsze algorytmy. Zdarza się, że nie jesteśmy zadowoleni z wyników, jakie przynosi 
+wykorzystanie stworzonych modeli, bądź chcielibyśmy dokonać dalszej optymalizacji czasowej, 
+w takim przypadku możemy rozważyć dodatkowe przygotowanie danych, aby uzyskać pożądany efekt.
+Po dobrze przeprowadzonej analizie, jesteśmy w stanie 
+wykorzystać stworzone na tym etapie narzędzia do rozwiązywania rzeczywistych problemów.
+
 \subsection{Działanie: podejmowanie decyzji}
-Kiedy mamy już gotowe wyniki analizy, 
-wtedy możemy je wykorzystać aby podjąć 
+Mając gotowe narzędzia będące wynikiem modelowania danych, możemy je wykorzystać aby podjąć 
 konkretne decyzje w prawdziwym świecie: Wykorzystać stworzony 
-klasyfikator w diagnostyce chorób, w systemach rekomendacji 
-bądź w wielu innych dziedzinach
+klasyfikator w diagnostyce chorób, wdrożyć system rekomendacji 
+na naszej stronie internetowej, wykorzystać stworzone klastry danych do kategoryzacji klientów. 
+Każdy z przedstawionych problemów wymaga eksperckiej wiedzy oraz ogromnego doświadczenia, 
+a dzięki analizie danych możemy znacznie usprawnić ich rozwiązywanie.
 
 \section{Problemy z Danymi}
 
@@ -124,6 +152,10 @@ wpływ na zmienną po standaryzacji
 
 
 \chapter{Środowisko wykonawcze}
+
+W poniższym rozdziale przedstawione zostało środowisko wykonawcze, 
+w jakim przeprowadzono eksperymenty, a także opisano zbiory danych, 
+na których je przeprowadzono
 \section{Specyfikacja sprzetowa, system i środowisko}
 Sprzęt: Laptop wyposażony w procesor Intel Core i5-1135G7 
 (2.4Ghz) ze zintegrowaną grafiką oraz 16GB pamięci RAM
@@ -428,24 +460,100 @@ określa sektor
 \end{lstlisting}
 
 \chapter{Wyniki Eksperymentów}
+
+Poniżej przedstawiono wyniki eksperymentów dla każdego z klasyfikatorów, 
+z podziałem na poszczególne zbiory danych, a następnie zebrano średnie wyniki dla każdego 
+ze zbiorów danych
+
 \section{League of Legends stats}
-\begin{figure}[H]
-\centerline{\includegraphics{Lol_Stats_1}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
 
-\end{figure}
-
+\subsection{Wypełnienie brakujących wartości}
 \begin{figure}[H]
-\centerline{\includegraphics{Lol_Stats_2}}
+\centerline{\includegraphics{Lol_Stats_1_Wypełnienie_brakujących}}
 \centering
 \caption{Trafność klasyfikatorów po przygotowaniu danych 
 według danego scenariusza}
 \end{figure}
 
 \begin{figure}[H]
-\centerline{\includegraphics{Lol_Stats_3}}
+\centerline{\includegraphics{Lol_Stats_2_Wypełnienie_brakujących}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Lol_Stats_3_Wypełnienie_brakujących}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\subsection{Standaryzacja}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Lol_Stats_1_Standaryzacja}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Lol_Stats_2_Standaryzacja}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Lol_Stats_3_Standaryzacja}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\subsection{Kodowanie}
+
+
+\begin{figure}[H]
+\centerline{\includegraphics{Lol_Stats_1_Kodowanie}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Lol_Stats_2_Kodowanie}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Lol_Stats_3_Kodowanie}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\subsection{Indywidualne podejście}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Lol_Stats_1_Custom}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Lol_Stats_2_Custom}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Lol_Stats_3_Custom}}
 \centering
 \caption{Trafność klasyfikatorów po przygotowaniu danych 
 według danego scenariusza}
@@ -453,22 +561,94 @@ według danego scenariusza}
 
 \section{Australian Rain Forecast}
 
+
+\subsection{Wypełnienie brakujących wartości}
 \begin{figure}[H]
-\centerline{\includegraphics{Aus_Weather_1}}
+\centerline{\includegraphics{Aus_Weather_1_Wypełnienie_brakujących}}
 \centering
 \caption{Trafność klasyfikatorów po przygotowaniu danych 
 według danego scenariusza}
 \end{figure}
-    
+
 \begin{figure}[H]
-\centerline{\includegraphics{Aus_Weather_2}}
+\centerline{\includegraphics{Aus_Weather_2_Wypełnienie_brakujących}}
 \centering
 \caption{Trafność klasyfikatorów po przygotowaniu danych 
 według danego scenariusza}
 \end{figure}
-    
+
 \begin{figure}[H]
-\centerline{\includegraphics{Aus_Weather_3}}
+\centerline{\includegraphics{Aus_Weather_3_Wypełnienie_brakujących}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\subsection{Standaryzacja}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Aus_Weather_1_Standaryzacja}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Aus_Weather_2_Standaryzacja}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Aus_Weather_3_Standaryzacja}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\subsection{Kodowanie}
+
+
+\begin{figure}[H]
+\centerline{\includegraphics{Aus_Weather_1_Kodowanie}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Aus_Weather_2_Kodowanie}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Aus_Weather_3_Kodowanie}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\subsection{Indywidualne podejście}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Aus_Weather_1_Custom}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Aus_Weather_2_Custom}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Aus_Weather_3_Custom}}
 \centering
 \caption{Trafność klasyfikatorów po przygotowaniu danych 
 według danego scenariusza}
@@ -477,49 +657,102 @@ według danego scenariusza}
 
 \section{Titanic Survival}
 
+
+\subsection{Wypełnienie brakujących wartości}
 \begin{figure}[H]
-\centerline{\includegraphics{Lol_Stats_1}}
+\centerline{\includegraphics{Titanic_1_Wypełnienie_brakujących}}
 \centering
 \caption{Trafność klasyfikatorów po przygotowaniu danych 
 według danego scenariusza}
 \end{figure}
-        
-\begin{figure}[H]
-\centerline{\includegraphics{Lol_Stats_2}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-        
-\begin{figure}[H]
-\centerline{\includegraphics{Lol_Stats_3}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-    
-\section{Średnie wyniki}
 
 \begin{figure}[H]
-\centerline{\includegraphics{Titanic_Avg}}
+\centerline{\includegraphics{Titanic_2_Wypełnienie_brakujących}}
 \centering
-\caption{Średnia trafność klasyfikatorów po przygotowaniu 
-danych według danego scenariusza}
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
 \end{figure}
-            
+
 \begin{figure}[H]
-\centerline{\includegraphics{Aus_Weather_Avg}}
+\centerline{\includegraphics{Titanic_3_Wypełnienie_brakujących}}
 \centering
-\caption{Średnia trafność klasyfikatorów po przygotowaniu 
-danych według danego scenariusza}
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
 \end{figure}
-            
+
+\subsection{Standaryzacja}
+
 \begin{figure}[H]
-\centerline{\includegraphics{Lol_Stats_Avg}}
+\centerline{\includegraphics{Titanic_1_Standaryzacja}}
 \centering
-\caption{Średnia trafność klasyfikatorów po przygotowaniu 
-danych według danego scenariusza}
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
 \end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Titanic_2_Standaryzacja}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Titanic_3_Standaryzacja}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\subsection{Kodowanie}
+
+
+\begin{figure}[H]
+\centerline{\includegraphics{Titanic_1_Kodowanie}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Titanic_2_Kodowanie}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Titanic_3_Kodowanie}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\subsection{Indywidualne podejście}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Titanic_1_Custom}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Titanic_2_Custom}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics{Titanic_3_Custom}}
+\centering
+\caption{Trafność klasyfikatorów po przygotowaniu danych 
+według danego scenariusza}
+\end{figure}
+
+
+\section{Średnie wyniki}
+
 
 \chapter{Podsumowanie}
 Z przeprowadzonych eksperymentów wynika, 
