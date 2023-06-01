@@ -6,6 +6,7 @@
 \usepackage{listings}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{multirow}
 \graphicspath{ {./Wykresy/} }
 
 \title{Analiza wpływu zastosowania wybranych technik przygotowania danych do analizy, na jakość analizy danych}
@@ -168,6 +169,20 @@ formacie Jupyter notebook
 Zbiory na których będziemy sprawdzać wpływ przygotowania danych 
 są zbiorami do klasyfikacji. Do eksperymentów wybrano następujące 
 zestawy danych:
+
+\begin{center}
+    \begin{tabular}{ |c|c|c|c| } 
+    \hline
+    \multicolumn{4}{|c|}{Zbiory danych} \\
+    \hline
+    Nazwa zbioru & Ilość rekordów & Kolumny numeryczne & Kolumny kategoryczne \\
+     \hline
+     League of Legends Stats: S13 & 485 & 3 & 7\\ 
+     Rain in Australia & 16443 & 16 & 7\\ 
+     Titanic - Machine Learning from Disaster & 891 & 5 & 5\\ 
+     \hline
+    \end{tabular}
+    \end{center}
 \subsection{League of Legends stats}
 Zbiór zawierający statystyki postaci z gry League of Legends z 
 dwóch wersji obecnego sezonu (13.1 oraz 13.3)
@@ -471,46 +486,58 @@ ze zbiorów danych
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_1_Wypełnienie_brakujących}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats 1}
 \end{figure}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_2_Wypełnienie_brakujących}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats 2}
 \end{figure}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_3_Wypełnienie_brakujących}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats 3}
 \end{figure}
+
+
+Dla klasyfikatora xgBoost wypełnienie jakąkolwiek wartością daje widoczną poprawę w trafności, 
+jednak najlepsze wyniki uzyskujemy przy wartości średniej. Dla RandomForestClassifier uzyskujemy 
+różne rezultaty w zależności od wygenerowanych dziur w zbiorze danych, w pierwszym przypadku jakiekolwiek 
+wypełnianie pogarsza klasyfikację, w drugim regresja jest najlepszym sposobem, a w trzecim minimum. 
+Dla algorytmu k-nearest neighbors w każdym z przypadków nie uzyskujemy poprawy albo wręcz pogarszamy wyniki przez 
+wypełnienie brakujących wartości.
 
 \subsection{Standaryzacja}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_1_Standaryzacja}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po standaryzacji dla zestawu danych Lol Stats 1}
 \end{figure}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_2_Standaryzacja}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po standaryzacji dla zestawu danych Lol Stats 2}
 \end{figure}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_3_Standaryzacja}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po standaryzacji dla zestawu danych Lol Stats 3}
 \end{figure}
+
+Klasyfikator xgBoost osiąga niemalże perfekcję po 
+standaryzacji lub standaryzacji ze skalowaniem do przedziału (0,1). 
+Dla RandomForestClassifier jedynie w trzecim przypadku uzyskujemy poprawę przy 
+standaryzacji oraz skalowaniu do przedziału (0,1) 
+Dla algorytmu k-nearest neighbors podobnie jak dla RandomForestClassifier jedynie 
+trzeci przypadek wykazuje poprawę trafności.
+Należy zwrócić uwagę na fakt, że dla każdego z przypadków usunięcie wartości 
+odstających znacznie pogarsza trafność klasyfikacji, 
+nawet względem braku przygotowania danych
 
 \subsection{Kodowanie}
 
@@ -518,46 +545,49 @@ według danego scenariusza}
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_1_Kodowanie}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po kodowaniu dla zestawu danych Lol Stats 1}
 \end{figure}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_2_Kodowanie}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po kodowaniu dla zestawu danych Lol Stats 2}
 \end{figure}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_3_Kodowanie}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po kodowaniu dla zestawu danych Lol Stats 3}
 \end{figure}
+
+XgBoost po kodowaniu wartości kategorycznych osiąga perfekcję i utrzymuje się na tym poziomie, 
+RandomForestClassifier dla samego kodowania wykazuje poprawę we wszystkich przypadkach, 
+natomiast dla pierwszego przypadku wypełnienie brakujacych wartości średnią powoduje 
+pogorszenie wyników względem samego kodowania. Dla algorytmu k-nearest neighbors poprawa uzyskana 
+dzięki kodowaniu jest nieznaczna, jednak bardzo często w połączeniu z wypełenieniem wartości brakujących 
+średnią uzyskujemy wynik gorszy od braku przygotowania.
 
 \subsection{Indywidualne podejście}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_1_Custom}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po indywidualnym podejśćiu dla zestawu danych Lol Stats 1}
 \end{figure}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_2_Custom}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po indywidualnym podejśćiu dla zestawu danych Lol Stats 2}
 \end{figure}
 
 \begin{figure}[H]
 \centerline{\includegraphics{Lol_Stats_3_Custom}}
 \centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
+\caption{Trafność klasyfikatorów po indywidualnym podejśćiu dla zestawu danych Lol Stats 3}
 \end{figure}
+
+
 
 \section{Australian Rain Forecast}
 

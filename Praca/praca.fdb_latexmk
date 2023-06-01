@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1685566184 "e:/Magisterka/PracaMagPreproccessing/Praca/praca.tex" "praca.pdf" "praca" 1685566189 0
+["pdflatex"] 1685619789 "e:/Magisterka/PracaMagPreproccessing/Praca/praca.tex" "praca.pdf" "praca" 1685619792 0
   "C:/Users/Dariusz/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1685389333 25420 0434a2cf3f70144a5a53049d5de00e6c ""
   "C:/Users/Dariusz/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1685389335 31952 d8a0b36e322a333d672d0b19af230d25 ""
   "C:/Users/Dariusz/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1685389336 40136 d6f8eac47fc07645f212286bc526fc01 ""
@@ -12,7 +12,7 @@
   "C:/Users/Dariusz/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecti1000.pk" 1685389329 31892 1c10d1e77e8a3eb31ae75152dee4d8a6 ""
   "C:/Users/Dariusz/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1685389330 11548 dddecf57710ee49d8049cc1df09a5b58 ""
   "C:/Users/Dariusz/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1685560925 9716332 92a7d469cc603945fd043ac46ac0f243 ""
-  "C:/Users/Dariusz/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1685389320 82705 9cc9f144eacd499bc23a611703921467 ""
+  "C:/Users/Dariusz/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1685601735 82705 9cc9f144eacd499bc23a611703921467 ""
   "C:/Users/Dariusz/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecbx1000.tfm" 993061956 3200 328792ff19833a39406f06fa0555a6dc ""
   "C:/Users/Dariusz/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecbx1200.tfm" 993061958 3200 b8d69bc738e5ef3e08cefeef3109ff56 ""
   "C:/Users/Dariusz/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecbx1440.tfm" 993061960 3196 0b37fa3083e15c57cfa8c4ff52f2807a ""
@@ -60,6 +60,7 @@
   "C:/Users/Dariusz/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.sty" 1623004942 80964 64e57373f36316e4a09b517cbf1aba2e ""
   "C:/Users/Dariusz/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstlang1.sty" 1623004943 204271 bae5b2d457283e99567249c1990510be ""
   "C:/Users/Dariusz/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty" 1623004942 77022 ee25ce086f4a79d8cf73bac6f94c02a5 ""
+  "C:/Users/Dariusz/AppData/Local/Programs/MiKTeX/tex/latex/multirow/multirow.sty" 1615976118 6149 2398eec4faa1ee24ff761581e580ecf1 ""
   "C:/Users/Dariusz/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1622550326 4545 d84d0b20a11b9c36c6ecf45697be591c ""
   "Wykresy//Aus_Weather_1_Custom.png" 1685560660 16435 ce550ac4e3bbdcbc067d1fb452ec7d5c ""
   "Wykresy//Aus_Weather_1_Kodowanie.png" 1685560660 24606 8d347b355fabda07a734ddd8a2e84c10 ""
@@ -97,8 +98,8 @@
   "Wykresy//Titanic_3_Kodowanie.png" 1685560660 21918 953454fa7c3683fbd4a8644c26586dd6 ""
   "Wykresy//Titanic_3_Standaryzacja.png" 1685560660 22558 27dc7f7510c5ca95ae078e504b3b3f7c ""
   "Wykresy//Titanic_3_Wypełnienie_brakujących.png" 1685560660 20962 949b0be60b7e48c21828dd350b6443ef ""
-  "e:/Magisterka/PracaMagPreproccessing/Praca/praca.tex" 1685566181 29063 9991f7035e2f2af2e8041800d8668e66 ""
-  "praca.aux" 1685566188 15333 361f36068b95ba5227bb1c1b02079f01 "pdflatex"
+  "e:/Magisterka/PracaMagPreproccessing/Praca/praca.tex" 1685619783 31276 53d6eb5e3a78ee49aff140b971239ee8 ""
+  "praca.aux" 1685619792 15388 df09045be2954743e00cf98e6444a460 "pdflatex"
   (generated)
   "praca.aux"
   "praca.log"
