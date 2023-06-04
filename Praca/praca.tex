@@ -7,7 +7,9 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{multirow}
+\usepackage{hyperref}
 \graphicspath{ {./Wykresy/} }
+
 
 \title{Analiza wpływu zastosowania wybranych technik przygotowania danych do analizy, na jakość analizy danych}
 \author{Dariusz Litwiński}
@@ -22,9 +24,8 @@
 \section{Analiza Danych}
 Analiza danych to proces, 
 w którym przekształcamy surowe dane w wiedzę i 
-wnioski, dzięki którym jesteśmy w stanie podejmować lepsze decyzje. 
+wnioski, dzięki którym jesteśmy w stanie podejmować lepsze decyzje \cite{data_analysis}. 
 Wewnątrz tego procesu można wyróżnić następujące fazy:
-
 
 \subsection{Pozyskiwanie: gromadzenie danych}
 Zanim analiza danych będzie możliwa należy pozyskać dane, 
@@ -792,6 +793,21 @@ scenariusze skutkowały jednoznaczną poprawą rezultatów.
 Na szczególne wyróżenienie zasługuje kodowanie wartości 
 kategorycznych na liczbowe, gdyż w każdym przypadku zastosowanie 
 tej metody znacznie zwiększyło trafność klasyfikacji
+
+\begin{thebibliography}{9}
+    \bibitem{data_analysis}
+    \href{https://www.intel.pl/content/www/pl/pl/analytics/resources/what-is-data-analytics.html}{Definicja zaproponowana przez firmę Intel}
+    \bibitem{titanic_dataset}
+    \href{https://www.kaggle.com/competitions/titanic/data?select=train.csv}{Zbiór danych Titanic dostępny do pobrania ze strony kaggle.com}
+    \bibitem{lol_stats_dataset}
+    \href{https://www.kaggle.com/datasets/vivovinco/league-of-legends-stats-s13}{Zbiór danych Lol Stats dostępny do pobrania ze strony kaggle.com}
+    \bibitem{australian_rain_dataset}
+    \href{https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package}{Zbiór danych Australian Rain dostępny do pobrania ze strony kaggle.com}
+    
+    \bibitem{lamport94}
+    Leslie Lamport (1994) \emph{\LaTeX: a document preparation system}, Addison
+    Wesley, Massachusetts, 2nd ed.
+    \end{thebibliography}
 
 
 \end{document}
