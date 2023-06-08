@@ -34,10 +34,10 @@ jak trafne wnioski będziemy mogli wysnuć na późniejszych etapach.
 Bardzo ważne jest to, jak dużą ilość danych uda nam się zebrać, a także jak dokładne one będą.
 Możemy pozyskiwać dane z różnorakich źródeł, na przykład: 
 \begin{itemize}
-    \item Zapisywać wartości zbierane przez czujniki 
-    \item Korzystać z ankiet zebranych wśród danej populacji
-    \item Zbierać dane o zachowaniach użytkowników w trakcie korzystania ze strony internetowej
-    \item Wykorzystywać dane statystyczne/historyczne
+    \item Zapisywać wartości zbierane przez czujniki \cite{data_from_sensors}
+    \item Korzystać z ankiet zebranych wśród danej populacji \cite{data_from_questionaire}
+    \item Zbierać dane o zachowaniach użytkowników w trakcie korzystania ze strony internetowej \cite{data_from_behavior}
+    \item Wykorzystywać dane statystyczne/historyczne \cite{data_from_statistics}
   \end{itemize}
 Jesteśmy w tej kwestii ograniczeni jedynie przez dziedzinę, w jakiej przeprowadzamy analizę danych
 Istotną kwestią jest również to, w jakim formacie są 
@@ -63,7 +63,7 @@ trafniejsze i przyniosą lepsze rezultaty
 
 \subsection{Analiza: modelowanie danych}
 Mając do dyspozycji przygotowane dane możemy przejść do ich właściwej analizy, 
-na podstawie której tworzymy modele, klasyfikatory, systemy rekomendacji, dokonujemy klasteryzacji. 
+na podstawie której tworzymy modele, klasyfikatory\cite{classifiers}, systemy rekomendacji\cite{recomendation_systems}, dokonujemy klasteryzacji\cite{clustering}. 
 Najczęsciej nie tworzymy ich od zera, a wspomagamy się dostępnymi bibliotekami, które zawierają 
 najpopularniejsze algorytmy. Zdarza się, że nie jesteśmy zadowoleni z wyników, jakie przynosi 
 wykorzystanie stworzonych modeli, bądź chcielibyśmy dokonać dalszej optymalizacji czasowej, 
@@ -98,7 +98,7 @@ brakujących wartości. W miejsce braku może być wstawiona średnia,
 minimum, maksimum, lub też inna arbitralnie wybrana wartość. 
 Pozornie wartości wstawiane w puste miejsca są kompletnie arbitralne, 
 jednak bardzo często takie podejście skutkuje najlepszymi rezultatami, 
-pod warunkiem że dobierzemy odpowiednią wartość do wstawiania. 
+pod warunkiem że dobierzemy odpowiednią wartość do wstawiania. \cite{missing_values}
 \subsection{Wartości odstające}
 W niektórych przypadkach w danych mogą pojawić się takie wartości, 
 które wyraźnie odstają od reszty i nie wnoszą sobą zbyt wiele 
@@ -106,14 +106,14 @@ informacji w kontekście analizy danych. Co więcej, mogą one
 zaciemniać pozostałą część danych, maskując trendy bądź prowadząc 
 do błędnych wniosków. Dlatego najlepszym podejściem jest wykrywanie 
 oraz usuwanie wartości, które możemy uznać za odstające. 
-Istnieją algorytmy pozwalające nam na odrzucenie wartości odstających.
+Istnieją algorytmy pozwalające nam na odrzucenie wartości odstających. \cite{outlier_detection}
 \subsection{Kolumny kategoryczne}
 Wiele z modeli może pracować jedynie na wartościach liczbowych, 
 podczas kiedy w zbiorach danych możemy znaleźć nie tylko takie wartości, 
 ale również kategoryczne. Rezygnując z analizy tych danych tracilibyśmy 
 wiedzę, jaką można z nich pozyskać. Nie jest to jednak konieczne, 
 gdyż istnieją sposoby, aby zamienić te dane na postać liczbową za 
-pomocą kodowania
+pomocą kodowania \cite{enconding}
 
 
 \chapter{Metody Przygotowania Danych}
@@ -139,7 +139,7 @@ najmniejszą wartość dla edukacji podstawowej, a najwyższą dla
 edukacji wyższej. Natomiast jeżeli nie znamy tych zależności, 
 możemy wykorzystać LabelEncoder, jednak on ponumeruje klasy w 
 kolejności alfabetycnzej, co nie zawsze jest pożądanym rezultatem. 
-Innym podejściem jest One-Hot Encoding, który dla każdej z klas 
+Innym podejściem jest One-Hot Encoding\cite{one_hot_encoding}, który dla każdej z klas 
 tworzy osobną kolumnę z wartością logiczną opisującą, czy dany 
 rekord należy do tej klasy. Powoduje to wygenerowanie sporej 
 ilości kolumn, jednak mamy wtedy pewność, że nie stworzymy 
@@ -797,19 +797,16 @@ kategorycznych na liczbowe, gdyż w każdym przypadku zastosowanie
 tej metody znacznie zwiększyło trafność klasyfikacji
 
 \begin{thebibliography}{9}
-    \bibitem{data_analysis}
-    \href{https://www.intel.pl/content/www/pl/pl/analytics/resources/what-is-data-analytics.html}{Definicja zaproponowana przez firmę Intel}
+    
     \bibitem{titanic_dataset}
     \href{https://www.kaggle.com/competitions/titanic/data?select=train.csv}{Zbiór danych Titanic dostępny do pobrania ze strony kaggle.com}
+    
     \bibitem{lol_stats_dataset}
     \href{https://www.kaggle.com/datasets/vivovinco/league-of-legends-stats-s13}{Zbiór danych Lol Stats dostępny do pobrania ze strony kaggle.com}
+    
     \bibitem{australian_rain_dataset}
     \href{https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package}{Zbiór danych Australian Rain dostępny do pobrania ze strony kaggle.com}
     
-    \bibitem{lamport94}
-    Leslie Lamport (1994) \emph{\LaTeX: a document preparation system}, Addison
-    Wesley, Massachusetts, 2nd ed.
-
     \bibitem{data_analysis_def}
     "Transforming Unstructured Data into Useful Information", \emph{Big Data, Mining, and Analytics}, Auerbach Publications, pp. 227–246, 2014-03-12, doi:10.1201/b16666-14, ISBN 978-0-429-09529-0
 
@@ -819,8 +816,50 @@ tej metody znacznie zwiększyło trafność klasyfikacji
     \bibitem{data_from_statistics}
     Margo, Robert A. (2000). \emph{Wages and labor markets in the United States, 1820-1860.} University of Chicago Press. ISBN 0-226-50507-3. OCLC 41285104
 
+    \bibitem{data_from_questionaire}
+    Marshall, G. (2005). The purpose, design and administration of a questionnaire for data collection. Radiography, 11(2), 131-136.
 
-    \end{thebibliography}
+    \bibitem{data_from_behavior}
+    Fabijan, A., Olsson, H. H., Bosch, J. (2015). Customer feedback and data collection techniques in software R\&D: a literature review. In Software Business: 6th International Conference, ICSOB 2015, Braga, Portugal, June 10-12, 2015, Proceedings 6 (pp. 139-153). Springer International Publishing.
 
+    \bibitem{missing_values}
+    Hasan, M. K., Alam, M. A., Roy, S., Dutta, A., Jawad, M. T.,  Das, S. (2021). Missing value imputation affects the performance of machine learning: A review and analysis of the literature (2010–2021). Informatics in Medicine Unlocked, 27, 100799.
+
+    \bibitem{standard_score}
+    E. Kreyszig (1979). Advanced Engineering Mathematics (4th ed.). Wiley. p. 880, eq. 5. ISBN 0-471-02140-7.
+
+    \bibitem{one_hot_encoding}
+    Okada, S., Ohzeki, M., Taguchi, S. (2019). Efficient partition of integer optimization problems with one-hot encoding. Scientific reports, 9(1), 13036.
+    
+    \bibitem{outlier_detection}
+    Wang, H., Bah, M. J., Hammad, M. (2019). Progress in outlier detection techniques: A survey. Ieee Access, 7, 107964-108000.
+
+    \bibitem{local_outlier_factor}
+    Alghushairy, O., Alsini, R., Soule, T., Ma, X. (2020). A review of local outlier factor algorithms for outlier detection in big data streams. Big Data and Cognitive Computing, 5(1), 1.
+    
+    \bibitem{enconding}
+    Potdar, K., Pardawala, T. S., Pai, C. D. (2017). A comparative study of categorical variable encoding techniques for neural network classifiers. International journal of computer applications, 175(4), 7-9.
+
+    \bibitem{classifiers}
+    Narudin, F. A., Feizollah, A., Anuar, N. B., Gani, A. (2016). Evaluation of machine learning classifiers for mobile malware detection. Soft Computing, 20, 343-357.
+    
+    \bibitem{recomendation_systems}
+    Khanal, S. S., Prasad, P. W. C., Alsadoon, A., Maag, A. (2020). A systematic review: machine learning based recommendation systems for e-learning. Education and Information Technologies, 25, 2635-2664.
+
+    \bibitem{clustering}
+    Ezugwu, A. E., Ikotun, A. M., Oyelade, O. O., Abualigah, L., Agushaka, J. O., Eke, C. I.,  Akinyelu, A. A. (2022). A comprehensive survey of clustering algorithms: State-of-the-art machine learning applications, taxonomy, challenges, and future research prospects. Engineering Applications of Artificial Intelligence, 110, 104743.
+    
+    \bibitem{decisions_healthcare}
+    Sousa, M. J., Pesqueira, A. M., Lemos, C., Sousa, M., \& Rocha, Á. (2019). Decision-making based on big data analytics for people management in healthcare organizations. Journal of medical systems, 43, 1-10.
+
+    \bibitem{decisions_education}
+    Schildkamp, K., Lai, M. K., \& Earl, L. (Eds.). (2012). Data-based decision making in education: Challenges and opportunities.
+
+    \bibitem{decsision_buisness}
+    Fávero, L. P., \& Belfiore, P. (2019). Data science for business and decision making. Academic Press.
+
+\end{thebibliography}
+
+    
 
 \end{document}
