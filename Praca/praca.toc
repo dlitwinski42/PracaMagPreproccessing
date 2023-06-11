@@ -1,0 +1,69 @@
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{\numberline {1}Problem Analizy Danych}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Analiza Danych}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Pozyskiwanie: gromadzenie danych}{5}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Przygotowanie: przetwarzanie danych}{5}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Analiza: modelowanie danych}{6}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Działanie: podejmowanie decyzji}{6}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Jakość Danych}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Problemy z Danymi}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Brakujące wartości}{7}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Wartości odstające}{7}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Kolumny kategoryczne}{7}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Cel pracy}{7}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Metody Przygotowania Danych}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Uzupełnianie brakujących wartości}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Wykrywanie wartości odstających}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Kodowanie wartości kategorycznych}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Standaryzacja}{10}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Środowisko wykonawcze}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Specyfikacja sprzetowa, system i środowisko}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Zbiory danych}{11}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}League of Legends stats}{11}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Australian Rain Forecast}{12}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Titanic Survival}{12}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Przygotowanie danych do eksperymentów}{12}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Wykonane Eksperymenty}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Użyte klasyfikatory}{13}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}xgBoost}{13}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}RandomForestClassifier}{13}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}knn}{13}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Brak Preprocessingu}{13}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Wypełeninie brakujących wartości średnią}{14}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Wypełeninie brakujących wartości minimum}{14}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Wypełeninie brakujących wartości maksimum}{14}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Wypełeninie brakujących wartości za pomocą regresji liniowej}{14}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Standaryzacja}{15}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Standaryzacja oraz skalowanie do przedziału (0,1)}{15}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Skalowanie do przedziału (0,1) oraz usunięcie wartości odstających}{16}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Kodowanie wartości kategorycznych}{16}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Kodowanie wartości kategorycznych oraz wypełnienie brakujących wartości średnią}{17}{section.4.11}%
+\contentsline {section}{\numberline {4.12}Scenariusz indywidualnego podejścia do zbioru danych}{17}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}League of Legends stats}{17}{subsection.4.12.1}%
+\contentsline {subsection}{\numberline {4.12.2}Australian Rain Forecast}{17}{subsection.4.12.2}%
+\contentsline {subsection}{\numberline {4.12.3}Titanic Survival}{18}{subsection.4.12.3}%
+\contentsline {chapter}{\numberline {5}Wyniki Eksperymentów}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}League of Legends stats}{21}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Wypełnienie brakujących wartości}{21}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Standaryzacja}{23}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Kodowanie}{25}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Indywidualne podejście}{27}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Australian Rain Forecast}{28}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Wypełnienie brakujących wartości}{28}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Standaryzacja}{30}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Kodowanie}{31}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Indywidualne podejście}{33}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Titanic Survival}{34}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Wypełnienie brakujących wartości}{34}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Standaryzacja}{36}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Kodowanie}{37}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Indywidualne podejście}{39}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Średnie wyniki}{40}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Wypełnienie brakujących wartości}{40}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Standaryzacja}{42}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Kodowanie}{43}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Indywidualne podejście}{45}{subsection.5.4.4}%
+\contentsline {chapter}{\numberline {6}Podsumowanie}{47}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Wyniki eksperymentów względem hipotezy}{47}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Podejście w przygotowaniu danych dające najlepsze rezultaty}{47}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Konkluzja}{47}{section.6.3}%

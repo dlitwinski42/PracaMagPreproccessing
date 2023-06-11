@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1686509346 "e:/Magisterka/PracaMagPreproccessing/Praca/praca.tex" "praca.pdf" "praca" 1686509354 0
+["pdflatex"] 1686512943 "e:/Magisterka/PracaMagPreproccessing/Praca/praca.tex" "praca.pdf" "praca" 1686512948 0
   "C:/Users/Dariusz/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1685389333 25420 0434a2cf3f70144a5a53049d5de00e6c ""
   "C:/Users/Dariusz/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1685389335 31952 d8a0b36e322a333d672d0b19af230d25 ""
   "C:/Users/Dariusz/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1685389336 40136 d6f8eac47fc07645f212286bc526fc01 ""
@@ -141,10 +141,10 @@
   "Wykresy//Titanic_Avg_Kodowanie.png" 1686336253 23875 7280d8f3381a55d0720a2143d809df83 ""
   "Wykresy//Titanic_Avg_Standaryzacja.png" 1686336253 22580 9a048314ff434c3284ac8683030a15d7 ""
   "Wykresy//Titanic_Avg_Wypełnienie_brakujących.png" 1686336253 22241 9a15407aa529ed42f1bf29f7dbb4aea6 ""
-  "e:/Magisterka/PracaMagPreproccessing/Praca/praca.tex" 1686509335 41167 6783be318668de613c858fdd36c8b68f ""
-  "praca.aux" 1686509353 22579 214a4abdf283e5ff9dd6ff5785f629e2 "pdflatex"
-  "praca.out" 1686509353 12548 ccf906fe1679e4ace08049ad52929a79 "pdflatex"
-  "praca.toc" 1686509353 5924 1452a0531c4511615b78f14adb617fb9 "pdflatex"
+  "e:/Magisterka/PracaMagPreproccessing/Praca/praca.tex" 1686512935 41276 3b3269a2685bdc8a7f289ac702bef867 ""
+  "praca.aux" 1686512948 23071 43f1c5d766bcf31e88cc9f944b6d8f8e "pdflatex"
+  "praca.out" 1686512948 13051 2ec41026711f91260cf47568d21b28ae "pdflatex"
+  "praca.toc" 1686512948 6252 b1c3f6293c1037e74867a448021a2c2f "pdflatex"
   (generated)
   "praca.aux"
   "praca.log"
