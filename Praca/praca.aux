@@ -1,14 +1,17 @@
 \relax 
+\providecommand\hyper@newdestlabel[2]{}
 \providecommand\babel@aux[2]{}
 \@nameuse{bbl@beforestart}
 \catcode `"\active 
-\providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -50,6 +53,9 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Wykrywanie wartości odstających}{9}{section.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Kodowanie wartości kategorycznych}{9}{section.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}Standaryzacja}{10}{section.2.4}\protected@file@percent }
+\citation{lol_stats_dataset}
+\citation{australian_rain_dataset}
+\citation{titanic_dataset}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Środowisko wykonawcze}{11}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -58,6 +64,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}League of Legends stats}{11}{subsection.3.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Australian Rain Forecast}{12}{subsection.3.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Titanic Survival}{12}{subsection.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Przygotowanie danych do eksperymentów}{12}{section.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Wykonane Eksperymenty}{13}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -142,9 +149,28 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {5.35}{\ignorespaces Trafność klasyfikatorów po przygotowaniu danych według danego scenariusza}}{39}{figure.5.35}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5.36}{\ignorespaces Trafność klasyfikatorów po przygotowaniu danych według danego scenariusza}}{40}{figure.5.36}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5.4}Średnie wyniki}{40}{section.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Podsumowanie}{41}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Wypełnienie brakujących wartości}{40}{subsection.5.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.37}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Lol Stats dla grupy scenariuszy wypełniania brakujących wartości}}{40}{figure.5.37}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.38}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Titanic dla grupy scenariuszy wypełniania brakujących wartości}}{41}{figure.5.38}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.39}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Australian Weather dla grupy scenariuszy wypełniania brakujących wartości}}{41}{figure.5.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Standaryzacja}{42}{subsection.5.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.40}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Lol Stats dla grupy scenariuszy wypełniania brakujących wartości}}{42}{figure.5.40}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.41}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Titanic dla grupy scenariuszy wypełniania brakujących wartości}}{42}{figure.5.41}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.42}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Australian Weather dla grupy scenariuszy wypełniania brakujących wartości}}{43}{figure.5.42}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Kodowanie}{43}{subsection.5.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.43}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Lol Stats dla grupy scenariuszy wypełniania brakujących wartości}}{43}{figure.5.43}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.44}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Titanic dla grupy scenariuszy wypełniania brakujących wartości}}{44}{figure.5.44}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.45}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Australian Weather dla grupy scenariuszy wypełniania brakujących wartości}}{44}{figure.5.45}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Indywidualne podejście}{45}{subsection.5.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.46}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Lol Stats dla grupy scenariuszy wypełniania brakujących wartości}}{45}{figure.5.46}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.47}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Titanic dla grupy scenariuszy wypełniania brakujących wartości}}{45}{figure.5.47}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.48}{\ignorespaces Średnia trafność klasyfikatorów dla zbioru danych Australian Weather dla grupy scenariuszy wypełniania brakujących wartości}}{46}{figure.5.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Podsumowanie}{47}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Wyniki eksperymentów względem hipotezy}{47}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Podejście w przygotowaniu danych dające najlepsze rezultaty}{47}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Konkluzja}{47}{section.6.3}\protected@file@percent }
 \bibcite{titanic_dataset}{1}
 \bibcite{lol_stats_dataset}{2}
 \bibcite{australian_rain_dataset}{3}
@@ -165,4 +191,4 @@
 \bibcite{decisions_healthcare}{18}
 \bibcite{decisions_education}{19}
 \bibcite{decsision_buisness}{20}
-\gdef \@abspage@last{44}
+\gdef \@abspage@last{50}

@@ -197,9 +197,9 @@ zestawy danych:
     \hline
     Nazwa zbioru & Ilość rekordów & Kolumny numeryczne & Kolumny kategoryczne \\
      \hline
-     League of Legends Stats: S13 & 485 & 3 & 7\\ 
-     Rain in Australia & 16443 & 16 & 7\\ 
-     Titanic - Machine Learning from Disaster & 891 & 5 & 5\\ 
+     League of Legends Stats: S13\cite{lol_stats_dataset} & 485 & 3 & 7\\ 
+     Rain in Australia\cite{australian_rain_dataset} & 16443 & 16 & 7\\ 
+     Titanic\cite{titanic_dataset} & 891 & 5 & 5\\ 
      \hline
     \end{tabular}
     \end{center}
@@ -214,6 +214,8 @@ Jest to zestaw informacji na temat pasażerów Titanica oraz tego,
 czy udało im się przeżyć, na podstawie czego budujemy model, 
 który próbuje przewidzieć na podstawie informacji które mu przekażemy, 
 czy dana osoba przeżyła katastrofę
+
+\section{Przygotowanie danych do eksperymentów}
 
 \chapter{Wykonane Eksperymenty}
 Dla każdego z wybranych zbiorów danych przeprowadzono 
@@ -496,9 +498,9 @@ określa sektor
 
 \chapter{Wyniki Eksperymentów}
 
-Poniżej przedstawiono wyniki eksperymentów dla każdego z klasyfikatorów, 
-z podziałem na poszczególne zbiory danych, a następnie zebrano średnie wyniki dla każdego 
-ze zbiorów danych
+W poniższym rozdziale przedstawiono wyniki eksperymentów dla każdego z klasyfikatorów, 
+z podziałem na zbliżone do siebie scenariusze, jak i również średnie wyniki dla każdego 
+ze zbiorów danych.
 
 \section{League of Legends stats}
 
@@ -522,7 +524,7 @@ ze zbiorów danych
 \end{figure}
 
 
-Dla klasyfikatora xgBoost wypełnienie jakąkolwiek wartością daje widoczną poprawę w trafności, 
+Jak widać na wykresach (Rysunek 5.1, Rysunek 5.2, Rysunek 5.3), dla klasyfikatora xgBoost wypełnienie jakąkolwiek wartością daje widoczną poprawę w trafności, 
 jednak najlepsze wyniki uzyskujemy przy wartości średniej. Dla RandomForestClassifier uzyskujemy 
 różne rezultaty w zależności od wygenerowanych dziur w zbiorze danych, w pierwszym przypadku jakiekolwiek 
 wypełnianie pogarsza klasyfikację, w drugim regresja jest najlepszym sposobem, a w trzecim minimum. 
@@ -549,7 +551,7 @@ wypełnienie brakujących wartości.
 \caption{Trafność klasyfikatorów po standaryzacji dla zestawu danych Lol Stats 3}
 \end{figure}
 
-Klasyfikator xgBoost osiąga niemalże perfekcję po 
+Na wykresach (Rysunek Klasyfikator xgBoost osiąga niemalże perfekcję po 
 standaryzacji lub standaryzacji ze skalowaniem do przedziału (0,1). 
 Dla RandomForestClassifier jedynie w trzecim przypadku uzyskujemy poprawę przy 
 standaryzacji oraz skalowaniu do przedziału (0,1) 
@@ -803,8 +805,107 @@ według danego scenariusza}
 
 \section{Średnie wyniki}
 
+\subsection{Wypełnienie brakujących wartości}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_Stats_Avg_Wypełnienie_brakujących}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Lol Stats 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Titanic_Avg_Wypełnienie_brakujących}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Titanic 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_Avg_Wypełnienie_brakujących}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Australian Weather 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
+\subsection{Standaryzacja}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_Stats_Avg_Standaryzacja}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Lol Stats 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Titanic_Avg_Standaryzacja}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Titanic 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_Avg_Standaryzacja}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Australian Weather 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
+\subsection{Kodowanie}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_Stats_Avg_Kodowanie}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Lol Stats 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Titanic_Avg_Kodowanie}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Titanic 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_Avg_Kodowanie}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Australian Weather 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
+\subsection{Indywidualne podejście}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_Stats_Avg_Custom}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Lol Stats 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Titanic_Avg_Custom}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Titanic 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_Avg_Custom}}
+    \centering
+    \caption{Średnia trafność klasyfikatorów dla zbioru danych Australian Weather 
+    dla grupy scenariuszy wypełniania brakujących wartości}
+    \end{figure}
+
 
 \chapter{Podsumowanie}
+
+\section{Wyniki eksperymentów względem hipotezy}
+
+\section{Podejście w przygotowaniu danych dające najlepsze rezultaty}
+
+\section{Konkluzja}
+
 Z przeprowadzonych eksperymentów wynika, 
 że odpowiednie przygotowanie danych zwiększa trafność 
 klasyfikatorów. Należy jednak zwrócić uwagę, że nie wszystkie 
