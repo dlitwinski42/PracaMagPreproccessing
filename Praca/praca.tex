@@ -88,6 +88,29 @@ Każdy z przedstawionych problemów wymaga eksperckiej wiedzy oraz ogromnego do�
 a dzięki analizie danych możemy znacznie usprawnić ich rozwiązywanie.
 
 \section{Jakość Danych}
+Jakość danych jest oceniana na podstawie wielu kryteriów, zależnych od źródła informacji\cite{data_quality}:
+\begin{itemize}
+    \item Kompletność - ilość danych która jest kompletna bądź zdatna do użycia. Jeśli duża 
+    część danych jest niekompletna, może to prowadzić do stronniczej bądź nawet omylnej analizy. 
+    \item Unikalność - jaka część z zestawu danych się powtarza, 
+    dla przykładu zestaw danych zawierających dane o klientach 
+    powinien każdemu z nich przypisać unikalny numer identyfikacyjny
+    \item Ważność - To kryterium mówi o tym czy zebrane dane są w odpowiednim formacie
+    \item Aktualność - W zależności od dziedziny którą się zajmujemy, dane mogą tracić na aktualności wraz 
+    z upływem czasu, przez na przykład postęp w danej 
+    dziedzinie bądź zmieniające się warunki
+    \item Dokładność - poprawność danych w oparciu o ustalone "źródło prawdy". 
+    Jako, że może istnieć wiele źródeł tych samych danych, 
+    należy ustalić nadrzędne źródło danych, pozostałe 
+    zaś mogą potwierdzać dokładność tego pierwszego.
+    \item Stałość - kryterium służące do porównywania danych z dwóch zestawów danych. 
+    Używanie różnych źródeł do szukania stałych trendów w danych. 
+    Dzięki temu wnioski pojawiające się w trakcie analizy mogą być 
+    traktowane z większym zaufaniem, jako że tworzone są na podstawie wielu niezależnych zestawów danych.
+    \item Dopasowanie do celu - to kryterium pozwala nam zapewnić fakt, 
+    że dane które są zbierane posłużą nam do rozwiązania problemu, jaki przed nami stoi
+  \end{itemize}
+
 \section{Problemy z Danymi}
 
 Bardzo często zebrane dane nie nadają się bezpośrednio do pracy z nimi. 
@@ -300,10 +323,25 @@ jak najwięcej informacji z dostępnych danych
 xgBoost to zoptymalizowana, zbiorowa biblioteka wzmacniająca gradient, zaprojektowana aby być wysoce
 efektywną, elastyczną oraz współpracującą z wieloma rodzajami sprzętu. XGBoost korzysta z równoległego wzmacniania drzew, 
 dzięki którym rozwiązuje wiele problemów z dziedziny data science w szybki i dokładny sposób. \cite{xgBoost}
-\subsection{RandomForestClassifier}
 
-\subsection{knn}
-Wykorzystano knnClassifier z biblioteki scikit\-learn. 
+\subsection{Las Losowy}
+Wykorzystano RandomForestClassifier z biblioteki scikit\-learn. 
+Jest to algorytm uczenia maszynowego metodą zespołową, 
+która polega na tworzeniu wielu drzew decyzyjnych podczas 
+uczenia modelu. Przy przypisywaniu obiektu do danej klasy wybierana
+jest ta, którą wybrała największa ilość drzew. Las losowy eliminuje 
+tendencje drzew decyzyjnych do nadmiernego dopasowywania się do zbioru
+uczącego.
+
+\subsection{k-Najbliższych Sąsiadów}
+Wykorzystano KNeighborsClassifier z biblioteki 
+scikit\-learn. Danymi wejściowymi jest k 
+najbliższych sąsiadów w zbiorze danych. Wyjściem 
+jest przynależność do klasy danego obiektu. Obiekt 
+jest klasyfikowany przez głosowanie większościowe 
+spośród k-najbliższych ze zbioru uczącego. Zazwyczaj 
+metryką używaną do głosowania jest odległość euklidesowa, 
+jednak nie jest to jedyna możliwość.
 
 \section{Brak Preprocessingu}
 Pierwszy scenariusz, który w przyszłości 
@@ -473,8 +511,7 @@ Po wykonaniu kodowania z poprzedniego scenariusza,
 wypełniono brakujące wartości wartością średnią
 \section{Scenariusz indywidualnego podejścia do zbioru danych}
 \subsection{League of Legends stats}
-Dla statystyk z gry League of Legends jedyne co mogło być zrobione 
-poza operacjami z poprzednich scenariuszy było usunięcie kolumny z 
+Dla statystyk z gry League of Legends jedyną dodatkową operacją względem poprzednich scenariuszy było usunięcie kolumny z 
 imieniem postaci, jako że nie wnosiła ona konkretnych informacji, 
 a głównie identyfikowała dany rekord
 
@@ -982,9 +1019,12 @@ według danego scenariusza}
 
 \chapter{Podsumowanie}
 
+W poniższym rozdziale przedstawiono, jak wyniki eksperymentów mają się do założeń postawionych 
+przed ich przeprowadzeniem, oraz wypisano wnioski powstałe na podstawie wyników eksperymentów.
+
 \section{Wyniki eksperymentów względem hipotezy}
 
-\section{Podejście w przygotowaniu danych dające najlepsze rezultaty}
+\section{Podejście dające najlepsze rezultaty}
 
 \section{Konkluzja}
 
@@ -1063,6 +1103,13 @@ tej metody znacznie zwiększyło trafność klasyfikacji
 
     \bibitem{k-nearest neighbors}
     Cover, Thomas M.; Hart, Peter E. (1967). "Nearest neighbor pattern classification" (PDF). IEEE Transactions on Information Theory. 13 (1): 21–27. CiteSeerX 10.1.1.68.2616. doi:10.1109/TIT.1967.1053964.
+
+    \bibitem{random forest}
+    Ho, Tin Kam (1995). Random Decision Forests (PDF). Proceedings of the 3rd International Conference on Document Analysis and Recognition, Montreal, QC, 14–16 August 1995. pp. 278–282.
+
+    \bibitem{data_quality}
+    \href{https://www.ibm.com/topics/data-quality}{Artykuł na temat jakości danych na stronie firmy IBM}
+    
 
 \end{thebibliography}
 
