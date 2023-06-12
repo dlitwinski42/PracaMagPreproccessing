@@ -216,6 +216,78 @@ który próbuje przewidzieć na podstawie informacji które mu przekażemy,
 czy dana osoba przeżyła katastrofę
 
 \section{Przygotowanie danych do eksperymentów}
+\subsection{Część wspólna dla wszystkich zbiorów danych}
+Do przygotowania danych do eksperymentów służyła 
+funkcja prepare\_to\_file (Przykład 3.1), która losowo generowała braki w danych, a następnie 
+zapisywała nowopowstały niepełny zbiór danych do pliku.
+
+\begin{lstlisting}[language=Python, caption={Funkcja generująca braki w podanym zbiorze danych}, captionpos=b]
+    def prepare_to_file(df,work_columns,filename,count):
+    path=r'C:\Users\Darek\Documents\Magisterka
+    \PracaMagPreproccessing\Datasets\Prepared'
+    for i in range(count):
+        df_copy = df.copy()
+        df_random_rows = df.sample(frac=0.1)
+        random_indexes = df_random_rows.index.tolist()
+        for j in random_indexes:
+            chosen_column = random.choice(work_columns)
+            df_copy.at[j, chosen_column] = pd.NA
+        df_copy.to_csv(path + '\\' + filename +
+        '_'+str(i+1)+'.csv', index=False)
+\end{lstlisting}
+
+\subsection{Zbiór danych Titanic}
+Dla zestawu danych Titanic wypełniono 
+brakujące wartości dla wieku oraz portu, w którym pasażer
+wsiadł na statek (Przykład 3.2)
+ \begin{lstlisting}[language=Python, caption={Przygotowanie zbioru danych Titanic do eksperymentów}, captionpos=b]
+    titanic['Age'] = titanic['Age']
+    .fillna(titanic['Age'].mean())
+    titanic['Embarked'] = titanic['Embarked']
+    .fillna('S')
+\end{lstlisting}
+
+\subsection{Zbiór danych Lol Stats}
+Połączono dostępne zbiory danych dla wersji 13.1 oraz 13.3, 
+dodano odpowiednią klasę dla bohatera K'Sante, dokonano 
+odpowiedniego kodowania atrybutu klasyfikującego 
+,a także sformatowano kolumny zawierające wartości procentowe
+\begin{lstlisting}[language=Python, caption={Przygotowanie zbioru danych Lol Stats do eksperymentów}, captionpos=b]
+    lol_stats = pd.concat([lol_13_1,lol_13_3])
+    for i in lol_stats.loc[lol_stats['Name'] == "K'Sante"].index.values:
+        lol_stats.at[i,"Class"] = "Tank"
+    dict = {"God" : '0',
+             "S" : '1',
+             "A": '2',
+             "B" : '3',
+             "C": '4',
+             "D": '5'}
+    lol_stats=lol_stats.replace({"Tier": dict})
+    percent_columns = ['Win %', 'Role %',
+       'Pick %', 'Ban %']
+    for col in percent_columns:
+        lol_stats[col] = lol_stats[col].str.rstrip('%')
+\end{lstlisting}
+
+\subsection{Zbiór danych Australian Rain Forecast}
+Z całego dostępnego zbioru danych wybrano jedynie dane dotyczące stacji pogodowych z Sydney, Lotniska Sydney, Melbourne, 
+Lotniska Melbourne, Canberry, Newcastle oraz Perth, a także zakodowano odpowiednio wartości binarne
+
+\begin{lstlisting}[language=Python, caption={Przygotowanie zbioru danych Australian Rain Forecast do eksperymentów}, captionpos=b]
+    aus_weather = aus_weather.dropna()
+    aus_weather = aus_weather[aus_weather['Location'].isin(
+        ['Sydney','SydneyAirport',
+        'Canberra','MelbourneAirport',
+        'Melbourne','Brisbane','Perth'])]
+    aus_weather['RainToday'] = aus_weather['RainToday']
+    .replace('Yes', '1')
+    aus_weather['RainToday'] = aus_weather['RainToday']
+    .replace('No', '0')
+    aus_weather['RainTomorrow'] = aus_weather['RainTomorrow']
+    .replace('Yes', '1')
+    aus_weather['RainTomorrow'] = aus_weather['RainTomorrow']
+    .replace('No', '0')
+\end{lstlisting}
 
 \chapter{Wykonane Eksperymenty}
 Dla każdego z wybranych zbiorów danych przeprowadzono 
@@ -225,8 +297,14 @@ indywidualne podejście do zbioru oraz wyciągnięcie możliwie
 jak najwięcej informacji z dostępnych danych
 \section{Użyte klasyfikatory}
 \subsection{xgBoost}
+xgBoost to zoptymalizowana, zbiorowa biblioteka wzmacniająca gradient, zaprojektowana aby być wysoce
+efektywną, elastyczną oraz współpracującą z wieloma rodzajami sprzętu. XGBoost korzysta z równoległego wzmacniania drzew, 
+dzięki którym rozwiązuje wiele problemów z dziedziny data science w szybki i dokładny sposób. \cite{xgBoost}
 \subsection{RandomForestClassifier}
+
 \subsection{knn}
+Wykorzystano knnClassifier z biblioteki scikit\-learn. 
+
 \section{Brak Preprocessingu}
 Pierwszy scenariusz, który w przyszłości 
 będzie punktem odniesienia polegał na usunięciu rekordów, 
@@ -979,6 +1057,12 @@ tej metody znacznie zwiększyło trafność klasyfikacji
 
     \bibitem{decsision_buisness}
     Fávero, L. P., \& Belfiore, P. (2019). Data science for business and decision making. Academic Press.
+
+    \bibitem{xgBoost}
+    \href{https://xgboost.readthedocs.io/en/stable/}{Definicja dostępna w dokumentacji biblioteki XGBoost}
+
+    \bibitem{k-nearest neighbors}
+    Cover, Thomas M.; Hart, Peter E. (1967). "Nearest neighbor pattern classification" (PDF). IEEE Transactions on Information Theory. 13 (1): 21–27. CiteSeerX 10.1.1.68.2616. doi:10.1109/TIT.1967.1053964.
 
 \end{thebibliography}
 
