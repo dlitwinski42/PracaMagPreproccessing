@@ -49,25 +49,61 @@
 \contentsline {chapter}{\numberline {5}Wyniki Eksperymentów}{23}{chapter.5}%
 \contentsline {section}{\numberline {5.1}League of Legends stats}{23}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Wypełnienie brakujących wartości}{23}{subsection.5.1.1}%
+\contentsline {subsubsection}{xgBoost}{23}{section*.2}%
+\contentsline {subsubsection}{Las Losowy}{24}{section*.3}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{24}{section*.4}%
 \contentsline {subsection}{\numberline {5.1.2}Standaryzacja}{25}{subsection.5.1.2}%
+\contentsline {subsubsection}{xgBoost}{25}{section*.5}%
+\contentsline {subsubsection}{Las Losowy}{26}{section*.6}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{26}{section*.7}%
 \contentsline {subsection}{\numberline {5.1.3}Kodowanie}{27}{subsection.5.1.3}%
+\contentsline {subsubsection}{xgBoost}{27}{section*.8}%
+\contentsline {subsubsection}{Las Losowy}{28}{section*.9}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{28}{section*.10}%
 \contentsline {subsection}{\numberline {5.1.4}Indywidualne podejście}{29}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Australian Rain Forecast}{30}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Wypełnienie brakujących wartości}{30}{subsection.5.2.1}%
+\contentsline {subsubsection}{xgBoost}{29}{section*.11}%
+\contentsline {subsubsection}{Las Losowy}{30}{section*.12}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{30}{section*.13}%
+\contentsline {section}{\numberline {5.2}Australian Rain Forecast}{31}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Wypełnienie brakujących wartości}{31}{subsection.5.2.1}%
+\contentsline {subsubsection}{xgBoost}{31}{section*.14}%
+\contentsline {subsubsection}{Las Losowy}{31}{section*.15}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{32}{section*.16}%
 \contentsline {subsection}{\numberline {5.2.2}Standaryzacja}{32}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Kodowanie}{33}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Indywidualne podejście}{35}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Titanic Survival}{36}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Wypełnienie brakujących wartości}{36}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Standaryzacja}{38}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Kodowanie}{39}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Indywidualne podejście}{41}{subsection.5.3.4}%
-\contentsline {section}{\numberline {5.4}Średnie wyniki}{42}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Wypełnienie brakujących wartości}{42}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Standaryzacja}{44}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Kodowanie}{45}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}Indywidualne podejście}{47}{subsection.5.4.4}%
-\contentsline {chapter}{\numberline {6}Podsumowanie}{49}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Wyniki eksperymentów względem hipotezy}{49}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Podejście dające najlepsze rezultaty}{49}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Konkluzja}{49}{section.6.3}%
+\contentsline {subsubsection}{xgBoost}{32}{section*.17}%
+\contentsline {subsubsection}{Las Losowy}{33}{section*.18}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{33}{section*.19}%
+\contentsline {subsection}{\numberline {5.2.3}Kodowanie}{34}{subsection.5.2.3}%
+\contentsline {subsubsection}{xgBoost}{34}{section*.20}%
+\contentsline {subsubsection}{Las Losowy}{35}{section*.21}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{35}{section*.22}%
+\contentsline {subsection}{\numberline {5.2.4}Indywidualne podejście}{36}{subsection.5.2.4}%
+\contentsline {subsubsection}{xgBoost}{36}{section*.23}%
+\contentsline {subsubsection}{Las Losowy}{36}{section*.24}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{37}{section*.25}%
+\contentsline {section}{\numberline {5.3}Titanic Survival}{37}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Wypełnienie brakujących wartości}{37}{subsection.5.3.1}%
+\contentsline {subsubsection}{xgBoost}{37}{section*.26}%
+\contentsline {subsubsection}{Las Losowy}{38}{section*.27}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{38}{section*.28}%
+\contentsline {subsection}{\numberline {5.3.2}Standaryzacja}{39}{subsection.5.3.2}%
+\contentsline {subsubsection}{xgBoost}{39}{section*.29}%
+\contentsline {subsubsection}{Las Losowy}{39}{section*.30}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{40}{section*.31}%
+\contentsline {subsection}{\numberline {5.3.3}Kodowanie}{40}{subsection.5.3.3}%
+\contentsline {subsubsection}{xgBoost}{40}{section*.32}%
+\contentsline {subsubsection}{Las Losowy}{41}{section*.33}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{41}{section*.34}%
+\contentsline {subsection}{\numberline {5.3.4}Indywidualne podejście}{42}{subsection.5.3.4}%
+\contentsline {subsubsection}{xgBoost}{42}{section*.35}%
+\contentsline {subsubsection}{Las Losowy}{42}{section*.36}%
+\contentsline {subsubsection}{K-Najbliższych Sąsiadów}{43}{section*.37}%
+\contentsline {section}{\numberline {5.4}Średnie wyniki}{43}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Wypełnienie brakujących wartości}{43}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Standaryzacja}{45}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Kodowanie}{46}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Indywidualne podejście}{48}{subsection.5.4.4}%
+\contentsline {chapter}{\numberline {6}Podsumowanie}{51}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Wyniki eksperymentów względem hipotezy}{51}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Podejście dające najlepsze rezultaty}{51}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Konkluzja}{51}{section.6.3}%

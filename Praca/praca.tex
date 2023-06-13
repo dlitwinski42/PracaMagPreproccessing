@@ -624,23 +624,26 @@ ze zbiorów danych.
 \section{League of Legends stats}
 
 \subsection{Wypełnienie brakujących wartości}
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_1_Wypełnienie_brakujących}}
-\centering
-\caption{Trafność klasyfikatorów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats 1}
-\end{figure}
+\subsubsection{xgBoost}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_xgb_Wypełnienie_brakujących}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
 
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_2_Wypełnienie_brakujących}}
-\centering
-\caption{Trafność klasyfikatorów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats 2}
-\end{figure}
+\subsubsection{Las Losowy}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Wypełnienie_brakujących}}
+    \centering
+    \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
+\subsubsection{K-Najbliższych Sąsiadów}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Wypełnienie_brakujących}}
+    \centering
+    \caption{Trafność klasyfikatora K-Najbliższych Sąsiadów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
 
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_3_Wypełnienie_brakujących}}
-\centering
-\caption{Trafność klasyfikatorów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats 3}
-\end{figure}
 
 
 Jak widać na wykresach (Rysunek 5.1, Rysunek 5.2, Rysunek 5.3), dla klasyfikatora xgBoost wypełnienie jakąkolwiek wartością daje widoczną poprawę w trafności, 
@@ -652,23 +655,25 @@ wypełnienie brakujących wartości.
 
 \subsection{Standaryzacja}
 
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_1_Standaryzacja}}
-\centering
-\caption{Trafność klasyfikatorów po standaryzacji dla zestawu danych Lol Stats 1}
-\end{figure}
+\subsubsection{xgBoost}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_xgb_Standaryzacja}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
 
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_2_Standaryzacja}}
-\centering
-\caption{Trafność klasyfikatorów po standaryzacji dla zestawu danych Lol Stats 2}
-\end{figure}
-
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_3_Standaryzacja}}
-\centering
-\caption{Trafność klasyfikatorów po standaryzacji dla zestawu danych Lol Stats 3}
-\end{figure}
+\subsubsection{Las Losowy}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Standaryzacja}}
+    \centering
+    \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
+\subsubsection{K-Najbliższych Sąsiadów}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Standaryzacja}}
+    \centering
+    \caption{Trafność klasyfikatora K-Najbliższych Sąsiadów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
 
 Na wykresach (Rysunek Klasyfikator xgBoost osiąga niemalże perfekcję po 
 standaryzacji lub standaryzacji ze skalowaniem do przedziału (0,1). 
@@ -682,24 +687,26 @@ nawet względem braku przygotowania danych
 
 \subsection{Kodowanie}
 
+\subsubsection{xgBoost}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_xgb_Kodowanie}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
 
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_1_Kodowanie}}
-\centering
-\caption{Trafność klasyfikatorów po kodowaniu dla zestawu danych Lol Stats 1}
-\end{figure}
+\subsubsection{Las Losowy}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Kodowanie}}
+    \centering
+    \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
+\subsubsection{K-Najbliższych Sąsiadów}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Kodowanie}}
+    \centering
+    \caption{Trafność klasyfikatora K-Najbliższych Sąsiadów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
 
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_2_Kodowanie}}
-\centering
-\caption{Trafność klasyfikatorów po kodowaniu dla zestawu danych Lol Stats 2}
-\end{figure}
-
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_3_Kodowanie}}
-\centering
-\caption{Trafność klasyfikatorów po kodowaniu dla zestawu danych Lol Stats 3}
-\end{figure}
 
 XgBoost po kodowaniu wartości kategorycznych osiąga perfekcję i utrzymuje się na tym poziomie, 
 RandomForestClassifier dla samego kodowania wykazuje poprawę we wszystkich przypadkach, 
@@ -710,23 +717,25 @@ dzięki kodowaniu jest nieznaczna, jednak bardzo często w połączeniu z wypeł
 
 \subsection{Indywidualne podejście}
 
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_1_Custom}}
-\centering
-\caption{Trafność klasyfikatorów po indywidualnym podejśćiu dla zestawu danych Lol Stats 1}
-\end{figure}
+\subsubsection{xgBoost}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_xgb_Custom}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
 
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_2_Custom}}
-\centering
-\caption{Trafność klasyfikatorów po indywidualnym podejśćiu dla zestawu danych Lol Stats 2}
-\end{figure}
-
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Lol_Stats_3_Custom}}
-\centering
-\caption{Trafność klasyfikatorów po indywidualnym podejśćiu dla zestawu danych Lol Stats 3}
-\end{figure}
+\subsubsection{Las Losowy}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Custom}}
+    \centering
+    \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
+\subsubsection{K-Najbliższych Sąsiadów}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Custom}}
+    \centering
+    \caption{Trafność klasyfikatora K-Najbliższych Sąsiadów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+    \end{figure}
 
 
 
@@ -734,192 +743,194 @@ dzięki kodowaniu jest nieznaczna, jednak bardzo często w połączeniu z wypeł
 
 
 \subsection{Wypełnienie brakujących wartości}
+\subsubsection{xgBoost} 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_1_Wypełnienie_brakujących}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_xgb_Wypełnienie_brakujących}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Australian Weather}
+    \end{figure}
+
+\subsubsection{Las Losowy}
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_2_Wypełnienie_brakujących}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_rfc_Wypełnienie_brakujących}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Australian Weather}
+    \end{figure}
 
+\subsubsection{K-Najbliższych Sąsiadów}
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_3_Wypełnienie_brakujących}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_knn_Wypełnienie_brakujących}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Australian Weather}
+    \end{figure}
 
 \subsection{Standaryzacja}
+\subsubsection{xgBoost} 
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_xgb_Standaryzacja}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Australian Weather}
+    \end{figure}
+
+\subsubsection{Las Losowy}
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_1_Standaryzacja}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_rfc_Standaryzacja}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Australian Weather}
+    \end{figure}
+    
+\subsubsection{K-Najbliższych Sąsiadów}
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_2_Standaryzacja}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_3_Standaryzacja}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_knn_Standaryzacja}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Australian Weather}
+    \end{figure}
 
 \subsection{Kodowanie}
+\subsubsection{xgBoost} 
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_xgb_Kodowanie}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Australian Weather}
+    \end{figure}
 
+\subsubsection{Las Losowy}
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_1_Kodowanie}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_rfc_Kodowanie}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Australian Weather}
+    \end{figure}
+    
+\subsubsection{K-Najbliższych Sąsiadów}
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_2_Kodowanie}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_3_Kodowanie}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_knn_Kodowanie}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Australian Weather}
+    \end{figure}
 
 \subsection{Indywidualne podejście}
+\subsubsection{xgBoost} 
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_xgb_Custom}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po  dla zestawu danych Australian Weather}
+    \end{figure}
+
+\subsubsection{Las Losowy}
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_1_Custom}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_rfc_Custom}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po indywidualnym podejściu dla zestawu danych Australian Weather}
+    \end{figure}
+    
+\subsubsection{K-Najbliższych Sąsiadów}
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_2_Custom}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Aus_Weather_3_Custom}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Aus_Weather_knn_Custom}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po indywidualnym podejściu dla zestawu danych Australian Weather}
+    \end{figure}
 
 
 \section{Titanic Survival}
 
 
 \subsection{Wypełnienie brakujących wartości}
+\subsubsection{xgBoost} 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_1_Wypełnienie_brakujących}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Titanic_xgb_Wypełnienie_brakujących}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Titanic}
+    \end{figure}
+
+\subsubsection{Las Losowy}
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_2_Wypełnienie_brakujących}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
+    \centerline{\includegraphics[scale=0.5]{Titanic_rfc_Wypełnienie_brakujących}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Titanic}
+    \end{figure}
+    
+\subsubsection{K-Najbliższych Sąsiadów}
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_3_Wypełnienie_brakujących}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
+    \centerline{\includegraphics[scale=0.5]{Titanic_knn_Wypełnienie_brakujących}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Titanic}
+    \end{figure}
 \subsection{Standaryzacja}
 
+\subsubsection{xgBoost} 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_1_Standaryzacja}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Titanic_xgb_Standaryzacja}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Titanic}
+    \end{figure}
+
+\subsubsection{Las Losowy}
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_2_Standaryzacja}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
+    \centerline{\includegraphics[scale=0.5]{Titanic_rfc_Standaryzacja}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Titanic}
+    \end{figure}
+    
+\subsubsection{K-Najbliższych Sąsiadów}
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_3_Standaryzacja}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Titanic_knn_Standaryzacja}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Titanic}
+    \end{figure}
 
 \subsection{Kodowanie}
 
+\subsubsection{xgBoost} 
+\begin{figure}[H]
+    \centerline{\includegraphics[scale=0.5]{Titanic_xgb_Kodowanie}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Titanic}
+    \end{figure}
+
+\subsubsection{Las Losowy}
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_1_Kodowanie}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
+    \centerline{\includegraphics[scale=0.5]{Titanic_rfc_Kodowanie}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Titanic}
+    \end{figure}
+    
+\subsubsection{K-Najbliższych Sąsiadów}
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_2_Kodowanie}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_3_Kodowanie}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Titanic_knn_Kodowanie}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Titanic}
+    \end{figure}
 
 \subsection{Indywidualne podejście}
 
+\subsubsection{xgBoost} 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_1_Custom}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Titanic_xgb_Custom}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po indywidualnym podejściu dla zestawu danych Titanic}
+    \end{figure}
+
+\subsubsection{Las Losowy}
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_2_Custom}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
-
+    \centerline{\includegraphics[scale=0.5]{Titanic_rfc_Custom}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po indywidualnym podejściu dla zestawu danych Titanic}
+    \end{figure}
+    
+\subsubsection{K-Najbliższych Sąsiadów}
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{Titanic_3_Custom}}
-\centering
-\caption{Trafność klasyfikatorów po przygotowaniu danych 
-według danego scenariusza}
-\end{figure}
+    \centerline{\includegraphics[scale=0.5]{Titanic_knn_Custom}}
+    \centering
+    \caption{Trafność klasyfikatora xgBoost po indywidualnym podejściu dla zestawu danych Titanic}
+    \end{figure}
 
 
 \section{Średnie wyniki}
