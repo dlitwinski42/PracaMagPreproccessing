@@ -631,12 +631,23 @@ ze zbiorów danych.
     \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
     \end{figure}
 
+    Jak widać na wykresie (Rysunek 5.1), dla każdego scenariusza wypełniania brakujących wartości 
+    uzyskano poprawę w trafności klasyfikatora. Najlepszym scenariuszem wydaje się być wypełnianie 
+    średnią, dla dwóch przypadków brakujących wartości uzyskujemy niemal idealną trafność, a dla trzeciego 
+    przypadku uzyskujemy trafność na podobnym poziomie co dla wypełnienia innymi wartościami.
+
 \subsubsection{Las Losowy}
     \begin{figure}[H]
     \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Wypełnienie_brakujących}}
     \centering
     \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
     \end{figure}
+
+    Dla klasyfikatora wykorzystującego Las Losowy wyniki różnią się znacznie od tego, jakie braki w danych zostały wygenerowane (Rysunek 5.2). W pierwszym 
+    przypadku najlepszy wynik uzyskujemy przy braku wypełnienia brakujących wartości, dla drugiego dla wypełnienia przy pomocy regresji, jednak należy zauważyć, 
+    że różnice w poszczególnych wynikach są dość niewielkie. Dla trzeciego przypadku uzyskano znaczną poprawę wypełniając brakujące wartości, przy czym najlepszy 
+    wynik uzyskano przy wypełnieniu minimum.
+
 \subsubsection{K-Najbliższych Sąsiadów}
     \begin{figure}[H]
     \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Wypełnienie_brakujących}}
@@ -644,14 +655,9 @@ ze zbiorów danych.
     \caption{Trafność klasyfikatora K-Najbliższych Sąsiadów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
     \end{figure}
 
-
-
-Jak widać na wykresach (Rysunek 5.1, Rysunek 5.2, Rysunek 5.3), dla klasyfikatora xgBoost wypełnienie jakąkolwiek wartością daje widoczną poprawę w trafności, 
-jednak najlepsze wyniki uzyskujemy przy wartości średniej. Dla RandomForestClassifier uzyskujemy 
-różne rezultaty w zależności od wygenerowanych dziur w zbiorze danych, w pierwszym przypadku jakiekolwiek 
-wypełnianie pogarsza klasyfikację, w drugim regresja jest najlepszym sposobem, a w trzecim minimum. 
-Dla algorytmu k-nearest neighbors w każdym z przypadków nie uzyskujemy poprawy albo wręcz pogarszamy wyniki przez 
-wypełnienie brakujących wartości.
+    Używając algorytmu k-Najbliższych Sąsiadów w dwóch z trzech przypadków wygenerowanych 
+    braków najlepszy wynik dało usunięcie rekordów zawierające braki (Rysunek 5.3). Natomiast 
+    w trzecim przypadku zauważono niewielką poprawę dla wypełnienia minimum.
 
 \subsection{Standaryzacja}
 
@@ -662,12 +668,22 @@ wypełnienie brakujących wartości.
     \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
     \end{figure}
 
+    W przypadku klasyfikatora xgBoost w kontekście Standaryzacji zauważono poprawę wyników 
+    dla wszystkich przypadków generowania braków (Rysunek 5.4), 
+    jednak po Standaryzacji oraz usunęciu wartości odstających 
+    zauważono znaczne pogorszenie wyników, nawet względem braku przygotowania danych.
+
 \subsubsection{Las Losowy}
     \begin{figure}[H]
     \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Standaryzacja}}
     \centering
     \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
     \end{figure}
+
+    Na wykresie (Rysunek 5.5) widać, jak Standaryzacja ma znaczenie dla trafności klasyfikacji jedynie dla 
+    trzeciego przypadku generowania braków. W pozostałych przypadkach wyniki są zbliżone do braku przygotowania. 
+    Podobnie jak dla xgBoost, usunięcie wartości odstających powoduje zmniejszenie trafności wyników. 
+
 \subsubsection{K-Najbliższych Sąsiadów}
     \begin{figure}[H]
     \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Standaryzacja}}
@@ -675,15 +691,12 @@ wypełnienie brakujących wartości.
     \caption{Trafność klasyfikatora K-Najbliższych Sąsiadów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
     \end{figure}
 
-Na wykresach (Rysunek Klasyfikator xgBoost osiąga niemalże perfekcję po 
-standaryzacji lub standaryzacji ze skalowaniem do przedziału (0,1). 
-Dla RandomForestClassifier jedynie w trzecim przypadku uzyskujemy poprawę przy 
-standaryzacji oraz skalowaniu do przedziału (0,1) 
-Dla algorytmu k-nearest neighbors podobnie jak dla RandomForestClassifier jedynie 
-trzeci przypadek wykazuje poprawę trafności.
-Należy zwrócić uwagę na fakt, że dla każdego z przypadków usunięcie wartości 
-odstających znacznie pogarsza trafność klasyfikacji, 
-nawet względem braku przygotowania danych
+    Klasyfikator korzystający z algorytmu k-najbliższych sąsiadów najgorzej reagował na standaryzację (Rysunek 5.6), 
+    jedynie w jednym przypadku wpłynęła ona pozytywnie na trafność klasyfikacji, 
+    w pozostałych wpłyneła ona znacznie negatywnie. Należy zwrócić uwagę na fakt, że dla jednego przypadku 
+    dla którego Standaryzacja wpływała pozytywnie, usunięcie wartości odstających pogorszyło trafność klasyfikacji, natomiast dla tych, 
+    które reagowały negatywnie na Standaryzacje, usunięcie wartości odstających spowodowało nieznaczną poprawę trafności klasyfikacji.
+
 
 \subsection{Kodowanie}
 
@@ -694,12 +707,21 @@ nawet względem braku przygotowania danych
     \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
     \end{figure}
 
+    Na powyższym wykresie (Rysunek 5.7) wyraźnie widać, że kodowanie wartości kategorycznych dla xgBoost przyniosło wymierne 
+    korzyści w postaci zwiększenia trafności klasyfikowania.
+
 \subsubsection{Las Losowy}
     \begin{figure}[H]
     \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Kodowanie}}
     \centering
     \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
     \end{figure}
+
+    Podobnie jak dla xgBoost, Las Losowy wykazuje znaczną poprawę wraz 
+    z kodowaniem wartości kategoryczynch (Rysunek 5.8). 
+    Należy zauwazyć natomiast, że najlepsze wyniki wszystkie 
+    przypadki osiągają dopiero po kodowaniu jak i wypełnieniu brakujących wartości
+
 \subsubsection{K-Najbliższych Sąsiadów}
     \begin{figure}[H]
     \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Kodowanie}}
@@ -708,12 +730,11 @@ nawet względem braku przygotowania danych
     \end{figure}
 
 
-XgBoost po kodowaniu wartości kategorycznych osiąga perfekcję i utrzymuje się na tym poziomie, 
-RandomForestClassifier dla samego kodowania wykazuje poprawę we wszystkich przypadkach, 
-natomiast dla pierwszego przypadku wypełnienie brakujacych wartości średnią powoduje 
-pogorszenie wyników względem samego kodowania. Dla algorytmu k-nearest neighbors poprawa uzyskana 
-dzięki kodowaniu jest nieznaczna, jednak bardzo często w połączeniu z wypełenieniem wartości brakujących 
-średnią uzyskujemy wynik gorszy od braku przygotowania.
+    Dla k-Najbliższych Sąsiadów kodowanie w dwóch przypadkach poprawia 
+    trafność klasyfikacji, w pozostałym natomiast nie wpływa na nią w 
+    znacznym stopniu (Rysunek 5.9). Natomiast w przypadku kodowania oraz 
+    wypełnienia brakujących wartości można zauwazyć znaczne pogorszenie 
+    trafności, w dwóch przypadkach nawet względem braku przygotowania.
 
 \subsection{Indywidualne podejście}
 
@@ -724,12 +745,21 @@ dzięki kodowaniu jest nieznaczna, jednak bardzo często w połączeniu z wypeł
     \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
     \end{figure}
 
+    Dla każdego z przypadków xgBoost po przygotowaniu wg indywidualnego 
+    scenariusza dla danego zbioru danych osiąga perfekcyjne wyniki (Rysunek 5.10). 
+
 \subsubsection{Las Losowy}
     \begin{figure}[H]
     \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Custom}}
     \centering
     \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
     \end{figure}
+
+    Podobnie jak xgBoost, Las Losowy dobrze reaguje na operacje 
+    wykonane w ramach scenariusza przygotowanego dla danego zbioru danych. 
+    (Rysunek 5.11) Nalezy jednak zauważyć, że nie osiąga perfekcji, a jedynie 
+    lepsze wyniki od braku przygotowania.
+
 \subsubsection{K-Najbliższych Sąsiadów}
     \begin{figure}[H]
     \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Custom}}
@@ -737,6 +767,7 @@ dzięki kodowaniu jest nieznaczna, jednak bardzo często w połączeniu z wypeł
     \caption{Trafność klasyfikatora K-Najbliższych Sąsiadów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
     \end{figure}
 
+    Dla k-najbliższych sąsiadów również indywidualne podejście przynosi wymierne korzyści w kwestii trafności klasyfikacji (Rysunek 5.12).
 
 
 \section{Australian Rain Forecast}
