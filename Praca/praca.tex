@@ -8,6 +8,8 @@
 \usepackage{float}
 \usepackage{multirow}
 \usepackage{hyperref}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{textcomp}
 \graphicspath{ {./Wykresy/} }
 
 
@@ -331,7 +333,7 @@ która polega na tworzeniu wielu drzew decyzyjnych podczas
 uczenia modelu. Przy przypisywaniu obiektu do danej klasy wybierana
 jest ta, którą wybrała największa ilość drzew. Las losowy eliminuje 
 tendencje drzew decyzyjnych do nadmiernego dopasowywania się do zbioru
-uczącego.
+uczącego. \cite{random forest}
 
 \subsection{k-Najbliższych Sąsiadów}
 Wykorzystano KNeighborsClassifier z biblioteki 
@@ -341,7 +343,7 @@ jest przynależność do klasy danego obiektu. Obiekt
 jest klasyfikowany przez głosowanie większościowe 
 spośród k-najbliższych ze zbioru uczącego. Zazwyczaj 
 metryką używaną do głosowania jest odległość euklidesowa, 
-jednak nie jest to jedyna możliwość.
+jednak nie jest to jedyna możliwość. \cite{k-nearest neighbors}
 
 \section{Brak Preprocessingu}
 Pierwszy scenariusz, który w przyszłości 
@@ -624,341 +626,323 @@ ze zbiorów danych.
 \section{League of Legends stats}
 
 \subsection{Wypełnienie brakujących wartości}
-\subsubsection{xgBoost}
-    \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_xgb_Wypełnienie_brakujących}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
 
-    Jak widać na wykresie (Rysunek 5.1), dla każdego scenariusza wypełniania brakujących wartości 
-    uzyskano poprawę w trafności klasyfikatora. Najlepszym scenariuszem wydaje się być wypełnianie 
-    średnią, dla dwóch przypadków brakujących wartości uzyskujemy niemal idealną trafność, a dla trzeciego 
-    przypadku uzyskujemy trafność na podobnym poziomie co dla wypełnienia innymi wartościami.
 
-\subsubsection{Las Losowy}
-    \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Wypełnienie_brakujących}}
-    \centering
-    \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
+            \begin{table}[H]
+                \begin{tabular}{|l|l|l|l|l|l|}
+                \hline
+                Wariant                       & Scenariusz                                                      & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                              & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}   & 0.900000                                                    & \cellcolor[HTML]{67FD9A}{\color[HTML]{000000} 0.800000}             & \cellcolor[HTML]{67FD9A}{\color[HTML]{000000} 0.825000}                       & \cellcolor[HTML]{FFCC67}0.841667\textpm0.001806                   \\ \cline{2-6} 
+                                              & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ średnią\end{tabular}  & \cellcolor[HTML]{67FD9A}0.938776                            & 0.775510                                                            & 0.734694                                                                      & 0.816327\textpm0.007775                                           \\ \cline{2-6} 
+                                              & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ minimum\end{tabular}  & \cellcolor[HTML]{67FD9A}0.938776                            & 0.693878                                                            & 0.714286                                                                      & 0.782313\textpm0.012310                                           \\ \cline{2-6} 
+                                              & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & \cellcolor[HTML]{67FD9A}0.938776                            & 0.775510                                                            & 0.673469                                                                      & 0.795918\textpm0.011939                                           \\ \cline{2-6} 
+                \multirow{-5}{*}{LoL Stats 1} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & \cellcolor[HTML]{67FD9A}0.938776                            & 0.755102                                                            & 0.693878                                                                      & 0.795918\textpm0.010829                                           \\ \hline
+                                              & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}  & 0.925000                                                    & 0.750000                                                            & \cellcolor[HTML]{67FD9A}0.825000                                              & \cellcolor[HTML]{FFCC67}0.833333\textpm0.005139                   \\ \cline{2-6} 
+                                              & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ średnią\end{tabular}  & \cellcolor[HTML]{67FD9A}0.959184                            & 0.755102                                                            & 0.734694                                                                      & 0.816327\textpm0.010273                                           \\ \cline{2-6} 
+                                              & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ minimum\end{tabular}  & \cellcolor[HTML]{67FD9A}0.959184                            & 0.714286                                                            & 0.673469                                                                      & 0.782313\textpm0.015919                                           \\ \cline{2-6} 
+                                              & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & \cellcolor[HTML]{67FD9A}0.959184                            & 0.755102                                                            & 0.673469                                                                      & 0.795918\textpm0.014438                                           \\ \cline{2-6} 
+                \multirow{-5}{*}{LoL Stats 2} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & \cellcolor[HTML]{67FD9A}0.959184                            & \cellcolor[HTML]{67FD9A}0.775510                                    & 0.714286                                                                      & 0.816327\textpm0.010829                                           \\ \hline
+                                              & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}  & 0.900000                                                    & 0.625000                                                            & 0.650000                                                                      & 0.725000\textpm0.015417                                           \\ \cline{2-6} 
+                                              & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ średnią\end{tabular}  & \cellcolor[HTML]{67FD9A}0.959184                            & 0.734694                                                            & 0.653061                                                                      & 0.782313\textpm0.016752                                           \\ \cline{2-6} 
+                                              & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ minimum\end{tabular}  & 0.918367                                                    & \cellcolor[HTML]{67FD9A}0.775510                                    & \cellcolor[HTML]{67FD9A}0.693878                                              & \cellcolor[HTML]{FFCC67}0.795918\textpm0.008608                   \\ \cline{2-6} 
+                                              & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & 0.918367                                                    & 0.734694                                                            & 0.653061                                                                      & 0.768707\textpm0.012310                                           \\ \cline{2-6} 
+                \multirow{-5}{*}{LoL Stats 3} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & 0.938776                                                    & 0.755102                                                            & 0.673469                                                                      & 0.789116\textpm0.012310                                           \\ \hline
+                \end{tabular}
+                \end{table}
 
-    Dla klasyfikatora wykorzystującego Las Losowy wyniki różnią się znacznie od tego, jakie braki w danych zostały wygenerowane (Rysunek 5.2). W pierwszym 
-    przypadku najlepszy wynik uzyskujemy przy braku wypełnienia brakujących wartości, dla drugiego dla wypełnienia przy pomocy regresji, jednak należy zauważyć, 
-    że różnice w poszczególnych wynikach są dość niewielkie. Dla trzeciego przypadku uzyskano znaczną poprawę wypełniając brakujące wartości, przy czym najlepszy 
-    wynik uzyskano przy wypełnieniu minimum.
 
-\subsubsection{K-Najbliższych Sąsiadów}
-    \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Wypełnienie_brakujących}}
-    \centering
-    \caption{Trafność klasyfikatora K-Najbliższych Sąsiadów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
-
-    Używając algorytmu k-Najbliższych Sąsiadów w dwóch z trzech przypadków wygenerowanych 
-    braków najlepszy wynik dało usunięcie rekordów zawierające braki (Rysunek 5.3). Natomiast 
-    w trzecim przypadku zauważono niewielką poprawę dla wypełnienia minimum.
+                \begin{figure}[H]
+                    \centerline{\includegraphics[scale=0.8]{Lol_stats_Wypełnienie_brakujących}}
+                    \centering
+                    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+                    \end{figure}
 
 \subsection{Standaryzacja}
 
-\subsubsection{xgBoost}
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Wariant                       & Scenariusz                                                                                & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                  & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}                             & 0.900000                                                    & \cellcolor[HTML]{67FD9A}0.800000                                    & \cellcolor[HTML]{67FD9A}0.825000                                              & \cellcolor[HTML]{FFCC67}0.841667 0.001806                   \\ \cline{2-6} 
+                                  & Standaryzacja                                                                             & \cellcolor[HTML]{67FD9A}0.938776                            & 0.775510                                                            & 0.755102                                                                      & 0.823129 0.006756                                           \\ \cline{2-6} 
+                                  & Skalowanie do (0-1)                                                                       & \cellcolor[HTML]{67FD9A}0.938776                            & 0.775510                                                            & 0.653061                                                                      & 0.789116 0.013698                                           \\ \cline{2-6} 
+    \multirow{-4}{*}{Lol Stats 1} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających\end{tabular}     & 0.911111                                                    & 0.688889                                                            & 0.688889                                                                      & 0.762963 0.010974                                           \\ \hline
+                                  & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                            & 0.925000                                                    & 0.750000                                                            & \cellcolor[HTML]{67FD9A}0.825000                                              & \cellcolor[HTML]{FFCC67}0.833333 0.005139                   \\ \cline{2-6} 
+                                  & Standaryzacja                                                                             & \cellcolor[HTML]{67FD9A}0.959184                            & \cellcolor[HTML]{67FD9A}0.755102                                    & 0.755102                                                                      & 0.823129 0.009255                                           \\ \cline{2-6} 
+                                  & Skalowanie do (0-1)                                                                       & \cellcolor[HTML]{67FD9A}0.959184                            & \cellcolor[HTML]{67FD9A}0.755102                                    & 0.693878                                                                      & 0.802721 0.012865                                           \\ \cline{2-6} 
+    \multirow{-4}{*}{Lol Stats 2} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających\end{tabular}     & 0.863636                                                    & 0.659091                                                            & 0.681818                                                                      & 0.734848 0.008379                                           \\ \hline
+                                  & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                            & 0.900000                                                    & 0.625000                                                            & 0.650000                                                                      & 0.725000 0.015417                                           \\ \cline{2-6} 
+                                  & Standaryzacja                                                                             & \cellcolor[HTML]{67FD9A}0.959184                            & \cellcolor[HTML]{67FD9A}0.734694                                    & 0.693878                                                                      & 0.795918 0.013605                                           \\ \cline{2-6} 
+                                  & Skalowanie do (0-1)                                                                       & \cellcolor[HTML]{67FD9A}0.959184                            & \cellcolor[HTML]{67FD9A}0.734694                                    & \cellcolor[HTML]{67FD9A}0.755102                                              & \cellcolor[HTML]{FFCC67}0.816327 0.010273                   \\ \cline{2-6} 
+    \multirow{-4}{*}{Lol Stats 3} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających aaa\end{tabular} & 0.866667                                                    & 0.488889                                                            & 0.644444                                                                      & 0.666667 0.024033                                           \\ \hline
+    \end{tabular}
+    \end{table}
+
     \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_xgb_Standaryzacja}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
-
-    W przypadku klasyfikatora xgBoost w kontekście Standaryzacji zauważono poprawę wyników 
-    dla wszystkich przypadków generowania braków (Rysunek 5.4), 
-    jednak po Standaryzacji oraz usunęciu wartości odstających 
-    zauważono znaczne pogorszenie wyników, nawet względem braku przygotowania danych.
-
-\subsubsection{Las Losowy}
-    \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Standaryzacja}}
-    \centering
-    \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
-
-    Na wykresie (Rysunek 5.5) widać, jak Standaryzacja ma znaczenie dla trafności klasyfikacji jedynie dla 
-    trzeciego przypadku generowania braków. W pozostałych przypadkach wyniki są zbliżone do braku przygotowania. 
-    Podobnie jak dla xgBoost, usunięcie wartości odstających powoduje zmniejszenie trafności wyników. 
-
-\subsubsection{K-Najbliższych Sąsiadów}
-    \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Standaryzacja}}
-    \centering
-    \caption{Trafność klasyfikatora K-Najbliższych Sąsiadów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
-
-    Klasyfikator korzystający z algorytmu k-najbliższych sąsiadów najgorzej reagował na standaryzację (Rysunek 5.6), 
-    jedynie w jednym przypadku wpłynęła ona pozytywnie na trafność klasyfikacji, 
-    w pozostałych wpłyneła ona znacznie negatywnie. Należy zwrócić uwagę na fakt, że dla jednego przypadku 
-    dla którego Standaryzacja wpływała pozytywnie, usunięcie wartości odstających pogorszyło trafność klasyfikacji, natomiast dla tych, 
-    które reagowały negatywnie na Standaryzacje, usunięcie wartości odstających spowodowało nieznaczną poprawę trafności klasyfikacji.
+        \centerline{\includegraphics[scale=0.8]{Lol_stats_Standaryzacja}}
+        \centering
+        \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+        \end{figure}
 
 
 \subsection{Kodowanie}
 
-\subsubsection{xgBoost}
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Wariant                       & Scenariusz                                                                                                                   & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                  & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}                                                                & 0.900                                                       & 0.800000                                                            & 0.825000                                                                      & 0.841667 0.001806                                           \\ \cline{2-6} 
+                                  & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.925000                                    & \cellcolor[HTML]{67FD9A}0.900000                                              & \cellcolor[HTML]{FFCC67}0.941667 0.001806                   \\ \cline{2-6} 
+    \multirow{-3}{*}{LoL Stats 1} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000                               & 0.897959                                                            & 0.714286                                                                      & 0.870748 0.013976                                           \\ \hline
+                                  & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                                                               & 0.925                                                       & 0.750000                                                            & \cellcolor[HTML]{67FD9A}0.825000                                              & 0.833333 0.005139                                           \\ \cline{2-6} 
+                                  & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000                               & 0.875000                                                            & \cellcolor[HTML]{67FD9A}0.825000                                              & \cellcolor[HTML]{FFCC67}0.900000 0.005417                   \\ \cline{2-6} 
+    \multirow{-3}{*}{LoL Stats 2} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.918367                                    & 0.734694                                                                      & 0.884354 0.012310                                           \\ \hline
+                                  & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                                                               & 0.900                                                       & 0.625000                                                            & 0.650000                                                                      & 0.725000 0.015417                                           \\ \cline{2-6} 
+                                  & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000                               & 0.725000                                                            & 0.675000                                                                      & 0.800000 0.020417                                           \\ \cline{2-6} 
+    \multirow{-3}{*}{LoL Stats 3} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.897959                                    & \cellcolor[HTML]{67FD9A}0.693878                                              & \cellcolor[HTML]{FFCC67}0.863946 0.016197                   \\ \hline
+    \end{tabular}
+    \end{table}
+
     \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_xgb_Kodowanie}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
-
-    Na powyższym wykresie (Rysunek 5.7) wyraźnie widać, że kodowanie wartości kategorycznych dla xgBoost przyniosło wymierne 
-    korzyści w postaci zwiększenia trafności klasyfikowania.
-
-\subsubsection{Las Losowy}
-    \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Kodowanie}}
-    \centering
-    \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
-
-    Podobnie jak dla xgBoost, Las Losowy wykazuje znaczną poprawę wraz 
-    z kodowaniem wartości kategoryczynch (Rysunek 5.8). 
-    Należy zauwazyć natomiast, że najlepsze wyniki wszystkie 
-    przypadki osiągają dopiero po kodowaniu jak i wypełnieniu brakujących wartości
-
-\subsubsection{K-Najbliższych Sąsiadów}
-    \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Kodowanie}}
-    \centering
-    \caption{Trafność klasyfikatora K-Najbliższych Sąsiadów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
-
-
-    Dla k-Najbliższych Sąsiadów kodowanie w dwóch przypadkach poprawia 
-    trafność klasyfikacji, w pozostałym natomiast nie wpływa na nią w 
-    znacznym stopniu (Rysunek 5.9). Natomiast w przypadku kodowania oraz 
-    wypełnienia brakujących wartości można zauwazyć znaczne pogorszenie 
-    trafności, w dwóch przypadkach nawet względem braku przygotowania.
+        \centerline{\includegraphics[scale=0.8]{Lol_stats_Kodowanie}}
+        \centering
+        \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+        \end{figure}
 
 \subsection{Indywidualne podejście}
 
-\subsubsection{xgBoost}
+\begin{table}[]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Wariant                       & Scenariusz                                                                       & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                  & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}                    & 0.900                                                       & 0.800000                                                            & 0.825000                                                                      & 0.841667 0.001806                                           \\ \cline{2-6} 
+    \multirow{-2}{*}{Lol Stats 1} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.795455                                    & \cellcolor[HTML]{67FD9A}0.954545                                              & \cellcolor[HTML]{FFCC67}0.916667 0.007691                   \\ \hline
+                                  & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                   & 0.925                                                       & 0.750000                                                            & 0.825000                                                                      & 0.833333 0.005139                                           \\ \cline{2-6} 
+    \multirow{-2}{*}{Lol Stats 2} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.818182                                    & \cellcolor[HTML]{67FD9A}0.931818                                              & \cellcolor[HTML]{FFCC67}0.916667 0.005624                   \\ \hline
+                                  & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                   & 0.900                                                       & 0.625000                                                            & 0.650000                                                                      & 0.725000 0.015417                                           \\ \cline{2-6} 
+    \multirow{-2}{*}{Lol Stats 3} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.790698                                    & \cellcolor[HTML]{67FD9A}1.000000                                              & \cellcolor[HTML]{FFCC67}0.930233 0.009735                   \\ \hline
+    \end{tabular}
+    \end{table}
+
     \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_xgb_Custom}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
-
-    Dla każdego z przypadków xgBoost po przygotowaniu wg indywidualnego 
-    scenariusza dla danego zbioru danych osiąga perfekcyjne wyniki (Rysunek 5.10). 
-
-\subsubsection{Las Losowy}
-    \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_rfc_Custom}}
-    \centering
-    \caption{Trafność klasyfikatora Las Losowy po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
-
-    Podobnie jak xgBoost, Las Losowy dobrze reaguje na operacje 
-    wykonane w ramach scenariusza przygotowanego dla danego zbioru danych. 
-    (Rysunek 5.11) Nalezy jednak zauważyć, że nie osiąga perfekcji, a jedynie 
-    lepsze wyniki od braku przygotowania.
-
-\subsubsection{K-Najbliższych Sąsiadów}
-    \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_stats_knn_Custom}}
-    \centering
-    \caption{Trafność klasyfikatora K-Najbliższych Sąsiadów po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
-    \end{figure}
-
-    Dla k-najbliższych sąsiadów również indywidualne podejście przynosi wymierne korzyści w kwestii trafności klasyfikacji (Rysunek 5.12).
+        \centerline{\includegraphics[scale=0.8]{Lol_stats_Custom}}
+        \centering
+        \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+        \end{figure}
 
 
 \section{Australian Rain Forecast}
 
 
 \subsection{Wypełnienie brakujących wartości}
-\subsubsection{xgBoost} 
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_xgb_Wypełnienie_brakujących}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Australian Weather}
-    \end{figure}
 
-\subsubsection{Las Losowy}
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Wariant                                                                          & Scenariusz                                                      & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}   & \cellcolor[HTML]{67FD9A}{\color[HTML]{000000} 0.855405}     & \cellcolor[HTML]{67FD9A}0.849324                                    & \cellcolor[HTML]{67FD9A}0.836486                                              & \cellcolor[HTML]{FFCC67}0.847072 0.000062                   \\ \cline{2-6} 
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ średnią\end{tabular}  & 0.829787                                                    & 0.820669                                                            & 0.820669                                                                      & 0.823708 0.000018                                           \\ \cline{2-6} 
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ minimum\end{tabular}  & 0.834650                                                    & 0.819453                                                            & 0.815805                                                                      & 0.823303 0.000067                                           \\ \cline{2-6} 
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & 0.834043                                                    & 0.820669                                                            & 0.813374                                                                      & 0.822695 0.000073                                           \\ \cline{2-6} 
+    \multirow{-5}{*}{\begin{tabular}[c]{@{}l@{}}Australian\\ Weather 1\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & 0.830395                                                    & 0.820669                                                            & 0.822492                                                                      & 0.824519 0.000018                                           \\ \hline
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}  & \cellcolor[HTML]{67FD9A}0.851351                            & \cellcolor[HTML]{67FD9A}0.835811                                    & \cellcolor[HTML]{67FD9A}0.847297                                              & \cellcolor[HTML]{FFCC67}0.844820 0.000043                   \\ \cline{2-6} 
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ średnią\end{tabular}  & 0.827356                                                    & 0.819453                                                            & 0.817021                                                                      & 0.821277 0.000019                                           \\ \cline{2-6} 
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ minimum\end{tabular}  & 0.837082                                                    & 0.821277                                                            & 0.822492                                                                      & 0.826950 0.000052                                           \\ \cline{2-6} 
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & 0.834043                                                    & 0.818845                                                            & 0.817021                                                                      & 0.823303 0.000058                                           \\ \cline{2-6} 
+    \multirow{-5}{*}{\begin{tabular}[c]{@{}l@{}}Australian\\ Weather 2\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & 0.839514                                                    & 0.821884                                                            & 0.821277                                                                      & 0.827558 0.000072                                           \\ \hline
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}  & \cellcolor[HTML]{67FD9A}0.842568                            & \cellcolor[HTML]{67FD9A}0.830405                                    & \cellcolor[HTML]{67FD9A}0.829730                                              & \cellcolor[HTML]{FFCC67}0.834234 0.000035                   \\ \cline{2-6} 
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ średnią\end{tabular}  & 0.834043                                                    & 0.820669                                                            & 0.822492                                                                      & 0.825735 0.000035                                           \\ \cline{2-6} 
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ minimum\end{tabular}  & 0.841337                                                    & 0.821277                                                            & 0.818237                                                                      & 0.826950 0.000105                                           \\ \cline{2-6} 
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & 0.829179                                                    & 0.821277                                                            & 0.820669                                                                      & 0.823708 0.000015                                           \\ \cline{2-6} 
+    \multirow{-5}{*}{\begin{tabular}[c]{@{}l@{}}Australian\\ Weather 3\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & 0.834650                                                    & 0.820669                                                            & 0.823100                                                                      & 0.826140 0.000037                                           \\ \hline
+    \end{tabular}
+    \end{table}
 
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_rfc_Wypełnienie_brakujących}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Australian Weather}
-    \end{figure}
+    \begin{figure}[H]
+        \centerline{\includegraphics[scale=0.8]{Aus_Weather_Wypełnienie_brakujących}}
+        \centering
+        \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Australian Weather}
+        \end{figure}
 
-\subsubsection{K-Najbliższych Sąsiadów}
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_knn_Wypełnienie_brakujących}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Australian Weather}
-    \end{figure}
 
 \subsection{Standaryzacja}
-\subsubsection{xgBoost} 
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_xgb_Standaryzacja}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Australian Weather}
-    \end{figure}
 
-\subsubsection{Las Losowy}
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Wariant                                                                           & Scenariusz                                                                            & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                                                                      & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}                         & \cellcolor[HTML]{67FD9A}0.855405                            & \cellcolor[HTML]{67FD9A}0.849324                                    & \cellcolor[HTML]{67FD9A}0.836486                                              & \cellcolor[HTML]{FFCC67}0.847072 0.000062                   \\ \cline{2-6} 
+                                                                                      & Standaryzacja                                                                         & 0.829787                                                    & 0.820669                                                            & 0.824924                                                                      & 0.825127 0.000014                                           \\ \cline{2-6} 
+                                                                                      & Skalowanie do (0-1)                                                                   & 0.829787                                                    & 0.820669                                                            & 0.812766                                                                      & 0.821074 0.000048                                           \\ \cline{2-6} 
+    \multirow{-4}{*}{\begin{tabular}[c]{@{}l@{}}Australian \\ Weather 1\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających\end{tabular} & 0.838910                                                    & 0.825279                                                            & 0.825898                                                                      & 0.830029 0.000039                                           \\ \hline
+                                                                                      & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                        & \cellcolor[HTML]{67FD9A}0.851351                            & \cellcolor[HTML]{67FD9A}0.835811                                    & \cellcolor[HTML]{67FD9A}0.847297                                              & \cellcolor[HTML]{FFCC67}0.844820 0.000043                   \\ \cline{2-6} 
+                                                                                      & Standaryzacja                                                                         & 0.827356                                                    & 0.819453                                                            & 0.821277                                                                      & 0.822695 0.000011                                           \\ \cline{2-6} 
+                                                                                      & Skalowanie do (0-1)                                                                   & 0.827356                                                    & 0.819453                                                            & 0.812766                                                                      & 0.819858 0.000036                                           \\ \cline{2-6} 
+    \multirow{-4}{*}{\begin{tabular}[c]{@{}l@{}}Australian \\ Weather 2\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających\end{tabular} & 0.837871                                                    & 0.829827                                                            & 0.826114                                                                      & 0.831271 0.000024                                           \\ \hline
+                                                                                      & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                        & 0.842568                                                    & 0.830405                                                            & 0.829730                                                                      & 0.834234 0.000035                                           \\ \cline{2-6} 
+                                                                                      & Standaryzacja                                                                         & 0.834043                                                    & 0.820669                                                            & 0.823100                                                                      & 0.825937 0.000034                                           \\ \cline{2-6} 
+                                                                                      & Skalowanie do (0-1)                                                                   & 0.834043                                                    & 0.820669                                                            & 0.815198                                                                      & 0.823303 0.000063                                           \\ \cline{2-6} 
+    \multirow{-4}{*}{\begin{tabular}[c]{@{}l@{}}Australian \\ Weather 3\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających\end{tabular} & \cellcolor[HTML]{67FD9A}0.848729                            & \cellcolor[HTML]{67FD9A}0.834470                                    & \cellcolor[HTML]{67FD9A}0.830130                                              & \cellcolor[HTML]{FFCC67}0.837776 0.000063                   \\ \hline
+    \end{tabular}
+    \end{table}
 
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_rfc_Standaryzacja}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Australian Weather}
-    \end{figure}
-    
-\subsubsection{K-Najbliższych Sąsiadów}
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_knn_Standaryzacja}}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.8]{Aus_Weather_Standaryzacja}}
     \centering
     \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Australian Weather}
     \end{figure}
 
 \subsection{Kodowanie}
-\subsubsection{xgBoost} 
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_xgb_Kodowanie}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Australian Weather}
-    \end{figure}
 
-\subsubsection{Las Losowy}
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Wariant                         & Scenariusz                                                                                                                   & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                    & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}                                                                & 0.855405                                                    & 0.849324                                                            & 0.836486                                                                      & 0.847072 0.000062                                           \\ \cline{2-6} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.960811                                    & \cellcolor[HTML]{67FD9A}0.847297                                              & \cellcolor[HTML]{FFCC67}0.936036 0.004193                   \\ \cline{2-6} 
+    \multirow{-3}{*}{Aus Weather 1} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & 0.944073                                                            & 0.825532                                                                      & 0.923202 0.005291                                           \\ \hline
+                                    & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                                                               & 0.851351                                                    & 0.835811                                                            & \cellcolor[HTML]{67FD9A}0.847297                                              & 0.844820 0.000043                                           \\ \cline{2-6} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.955405                                    & 0.846622                                                                      & \cellcolor[HTML]{FFCC67}0.934009 0.004150                   \\ \cline{2-6} 
+    \multirow{-3}{*}{Aus Weather 2} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & 0.941641                                                            & 0.826748                                                                      & 0.922796 0.005180                                           \\ \hline
+                                    & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                                                               & 0.842568                                                    & 0.830405                                                            & 0.829730                                                                      & 0.834234 0.000035                                           \\ \cline{2-6} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000000                            & 0.938514                                                            & \cellcolor[HTML]{67FD9A}0.833108                                              & \cellcolor[HTML]{FFCC67}0.923874 0.004749                   \\ \cline{2-6} 
+    \multirow{-3}{*}{Aus Weather 3} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.943465                                    & 0.827964                                                                      & 0.923810 0.005126                                           \\ \hline
+    \end{tabular}
+    \end{table}
 
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_rfc_Kodowanie}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Australian Weather}
-    \end{figure}
-    
-\subsubsection{K-Najbliższych Sąsiadów}
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_knn_Kodowanie}}
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.8]{Aus_Weather_Kodowanie}}
     \centering
     \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Australian Weather}
     \end{figure}
 
 \subsection{Indywidualne podejście}
-\subsubsection{xgBoost} 
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_xgb_Custom}}
+
+\begin{table}[]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Wariant                                                                          & Scenariusz                                                                       & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}                    & 0.855405                                                    & 0.849324                                                            & \cellcolor[HTML]{67FD9A}0.836486                                                                      & 0.847072 0.000062                                           \\ \cline{2-6} 
+    \multirow{-2}{*}{\begin{tabular}[c]{@{}l@{}}Australian\\ Weather 1\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.984587                                    & 0.788533                                              & \cellcolor[HTML]{FFCC67}0.924373 0.009266                   \\ \hline
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                   & 0.851351                                                    & 0.835811                                                            & \cellcolor[HTML]{67FD9A}0.847297                                                                      & 0.844820 0.000043                                           \\ \cline{2-6} 
+    \multirow{-2}{*}{\begin{tabular}[c]{@{}l@{}}Australian\\ Weather 2\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.983970                                    & 0.799630                                              & \cellcolor[HTML]{FFCC67}0.927867 0.008265                   \\ \hline
+                                                                                     & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                   & 0.842568                                                    & 0.830405                                                            & \cellcolor[HTML]{67FD9A}0.829730                                                                      & 0.834234 0.000035                                           \\ \cline{2-6} 
+    \multirow{-2}{*}{\begin{tabular}[c]{@{}l@{}}Australian\\ Weather 3\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.981481                                    & 0.790741                                              & \cellcolor[HTML]{FFCC67}0.924074 0.008946                   \\ \hline
+    \end{tabular}
+    \end{table}
+
+    \begin{figure}[H]
+    \centerline{\includegraphics[scale=0.8]{Aus_Weather_Custom}}
     \centering
     \caption{Trafność klasyfikatora xgBoost po  dla zestawu danych Australian Weather}
     \end{figure}
 
-\subsubsection{Las Losowy}
-
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_rfc_Custom}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po indywidualnym podejściu dla zestawu danych Australian Weather}
-    \end{figure}
-    
-\subsubsection{K-Najbliższych Sąsiadów}
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_knn_Custom}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po indywidualnym podejściu dla zestawu danych Australian Weather}
-    \end{figure}
-
-
 \section{Titanic Survival}
 
 
+
 \subsection{Wypełnienie brakujących wartości}
-\subsubsection{xgBoost} 
+
+
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Wariant                     & Scenariusz                                                      & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}   & 0.777778                                                    & 0.500000                                                            & \cellcolor[HTML]{67FD9A}0.722222                                              & 0.666667 0.014403                                           \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ średnią\end{tabular}  & 0.722222                                                    & 0.744444                                                            & 0.700000                                                                      & 0.722222 0.000329                                           \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ minimum\end{tabular}  & 0.733333                                                    & \cellcolor[HTML]{67FD9A}0.755556                                    & 0.688889                                                                      & 0.725926 0.000768                                           \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & \cellcolor[HTML]{67FD9A}0.755556                            & 0.744444                                                            & 0.688889                                                                      & \cellcolor[HTML]{FFCC67}0.729630 0.000850                   \\ \cline{2-6} 
+    \multirow{-5}{*}{Titanic 1} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & 0.711111                                                    & 0.733333                                                            & 0.700000                                                                      & 0.714815 0.000192                                           \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}  & 0.684211                                                    & 0.631579                                                            & 0.578947                                                                      & 0.631579 0.001847                                           \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ średnią\end{tabular}  & 0.722222                                                    & 0.733333                                                            & \cellcolor[HTML]{67FD9A}0.677778                                              & 0.711111 0.000576                                           \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ minimum\end{tabular}  & 0.722222                                                    & 0.744444                                                            & \cellcolor[HTML]{67FD9A}0.677778                                              & 0.714815 0.000768                                           \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & \cellcolor[HTML]{67FD9A}0.777778                            & \cellcolor[HTML]{67FD9A}0.766667                                    & \cellcolor[HTML]{67FD9A}0.677778                                              & \cellcolor[HTML]{FFCC67}0.740741 0.002003                   \\ \cline{2-6} 
+    \multirow{-5}{*}{Titanic 2} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & 0.733333                                                    & 0.733333                                                            & \cellcolor[HTML]{67FD9A}0.677778                                              & 0.714815 0.000686                                           \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}  & 0.631579                                                    & 0.736842                                                            & 0.578947                                                                      & 0.649123 0.004309                                           \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ średnią\end{tabular}  & 0.744444                                                    & \cellcolor[HTML]{67FD9A}0.744444                                    & \cellcolor[HTML]{67FD9A}0.711111                                              & \cellcolor[HTML]{FFCC67}0.733333 0.000247                   \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ minimum\end{tabular}  & 0.744444                                                    & \cellcolor[HTML]{67FD9A}0.744444                                    & 0.688889                                                                      & 0.725926 0.000686                                           \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & 0.722222                                                    & 0.733333                                                            & 0.700000                                                                      & 0.718519 0.000192                                           \\ \cline{2-6} 
+    \multirow{-5}{*}{Titanic 3} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & \cellcolor[HTML]{67FD9A}0.755556                            & 0.722222                                                            & 0.700000                                                                      & 0.725926 0.000521                                           \\ \hline
+    \end{tabular}
+    \end{table}
+
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_xgb_Wypełnienie_brakujących}}
+    \centerline{\includegraphics[scale=0.8]{Titanic_Wypełnienie_brakujących}}
     \centering
     \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Titanic}
     \end{figure}
 
-\subsubsection{Las Losowy}
 
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_rfc_Wypełnienie_brakujących}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Titanic}
-    \end{figure}
-    
-\subsubsection{K-Najbliższych Sąsiadów}
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_knn_Wypełnienie_brakujących}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Titanic}
-    \end{figure}
 \subsection{Standaryzacja}
 
-\subsubsection{xgBoost} 
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Wariant                     & Scenariusz                                                                            & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}                         & \cellcolor[HTML]{67FD9A}0.777778                            & 0.500000                                                            & \cellcolor[HTML]{67FD9A}0.722222                                              & 0.666667 0.014403                                           \\ \cline{2-6} 
+                                & Standaryzacja                                                                         & 0.722222                                                    & \cellcolor[HTML]{67FD9A}0.744444                                    & 0.644444                                                                      & \cellcolor[HTML]{FFCC67}0.703704 0.001838                   \\ \cline{2-6} 
+                                & Skalowanie do (0-1)                                                                   & 0.722222                                                    & \cellcolor[HTML]{67FD9A}0.744444                                    & 0.577778                                                                      & 0.681481 0.005460                                           \\ \cline{2-6} 
+    \multirow{-4}{*}{Titanic 1} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających\end{tabular} & 0.703125                                                    & 0.718750                                                            & 0.656250                                                                      & 0.692708 0.000705                                           \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                        & 0.684211                                                    & 0.631579                                                            & 0.578947                                                                      & 0.631579 0.001847                                           \\ \cline{2-6} 
+                                & Standaryzacja                                                                         & \cellcolor[HTML]{67FD9A}0.722222                            & \cellcolor[HTML]{67FD9A}0.733333                                    & 0.633333                                                                      & 0.696296 0.002003                                           \\ \cline{2-6} 
+                                & Skalowanie do (0-1)                                                                   & \cellcolor[HTML]{67FD9A}0.722222                            & \cellcolor[HTML]{67FD9A}0.733333                                    & 0.577778                                                                      & 0.677778 0.005021                                           \\ \cline{2-6} 
+    \multirow{-4}{*}{Titanic 2} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających\end{tabular} & 0.718750                                                    & 0.718750                                                            & \cellcolor[HTML]{67FD9A}0.656250                                              & \cellcolor[HTML]{FFCC67}0.697917 0.000868                   \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                        & 0.631579                                                    & 0.736842                                                            & 0.578947                                                                      & 0.649123 0.004309                                           \\ \cline{2-6} 
+                                & Standaryzacja                                                                         & \cellcolor[HTML]{67FD9A}0.744444                            & \cellcolor[HTML]{67FD9A}0.744444                                    & 0.644444                                                                      & \cellcolor[HTML]{FFCC67}0.711111 0.002222                   \\ \cline{2-6} 
+                                & Skalowanie do (0-1)                                                                   & \cellcolor[HTML]{67FD9A}0.744444                            & \cellcolor[HTML]{67FD9A}0.744444                                    & 0.577778                                                                      & 0.688889 0.006173                                           \\ \cline{2-6} 
+    \multirow{-4}{*}{Titanic 3} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających\end{tabular} & 0.646154                                                    & 0.630769                                                            & \cellcolor[HTML]{67FD9A}0.692308                                              & 0.656410 0.000684                                           \\ \hline
+    \end{tabular}
+    \end{table}
+
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_xgb_Standaryzacja}}
+    \centerline{\includegraphics[scale=0.8]{Titanic_Standaryzacja}}
     \centering
     \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Titanic}
     \end{figure}
 
-\subsubsection{Las Losowy}
-
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_rfc_Standaryzacja}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Titanic}
-    \end{figure}
-    
-\subsubsection{K-Najbliższych Sąsiadów}
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_knn_Standaryzacja}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Titanic}
-    \end{figure}
 
 \subsection{Kodowanie}
 
-\subsubsection{xgBoost} 
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Wariant                     & Scenariusz                                                                                                                   & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}                                                                & 0.777778                                                    & 0.500000                                                            & \cellcolor[HTML]{67FD9A}0.722222                                              & 0.666667 0.014403                                           \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & 0.611111                                                                      & 0.870370 0.033608                                           \\ \cline{2-6} 
+    \multirow{-3}{*}{Titanic 1} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & 0.700000                                                                      & \cellcolor[HTML]{FFCC67}0.900000 0.020000                   \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                                                               & 0.684211                                                    & 0.684211                                                            & 0.578947                                                                      & 0.578947 0.001847                                           \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & 0.578947                                                                      & 0.859649 0.039397                                           \\ \cline{2-6} 
+    \multirow{-3}{*}{Titanic 2} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & \cellcolor[HTML]{67FD9A}0.677778                                              & \cellcolor[HTML]{FFCC67}0.892593 0.023073                   \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                                                               & 0.631579                                                    & 0.736842                                                            & 0.578947                                                                      & 0.649123 0.004309                                           \\ \cline{2-6} 
+                                & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & 0.578947                                                                      & 0.859649 0.039397                                           \\ \cline{2-6} 
+    \multirow{-3}{*}{Titanic 3} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & \cellcolor[HTML]{67FD9A}0.700000                                              & \cellcolor[HTML]{FFCC67}0.900000 0.020000                   \\ \hline
+    \end{tabular}
+    \end{table}
+
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_xgb_Kodowanie}}
+    \centerline{\includegraphics[scale=0.8]{Titanic_Kodowanie}}
     \centering
     \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Titanic}
     \end{figure}
 
-\subsubsection{Las Losowy}
-
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_rfc_Kodowanie}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Titanic}
-    \end{figure}
-    
-\subsubsection{K-Najbliższych Sąsiadów}
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_knn_Kodowanie}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Titanic}
-    \end{figure}
 
 \subsection{Indywidualne podejście}
 
-\subsubsection{xgBoost} 
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_xgb_Custom}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po indywidualnym podejściu dla zestawu danych Titanic}
-    \end{figure}
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    Wariant                     & Scenariusz                                                                       & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} & \begin{tabular}[c]{@{}l@{}}Średnia \\ trafność\end{tabular} \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania\end{tabular}                    & 0.777778                                                    & 0.500000                                                            & 0.722222                                                                      & 0.666667 0.014403                                           \\ \cline{2-6} 
+    \multirow{-2}{*}{Titanic 1} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & \cellcolor[HTML]{67FD9A}0.833333                                              & \cellcolor[HTML]{FFCC67}0.944444 0.006173                   \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                   & 0.684211                                                    & 0.631579                                                            & 0.578947                                                                      & 0.631579 0.001847                                           \\ \cline{2-6} 
+    \multirow{-2}{*}{Titanic 2} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & \cellcolor[HTML]{67FD9A}0.811111                                              & \cellcolor[HTML]{FFCC67}0.937037 0.007929                   \\ \hline
+                                & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                   & 0.631579                                                    & 0.736842                                                            & 0.578947                                                                      & 0.649123 0.004309                                           \\ \cline{2-6} 
+    \multirow{-2}{*}{Titanic 3} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & \cellcolor[HTML]{67FD9A}0.822222                                              & \cellcolor[HTML]{FFCC67}0.940741 0.007023                   \\ \hline
+    \end{tabular}
+    \end{table}
 
-\subsubsection{Las Losowy}
-
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_rfc_Custom}}
-    \centering
-    \caption{Trafność klasyfikatora xgBoost po indywidualnym podejściu dla zestawu danych Titanic}
-    \end{figure}
-    
-\subsubsection{K-Najbliższych Sąsiadów}
-\begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_knn_Custom}}
+    \centerline{\includegraphics[scale=0.8]{Titanic_Custom}}
     \centering
     \caption{Trafność klasyfikatora xgBoost po indywidualnym podejściu dla zestawu danych Titanic}
     \end{figure}
@@ -989,6 +973,11 @@ ze zbiorów danych.
     dla grupy scenariuszy wypełniania brakujących wartości}
     \end{figure}
 
+
+    Dla Lol Stats oraz Australian Weather średnia trafność nieznacznie maleje po wypełnieniu brakujących wartości (Rysunek 5.37, Rysunek 5.39). 
+    Dla zbioru Titanic w każdym przypadku po wypełnieniu brakujących wartości średnia trafność klasyfikacji wzrosła (Rysunek 5.38)
+
+
 \subsection{Standaryzacja}
 
 \begin{figure}[H]
@@ -1011,6 +1000,12 @@ ze zbiorów danych.
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Australian Weather 
     dla grupy scenariuszy wypełniania brakujących wartości}
     \end{figure}
+
+    W kwestii Standaryzacji dla zestawu danych Lol Stats 
+    najlepszy wynik uzyskujemy dla Standaryzacji oraz 
+    Standaryzacji do przedziału (0,1) (Rysunek 5.40), dla 
+    Titanic Standaryzacji (Rysunek 5.41), a dla Australian 
+    Rain Forecast dla braku przygotowania (Rysunek 5.42)
 
 \subsection{Kodowanie}
 
@@ -1035,6 +1030,18 @@ ze zbiorów danych.
     dla grupy scenariuszy wypełniania brakujących wartości}
     \end{figure}
 
+    Dla każdego zestawu danych Standaryzacja daje poprawę 
+    średniej trafności klasyfikacji, istnieją jednak pewne 
+    różnice pomiędzy samym kodowaniem, a kodowaniem z 
+    wypełnianiem brakujących wartości. Dla zbioru Lol 
+    Stats samo kodowanie powoduje dość rozbieżne wyniki 
+    pomiędzy trzema przypadkami wygenerowanych braków, 
+    jednak kodowanie z wypełnianiem daje w miarę spójny 
+    obraz średniej trafności (Rysunek 5.43), dla Titanic 
+    wypełnianie nieznacznie zwiększa średnią trafność 
+    klasyfikacji (Rysunek 5.44), natomiast dla Australian Weather
+    najlepszy wynik uzyskujemy dla kodowania bez wypełniania brakujących wartości (Rysunek 5.45)
+
 \subsection{Indywidualne podejście}
 
 \begin{figure}[H]
@@ -1058,22 +1065,153 @@ ze zbiorów danych.
     dla grupy scenariuszy wypełniania brakujących wartości}
     \end{figure}
 
+    Dla każdego z trzech zbiorów danych podejścia 
+    oparte na indywidualnym podejściu do zbioru 
+    danych dają wymierną poprawę średniej trafności 
+    (Rysunek 5.48, Rysunek 5.47, Rysunek 5.46)
+
 
 \chapter{Podsumowanie}
 
 W poniższym rozdziale przedstawiono, jak wyniki eksperymentów mają się do założeń postawionych 
-przed ich przeprowadzeniem, oraz wypisano wnioski powstałe na podstawie wyników eksperymentów.
+przed ich przeprowadzeniem, oraz zapisano wnioski na podstawie wyników.
+
+\section{Konieczność przygotowania danych}
+
+
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    Wariant       & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} \\ \hline
+    Titanic 1     & 0.777778                                                    & 0.500000                                                            & 0.722222                                                                      \\ \hline
+    Titanic 2     & 0.684211                                                    & 0.631579                                                            & 0.578947                                                                      \\ \hline
+    Titanic 3     & 0.631579                                                    & 0.736842                                                            & 0.578947                                                                      \\ \hline
+    Lol Stats 1   & 0.900000                                                    & 0.80000                                                             & 0.825000                                                                      \\ \hline
+    Lol Stats 2   & 0.925000                                                    & 0.750000                                                            & 0.825000                                                                      \\ \hline
+    Lol Stats 3   & 0.900000                                                    & 0.625000                                                            & 0.650000                                                                      \\ \hline
+    Aus Weather 1 & 0.855405                                                    & 0.849324                                                            & 0.836486                                                                      \\ \hline
+    Aus Weather 2 & 0.851351                                                    & 0.835811                                                            & 0.847297                                                                      \\ \hline
+    Aus Weather 3 & 0.842568                                                    & 0.830405                                                            & 0.829730                                                                      \\ \hline
+    \end{tabular}
+    \end{table}
+
+W zależności od tego, jaki klasyfikator wybierzemy, bez przygotowania danych możemy uzyskać wyniki 
+zarówno porównywalne z losowym wyborem klasy, ale i takie, które w wielu przypadkach mogły by być 
+uznać za zadowalające. Równocześnie musimy pamiętać, 
+że w dziedzinach takich jak medycyna, czy bankowość chcielibyśmy,
+aby wytrenowane klasyfikatory były jak najbliższe perfekcji. Z tego powodu cenną informacją jest to,
+jak bardzo możemy poprawić trafność klasyfikatorów dzięki przygotowaniu danych.
+
+\section{Negatywny wpływ przygotowania danych}
+
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    Wariant                         & Scenariusz                                                                          & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} \\ \hline
+                                    & Brak przygotowania                                                                  & \cellcolor[HTML]{67FD9A}0.777778                            & 0.500000                                                            & \cellcolor[HTML]{67FD9A}0.722222                                              \\ \cline{2-5} 
+    \multirow{-2}{*}{Titanic 1}     & Skalowanie do (0-1)                                                                 & 0.722222                                                    & \cellcolor[HTML]{67FD9A}0.744444                                    & 0.577778                                                                      \\ \hline
+                                    & \begin{tabular}[c]{@{}l@{}}Brak\\ przygotowania\end{tabular}                        & 0.900000                                                    & \cellcolor[HTML]{67FD9A}0.800000                                    & \cellcolor[HTML]{67FD9A}0.825000                                              \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Wypełnienie\\ minimum\end{tabular}                       & \cellcolor[HTML]{67FD9A}0.938776                            & 0.693878                                                            & 0.714286                                                                      \\ \cline{2-5} 
+    \multirow{-3}{*}{Lol Stats 1}   & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1)\\ i usuwanie\\ odstających\end{tabular} & 0.911111                                                    & 0.688889                                                            & 0.688889                                                                      \\ \hline
+                                    & \begin{tabular}[c]{@{}l@{}}Brak\\ przygotowania\end{tabular}                        & \cellcolor[HTML]{67FD9A}0.851351                            & \cellcolor[HTML]{67FD9A}0.835811                                    & \cellcolor[HTML]{67FD9A}0.847297                                              \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Wypełnienie\\  maksimum\end{tabular}                     & 0.834043                                                    & 0.818845                                                            & 0.817021                                                                      \\ \cline{2-5} 
+    \multirow{-3}{*}{Aus Weather 2} & Skalowanie do (0-1)                                                                 & 0.827356                                                    & 0.819453                                                            & 0.812766                                                                      \\ \hline
+    \end{tabular}
+    \end{table}
+
+Przed przeprowadzeniem eksperymentów postawiono hipotezę, że przygotowanie danych w każdym 
+przypadku powinno skutkować lepszymi rezultatami klasyfikacji, jednak podczas eksperymentów 
+zauważono przypadki, w których przygotowanie danych pogorszyło jakość klasyfikacji. Głównie 
+dotyczyło to wypełnienia brakujących wartości.
+
+
+\section{Najlepsze wyniki po przygotowaniu danych}
+
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    Wariant                         & Scenariusz                                                                                                                    & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} \\ \hline
+                                    & Brak przygotowania                                                                                                            & 0.777778                                                    & 0.500000                                                            & 0.722222                                                                      \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & 0.700000                                                                      \\ \cline{2-5} 
+    \multirow{-3}{*}{Titanic 1}     & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & \cellcolor[HTML]{67FD9A}0.833333                                              \\ \hline
+                                    & Brak przygotowania                                                                                                            & 0.684211                                                    & 0.631579                                                            & 0.578947                                                                      \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & 0.677778                                                                      \\ \cline{2-5} 
+    \multirow{-3}{*}{Titanic 2}     & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & \cellcolor[HTML]{67FD9A}0.811111                                              \\ \hline
+                                    & Brak przygotowania                                                                                                            & 0.631579                                                    & 0.736842                                                            & 0.578947                                                                      \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & 0.700000                                                                      \\ \cline{2-5} 
+    \multirow{-3}{*}{Titanic 3}     & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & \cellcolor[HTML]{67FD9A}0.822222                                              \\ \hline
+                                    
+                                \end{tabular}
+                            \end{table}
+                                    \begin{table}[H]
+                                        \begin{tabular}{|l|l|l|l|l|}
+                                        \hline
+                                        Wariant                         & Scenariusz                                                                                                                    & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} \\ \hline
+                                        & \begin{tabular}[c]{@{}l@{}}Brak\\ przygotowania\end{tabular}                                                                  & 0.900                                                       & 0.800000                                                            & 0.825000                                                                      \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych\end{tabular}                                                  & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.925000                                    & 0.900000                                                                      \\ \cline{2-5} 
+    \multirow{-3}{*}{Lol Stats 1}   & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000                               & 0.795455                                                            & \cellcolor[HTML]{67FD9A}0.954545                                              \\ \hline
+                                    & \begin{tabular}[c]{@{}l@{}}Brak\\ przygotowania\end{tabular}                                                                  & 0.925                                                       & 0.750000                                                            & 0.825000                                                                      \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych\end{tabular}                                                  & \cellcolor[HTML]{67FD9A}1.000                               & 0.875000                                                            & 0.825000                                                                      \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.918367                                    & 0.734694                                                                      \\ \cline{2-5} 
+    \multirow{-4}{*}{Lol Stats 2}   & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000                               & 0.818182                                                            & \cellcolor[HTML]{67FD9A}0.931818                                              \\ \hline
+                                    & \begin{tabular}[c]{@{}l@{}}Brak\\ przygotowania\end{tabular}                                                                  & 0.900                                                       & 0.625000                                                            & 0.650000                                                                      \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.897959                                    & 0.693878                                                                      \\ \cline{2-5} 
+    \multirow{-3}{*}{Lol Stats 3}   & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000                               & 0.790698                                                            & \cellcolor[HTML]{67FD9A}1.000000                                              \\ \hline
+                                                                        
+                                \end{tabular}
+                            \end{table}
+                                    \begin{table}[H]
+                                        \begin{tabular}{|l|l|l|l|l|}
+                                        \hline
+                                        Wariant                         & Scenariusz                                                                                                                    & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} \\ \hline
+                                        & \begin{tabular}[c]{@{}l@{}}Brak\\ przygotowania\end{tabular}                                                                  & 0.855405                                                    & 0.849324                                                            & 0.836486                                                                      \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych\end{tabular}                                                  & \cellcolor[HTML]{67FD9A}1.000000                            & 0.960811                                                            & \cellcolor[HTML]{67FD9A}0.847297                                              \\ \cline{2-5} 
+\multirow{-3}{*}{Aus Weather 1} & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.984587                                    & 0.788533                                                                      \\ \hline
+                                    & \begin{tabular}[c]{@{}l@{}}Brak\\ przygotowania\end{tabular}                                                                  & 0.851351                                                    & 0.835811                                                            & 0.847297                                                                      \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych\end{tabular}                                                  & \cellcolor[HTML]{67FD9A}1.000000                            & 0.955405                                                            & \cellcolor[HTML]{67FD9A}0.846622                                              \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & 0.941641                                                            & 0.826748                                                                      \\ \cline{2-5} 
+    \multirow{-4}{*}{Aus Weather 2} & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.983970                                    & 0.799630                                                                      \\ \hline
+                                    & \begin{tabular}[c]{@{}l@{}}Brak\\ przygotowania\end{tabular}                                                                  & 0.842568                                                    & 0.830405                                                            & 0.829730                                                                      \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych\end{tabular}                                                  & \cellcolor[HTML]{67FD9A}1.000000                            & 0.938514                                                            & \cellcolor[HTML]{67FD9A}0.833108                                              \\ \cline{2-5} 
+                                    & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & 0.943465                                                            & 0.827964                                                                      \\ \cline{2-5} 
+    \multirow{-4}{*}{Aus Weather 3} & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.981481                                    & 0.790741                                                                      \\ \hline
+    \end{tabular}
+    \end{table}
+
+
+\section{Ilość rekordów a wpływ przygotowania danych}
+
 
 \section{Wyniki eksperymentów względem hipotezy}
 
+Przed przeprowadzeniem eksperymentów postawiono hipotezę, że przygotowanie danych w każdym 
+przypadku powinno skutkować lepszymi rezultatami klasyfikacji, jednak podczas eksperymentów 
+zauważono przypadki, w których przygotowanie danych pogorszyło jakość klasyfikacji.
+
+Tabelka z przypadkami
+
+
+
 \section{Podejście dające najlepsze rezultaty}
 
-\section{Konkluzja}
+Drugim założeniem było to, że najlepsze rezultaty 
+uzyskamy dokonując starannego przygotowania danych
+opartego na przestudiowaniu, zrozumieniu zbioru danych, 
+a następnie dostosowaniu metod przygotowania do 
+danego zbioru, co znalazło swoje potwierdzenie w wynikach eksperymentów.
+
+Tabelka z przykładami
+
+\section{Wnioski}
 
 Z przeprowadzonych eksperymentów wynika, 
-że odpowiednie przygotowanie danych zwiększa trafność 
-klasyfikatorów. Należy jednak zwrócić uwagę, że nie wszystkie 
-scenariusze skutkowały jednoznaczną poprawą rezultatów. 
+że odpowiednie przygotowanie danych zwiększa w umiarkowanym stopniu trafność 
+klasyfikatorów. Jeżeli przed analizą danych dogłębnie poznamy i zrozumiemy zbiór danych,
+będziemy mogli wybrać najbardziej odpowiednie metody przygotowania danych dla danego zbioru,
+a co za tym idzie wyniki analizy będą najlepsze.
+Należy jednak zwrócić uwagę, że nie wszystkie 
+scenariusze skutkowały jednoznaczną poprawą rezultatów, dlatego dobrą praktyką jest
+wieloktorne przygotowywanie danych na różne sposoby tak, aby znaleźć taki, który zwraca najlepsze rezultaty 
 Na szczególne wyróżenienie zasługuje kodowanie wartości 
 kategorycznych na liczbowe, gdyż w każdym przypadku zastosowanie 
 tej metody znacznie zwiększyło trafność klasyfikacji
