@@ -216,6 +216,7 @@ są zbiorami do klasyfikacji. Do eksperymentów wybrano następujące
 zestawy danych:
 
 \begin{center}
+    \begin{table}[H]
     \begin{tabular}{ |c|c|c|c| } 
     \hline
     \multicolumn{4}{|c|}{Zbiory danych} \\
@@ -226,7 +227,10 @@ zestawy danych:
      Rain in Australia\cite{australian_rain_dataset} & 16443 & 16 & 7\\ 
      Titanic\cite{titanic_dataset} & 891 & 5 & 5\\ 
      \hline
+     
     \end{tabular}
+    \caption{Podstawowe informacje na temat zbiorów danych}
+\end{table}
     \end{center}
 \subsection{League of Legends stats}
 Zbiór zawierający statystyki postaci z gry League of Legends z 
@@ -648,13 +652,14 @@ ze zbiorów danych.
                                               & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & 0.918367                                                    & 0.734694                                                            & 0.653061                                                                      & 0.768707\textpm0.012310                                           \\ \cline{2-6} 
                 \multirow{-5}{*}{LoL Stats 3} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & 0.938776                                                    & 0.755102                                                            & 0.673469                                                                      & 0.789116\textpm0.012310                                           \\ \hline
                 \end{tabular}
+                \caption{Trafność klasyfikatorów dla zbioru Lol Stats po scenariuszach związanych z wypełnianiem brakujących wartości}
                 \end{table}
 
 
                 \begin{figure}[H]
                     \centerline{\includegraphics[scale=0.8]{Lol_stats_Wypełnienie_brakujących}}
                     \centering
-                    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+                    \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Lol Stats po wypełnieniu brakujących wartości}
                     \end{figure}
 
 \subsection{Standaryzacja}
@@ -676,12 +681,13 @@ ze zbiorów danych.
                                   & Skalowanie do (0-1)                                                                       & \cellcolor[HTML]{67FD9A}0.959184                            & \cellcolor[HTML]{67FD9A}0.734694                                    & \cellcolor[HTML]{67FD9A}0.755102                                              & \cellcolor[HTML]{FFCC67}0.816327 0.010273                   \\ \cline{2-6} 
     \multirow{-4}{*}{Lol Stats 3} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających aaa\end{tabular} & 0.866667                                                    & 0.488889                                                            & 0.644444                                                                      & 0.666667 0.024033                                           \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów dla zbioru Lol Stats po scenariuszach związanych ze standaryzacją}
     \end{table}
 
     \begin{figure}[H]
         \centerline{\includegraphics[scale=0.8]{Lol_stats_Standaryzacja}}
         \centering
-        \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+        \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Lol Stats po scenariuszach związanych ze standaryzacją}
         \end{figure}
 
 
@@ -701,12 +707,13 @@ ze zbiorów danych.
                                   & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000                               & 0.725000                                                            & 0.675000                                                                      & 0.800000 0.020417                                           \\ \cline{2-6} 
     \multirow{-3}{*}{LoL Stats 3} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.897959                                    & \cellcolor[HTML]{67FD9A}0.693878                                              & \cellcolor[HTML]{FFCC67}0.863946 0.016197                   \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów dla zbioru Lol Stats po scenariuszach związanych z kodowaniem}
     \end{table}
 
     \begin{figure}[H]
         \centerline{\includegraphics[scale=0.8]{Lol_stats_Kodowanie}}
         \centering
-        \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+        \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Lol Stats po scenariuszach związanych ze kodowaniem}
         \end{figure}
 
 \subsection{Indywidualne podejście}
@@ -722,12 +729,13 @@ ze zbiorów danych.
                                   & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                   & 0.900                                                       & 0.625000                                                            & 0.650000                                                                      & 0.725000 0.015417                                           \\ \cline{2-6} 
     \multirow{-2}{*}{Lol Stats 3} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.790698                                    & \cellcolor[HTML]{67FD9A}1.000000                                              & \cellcolor[HTML]{FFCC67}0.930233 0.009735                   \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów dla zbioru Lol Stats po indywidualnym podejściu do zbioru}
     \end{table}
 
     \begin{figure}[H]
         \centerline{\includegraphics[scale=0.8]{Lol_stats_Custom}}
         \centering
-        \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Lol Stats}
+        \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Lol Stats po indywidualnym podejściu dla zbiorów}
         \end{figure}
 
 
@@ -756,12 +764,13 @@ ze zbiorów danych.
                                                                                      & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & 0.829179                                                    & 0.821277                                                            & 0.820669                                                                      & 0.823708 0.000015                                           \\ \cline{2-6} 
     \multirow{-5}{*}{\begin{tabular}[c]{@{}l@{}}Australian\\ Weather 3\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & 0.834650                                                    & 0.820669                                                            & 0.823100                                                                      & 0.826140 0.000037                                           \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów dla zbioru Australian Weather po scenariuszach związanych z wypełnianiem brakujących wartości}
     \end{table}
 
     \begin{figure}[H]
         \centerline{\includegraphics[scale=0.8]{Aus_Weather_Wypełnienie_brakujących}}
         \centering
-        \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Australian Weather}
+        \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Australian Weather po wypełnieniu brakujących wartości}
         \end{figure}
 
 
@@ -784,12 +793,13 @@ ze zbiorów danych.
                                                                                       & Skalowanie do (0-1)                                                                   & 0.834043                                                    & 0.820669                                                            & 0.815198                                                                      & 0.823303 0.000063                                           \\ \cline{2-6} 
     \multirow{-4}{*}{\begin{tabular}[c]{@{}l@{}}Australian \\ Weather 3\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających\end{tabular} & \cellcolor[HTML]{67FD9A}0.848729                            & \cellcolor[HTML]{67FD9A}0.834470                                    & \cellcolor[HTML]{67FD9A}0.830130                                              & \cellcolor[HTML]{FFCC67}0.837776 0.000063                   \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów dla zbioru Australian Weather po scenariuszach związanych ze standaryzacją}
     \end{table}
 
     \begin{figure}[H]
     \centerline{\includegraphics[scale=0.8]{Aus_Weather_Standaryzacja}}
     \centering
-    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Australian Weather}
+    \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Australian Weather po scenariuszach związanych ze standaryzacją}
     \end{figure}
 
 \subsection{Kodowanie}
@@ -808,12 +818,13 @@ ze zbiorów danych.
                                     & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000000                            & 0.938514                                                            & \cellcolor[HTML]{67FD9A}0.833108                                              & \cellcolor[HTML]{FFCC67}0.923874 0.004749                   \\ \cline{2-6} 
     \multirow{-3}{*}{Aus Weather 3} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.943465                                    & 0.827964                                                                      & 0.923810 0.005126                                           \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów dla zbioru Australian Weather po scenariuszach związanych z kodowaniem}
     \end{table}
 
     \begin{figure}[H]
     \centerline{\includegraphics[scale=0.8]{Aus_Weather_Kodowanie}}
     \centering
-    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Australian Weather}
+    \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Australian Weather po scenariuszach związanych ze kodowaniemr}
     \end{figure}
 
 \subsection{Indywidualne podejście}
@@ -829,12 +840,13 @@ ze zbiorów danych.
                                                                                      & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                   & 0.842568                                                    & 0.830405                                                            & \cellcolor[HTML]{67FD9A}0.829730                                                                      & 0.834234 0.000035                                           \\ \cline{2-6} 
     \multirow{-2}{*}{\begin{tabular}[c]{@{}l@{}}Australian\\ Weather 3\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.981481                                    & 0.790741                                              & \cellcolor[HTML]{FFCC67}0.924074 0.008946                   \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów dla zbioru Aus Weather po indywidualnym podejściu do zbioru}
     \end{table}
 
     \begin{figure}[H]
     \centerline{\includegraphics[scale=0.8]{Aus_Weather_Custom}}
     \centering
-    \caption{Trafność klasyfikatora xgBoost po  dla zestawu danych Australian Weather}
+    \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Australian Weather po indywidualnym podejściu dla zbiorów}
     \end{figure}
 
 \section{Titanic Survival}
@@ -864,12 +876,13 @@ ze zbiorów danych.
                                 & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ maksimum\end{tabular} & 0.722222                                                    & 0.733333                                                            & 0.700000                                                                      & 0.718519 0.000192                                           \\ \cline{2-6} 
     \multirow{-5}{*}{Titanic 3} & \begin{tabular}[c]{@{}l@{}}Wypełnienie \\ regresją\end{tabular} & \cellcolor[HTML]{67FD9A}0.755556                            & 0.722222                                                            & 0.700000                                                                      & 0.725926 0.000521                                           \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów dla zbioru Titanic po scenariuszach związanych z wypełnianiem brakujących wartości}
     \end{table}
 
 \begin{figure}[H]
     \centerline{\includegraphics[scale=0.8]{Titanic_Wypełnienie_brakujących}}
     \centering
-    \caption{Trafność klasyfikatora xgBoost po wypełnieniu brakujących wartości dla zestawu danych Titanic}
+    \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Titanic po wypełnieniu brakujących wartości}
     \end{figure}
 
 
@@ -892,12 +905,13 @@ ze zbiorów danych.
                                 & Skalowanie do (0-1)                                                                   & \cellcolor[HTML]{67FD9A}0.744444                            & \cellcolor[HTML]{67FD9A}0.744444                                    & 0.577778                                                                      & 0.688889 0.006173                                           \\ \cline{2-6} 
     \multirow{-4}{*}{Titanic 3} & \begin{tabular}[c]{@{}l@{}}Skalowanie (0-1) \\ i usuwanie\\  odstających\end{tabular} & 0.646154                                                    & 0.630769                                                            & \cellcolor[HTML]{67FD9A}0.692308                                              & 0.656410 0.000684                                           \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów dla zbioru Titanic po scenariuszach związanych ze standaryzacją}
     \end{table}
 
 \begin{figure}[H]
     \centerline{\includegraphics[scale=0.8]{Titanic_Standaryzacja}}
     \centering
-    \caption{Trafność klasyfikatora xgBoost po standaryzacji dla zestawu danych Titanic}
+    \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Titanic po scenariuszach związanych ze standaryzacją}
     \end{figure}
 
 
@@ -917,12 +931,13 @@ ze zbiorów danych.
                                 & \begin{tabular}[c]{@{}l@{}}Kodowanie \\ wartości \\ kategorycznych\end{tabular}                                              & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & 0.578947                                                                      & 0.859649 0.039397                                           \\ \cline{2-6} 
     \multirow{-3}{*}{Titanic 3} & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości\\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & \cellcolor[HTML]{67FD9A}0.700000                                              & \cellcolor[HTML]{FFCC67}0.900000 0.020000                   \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów dla zbioru Titanic po scenariuszach związanych z kodowaniem}
     \end{table}
 
 \begin{figure}[H]
     \centerline{\includegraphics[scale=0.8]{Titanic_Kodowanie}}
     \centering
-    \caption{Trafność klasyfikatora xgBoost po kodowaniu wartości kategorycznych dla zestawu danych Titanic}
+    \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Titanic po scenariuszach związanych ze kodowaniem}
     \end{figure}
 
 
@@ -939,12 +954,13 @@ ze zbiorów danych.
                                 & \begin{tabular}[c]{@{}l@{}}Brak \\ przygotowania`\end{tabular}                   & 0.631579                                                    & 0.736842                                                            & 0.578947                                                                      & 0.649123 0.004309                                           \\ \cline{2-6} 
     \multirow{-2}{*}{Titanic 3} & \begin{tabular}[c]{@{}l@{}}Przygotowanie\\ dostosowane do \\ zbioru\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & \cellcolor[HTML]{67FD9A}0.822222                                              & \cellcolor[HTML]{FFCC67}0.940741 0.007023                   \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów dla zbioru Titanic po indywidualnym podejściu do zbioru}
     \end{table}
 
 \begin{figure}[H]
     \centerline{\includegraphics[scale=0.8]{Titanic_Custom}}
     \centering
-    \caption{Trafność klasyfikatora xgBoost po indywidualnym podejściu dla zestawu danych Titanic}
+    \caption{Trafność klasyfikatorów dla trzech wariantów wygenerowanych braków w zbiorze Titanic po indywidualnym podejściu dla zbiorów}
     \end{figure}
 
 
@@ -953,21 +969,21 @@ ze zbiorów danych.
 \subsection{Wypełnienie brakujących wartości}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_Stats_Avg_Wypełnienie_brakujących}}
+    \centerline{\includegraphics[scale=0.8]{Lol_Stats_Avg_Wypełnienie_brakujących}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Lol Stats 
     dla grupy scenariuszy wypełniania brakujących wartości}
     \end{figure}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_Avg_Wypełnienie_brakujących}}
+    \centerline{\includegraphics[scale=0.8]{Titanic_Avg_Wypełnienie_brakujących}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Titanic 
     dla grupy scenariuszy wypełniania brakujących wartości}
     \end{figure}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_Avg_Wypełnienie_brakujących}}
+    \centerline{\includegraphics[scale=0.8]{Aus_Weather_Avg_Wypełnienie_brakujących}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Australian Weather 
     dla grupy scenariuszy wypełniania brakujących wartości}
@@ -981,24 +997,24 @@ ze zbiorów danych.
 \subsection{Standaryzacja}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_Stats_Avg_Standaryzacja}}
+    \centerline{\includegraphics[scale=0.8]{Lol_Stats_Avg_Standaryzacja}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Lol Stats 
-    dla grupy scenariuszy wypełniania brakujących wartości}
+    dla standaryzacji}
     \end{figure}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_Avg_Standaryzacja}}
+    \centerline{\includegraphics[scale=0.8]{Titanic_Avg_Standaryzacja}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Titanic 
-    dla grupy scenariuszy wypełniania brakujących wartości}
+    dla standaryzacji}
     \end{figure}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_Avg_Standaryzacja}}
+    \centerline{\includegraphics[scale=0.8]{Aus_Weather_Avg_Standaryzacja}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Australian Weather 
-    dla grupy scenariuszy wypełniania brakujących wartości}
+    dla standaryzacji}
     \end{figure}
 
     W kwestii Standaryzacji dla zestawu danych Lol Stats 
@@ -1010,24 +1026,24 @@ ze zbiorów danych.
 \subsection{Kodowanie}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_Stats_Avg_Kodowanie}}
+    \centerline{\includegraphics[scale=0.8]{Lol_Stats_Avg_Kodowanie}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Lol Stats 
-    dla grupy scenariuszy wypełniania brakujących wartości}
+    dla kodowania}
     \end{figure}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_Avg_Kodowanie}}
+    \centerline{\includegraphics[scale=0.8]{Titanic_Avg_Kodowanie}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Titanic 
-    dla grupy scenariuszy wypełniania brakujących wartości}
+    dla kodowania}
     \end{figure}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_Avg_Kodowanie}}
+    \centerline{\includegraphics[scale=0.8]{Aus_Weather_Avg_Kodowanie}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Australian Weather 
-    dla grupy scenariuszy wypełniania brakujących wartości}
+    dla kodowania}
     \end{figure}
 
     Dla każdego zestawu danych Standaryzacja daje poprawę 
@@ -1045,24 +1061,24 @@ ze zbiorów danych.
 \subsection{Indywidualne podejście}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Lol_Stats_Avg_Custom}}
+    \centerline{\includegraphics[scale=0.8]{Lol_Stats_Avg_Custom}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Lol Stats 
-    dla grupy scenariuszy wypełniania brakujących wartości}
+    dla indywidualnego podejścia dla zbioru}
     \end{figure}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Titanic_Avg_Custom}}
+    \centerline{\includegraphics[scale=0.8]{Titanic_Avg_Custom}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Titanic 
-    dla grupy scenariuszy wypełniania brakujących wartości}
+    dla indywidualnego podejścia dla zbioru}
     \end{figure}
 
 \begin{figure}[H]
-    \centerline{\includegraphics[scale=0.5]{Aus_Weather_Avg_Custom}}
+    \centerline{\includegraphics[scale=0.8]{Aus_Weather_Avg_Custom}}
     \centering
     \caption{Średnia trafność klasyfikatorów dla zbioru danych Australian Weather 
-    dla grupy scenariuszy wypełniania brakujących wartości}
+    dla indywidualnego podejścia dla zbioru}
     \end{figure}
 
     Dla każdego z trzech zbiorów danych podejścia 
@@ -1083,26 +1099,27 @@ przed ich przeprowadzeniem, oraz zapisano wnioski na podstawie wyników.
     \begin{tabular}{|l|l|l|l|}
     \hline
     Wariant       & \begin{tabular}[c]{@{}l@{}}Trafność \\ xgBoost\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ Random \\ Forest\end{tabular} & \begin{tabular}[c]{@{}l@{}}Trafność\\ k-najbliższych\\  sąsiadów\end{tabular} \\ \hline
-    Titanic 1     & 0.777778                                                    & 0.500000                                                            & 0.722222                                                                      \\ \hline
-    Titanic 2     & 0.684211                                                    & 0.631579                                                            & 0.578947                                                                      \\ \hline
-    Titanic 3     & 0.631579                                                    & 0.736842                                                            & 0.578947                                                                      \\ \hline
-    Lol Stats 1   & 0.900000                                                    & 0.80000                                                             & 0.825000                                                                      \\ \hline
-    Lol Stats 2   & 0.925000                                                    & 0.750000                                                            & 0.825000                                                                      \\ \hline
-    Lol Stats 3   & 0.900000                                                    & 0.625000                                                            & 0.650000                                                                      \\ \hline
-    Aus Weather 1 & 0.855405                                                    & 0.849324                                                            & 0.836486                                                                      \\ \hline
-    Aus Weather 2 & 0.851351                                                    & 0.835811                                                            & 0.847297                                                                      \\ \hline
-    Aus Weather 3 & 0.842568                                                    & 0.830405                                                            & 0.829730                                                                      \\ \hline
+    Titanic 1     & 0.777778   & 0.500000  & 0.722222 \\ \hline
+    Titanic 2     & 0.684211   & 0.631579  & 0.578947 \\ \hline
+    Titanic 3     & 0.631579   & 0.736842  & 0.578947 \\ \hline
+    Lol Stats 1   & 0.900000   & 0.80000   & 0.825000 \\ \hline
+    Lol Stats 2   & 0.925000   & 0.750000  & 0.825000 \\ \hline
+    Lol Stats 3   & 0.900000   & 0.625000  & 0.650000 \\ \hline
+    Aus Weather 1 & 0.855405   & 0.849324  & 0.836486 \\ \hline
+    Aus Weather 2 & 0.851351   & 0.835811  & 0.847297 \\ \hline
+    Aus Weather 3 & 0.842568   & 0.830405  & 0.829730 \\ \hline
     \end{tabular}
+    \caption{Trafność klasyfikatorów bez przygotowania danych}
     \end{table}
 
 W zależności od tego, jaki klasyfikator wybierzemy, bez przygotowania danych możemy uzyskać wyniki 
 zarówno porównywalne z losowym wyborem klasy, ale i takie, które w wielu przypadkach mogły by być 
-uznać za zadowalające. Równocześnie musimy pamiętać, 
+uznać za zadowalające (Tablica 6.1). Równocześnie musimy pamiętać, 
 że w dziedzinach takich jak medycyna, czy bankowość chcielibyśmy,
 aby wytrenowane klasyfikatory były jak najbliższe perfekcji. Z tego powodu cenną informacją jest to,
 jak bardzo możemy poprawić trafność klasyfikatorów dzięki przygotowaniu danych.
 
-\section{Negatywny wpływ przygotowania danych}
+\section{Wpływ źle dobranych sposobów przygotowania danych}
 
 \begin{table}[H]
     \begin{tabular}{|l|l|l|l|l|}
@@ -1117,11 +1134,12 @@ jak bardzo możemy poprawić trafność klasyfikatorów dzięki przygotowaniu da
                                     & \begin{tabular}[c]{@{}l@{}}Wypełnienie\\  maksimum\end{tabular}                     & 0.834043                                                    & 0.818845                                                            & 0.817021                                                                      \\ \cline{2-5} 
     \multirow{-3}{*}{Aus Weather 2} & Skalowanie do (0-1)                                                                 & 0.827356                                                    & 0.819453                                                            & 0.812766                                                                      \\ \hline
     \end{tabular}
+    \caption{Przypadki, w któych przygotowanie danych wpłynęło negatywnie na trafność}
     \end{table}
 
 Przed przeprowadzeniem eksperymentów postawiono hipotezę, że przygotowanie danych w każdym 
 przypadku powinno skutkować lepszymi rezultatami klasyfikacji, jednak podczas eksperymentów 
-zauważono przypadki, w których przygotowanie danych pogorszyło jakość klasyfikacji. Głównie 
+zauważono przypadki, w których przygotowanie danych pogorszyło jakość klasyfikacji (Tablica 6.2). Głównie 
 dotyczyło to wypełnienia brakujących wartości.
 
 
@@ -1141,8 +1159,11 @@ dotyczyło to wypełnienia brakujących wartości.
                                     & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & 0.700000                                                                      \\ \cline{2-5} 
     \multirow{-3}{*}{Titanic 3}     & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}1.000000                                    & \cellcolor[HTML]{67FD9A}0.822222                                              \\ \hline
                                     
-                                \end{tabular}
-                            \end{table}
+    \end{tabular}
+    \caption{Scenariusze dla zbioru Titanic, w któych przygotowanie danych wpłynęło najlepiej na trafność}
+    \end{table}
+
+
                                     \begin{table}[H]
                                         \begin{tabular}{|l|l|l|l|l|}
                                         \hline
@@ -1158,8 +1179,13 @@ dotyczyło to wypełnienia brakujących wartości.
                                     & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000                               & \cellcolor[HTML]{67FD9A}0.897959                                    & 0.693878                                                                      \\ \cline{2-5} 
     \multirow{-3}{*}{Lol Stats 3}   & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000                               & 0.790698                                                            & \cellcolor[HTML]{67FD9A}1.000000                                              \\ \hline
                                                                         
-                                \end{tabular}
-                            \end{table}
+    \end{tabular}
+    \caption{Scenariusze dla zbioru Lol Stats, w któych przygotowanie danych wpłynęło najlepiej na trafność}
+    \end{table}
+
+
+
+
                                     \begin{table}[H]
                                         \begin{tabular}{|l|l|l|l|l|}
                                         \hline
@@ -1176,6 +1202,7 @@ dotyczyło to wypełnienia brakujących wartości.
                                     & \begin{tabular}[c]{@{}l@{}}Kodowanie wartości \\ kategorycznych i \\ wypełnianie wartości \\ brakujących średnią\end{tabular} & \cellcolor[HTML]{67FD9A}1.000000                            & 0.943465                                                            & 0.827964                                                                      \\ \cline{2-5} 
     \multirow{-4}{*}{Aus Weather 3} & Przygotowanie dostosowane do zbioru                                                                                           & \cellcolor[HTML]{67FD9A}1.000000                            & \cellcolor[HTML]{67FD9A}0.981481                                    & 0.790741                                                                      \\ \hline
     \end{tabular}
+    \caption{Scenariusze dla zbioru Australian Weather, w któych przygotowanie danych wpłynęło najlepiej na trafność}
     \end{table}
 
 
@@ -1201,6 +1228,7 @@ a następnie dostosowaniu metod przygotowania do
 danego zbioru, co znalazło swoje potwierdzenie w wynikach eksperymentów.
 
 Tabelka z przykładami
+\section{Potencjalne dalsze kierunki badań}
 
 \section{Wnioski}
 
