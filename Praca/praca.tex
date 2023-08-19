@@ -1137,10 +1137,12 @@ jak bardzo możemy poprawić trafność klasyfikatorów dzięki przygotowaniu da
     \caption{Przypadki, w któych przygotowanie danych wpłynęło negatywnie na trafność}
     \end{table}
 
-Przed przeprowadzeniem eksperymentów postawiono hipotezę, że przygotowanie danych w każdym 
+Zgodnie z hipotezą, przygotowanie danych w każdym 
 przypadku powinno skutkować lepszymi rezultatami klasyfikacji, jednak podczas eksperymentów 
-zauważono przypadki, w których przygotowanie danych pogorszyło jakość klasyfikacji (Tablica 6.2). Głównie 
-dotyczyło to wypełnienia brakujących wartości.
+zauważono przypadki, w których przygotowanie danych pogorszyło jakość klasyfikacji (Tablica 6.2).
+Jednoznacznie pokazuje to, że przeprowadzenie przygotowania danych bez
+przeanalizowania zbioru i dobrania odpowiednich metod do danego przypadku,
+może skutkować pogorszeniem skuteczności klasyfikacji.
 
 
 \section{Najlepsze wyniki po przygotowaniu danych}
@@ -1163,6 +1165,15 @@ dotyczyło to wypełnienia brakujących wartości.
     \caption{Scenariusze dla zbioru Titanic, w któych przygotowanie danych wpłynęło najlepiej na trafność}
     \end{table}
 
+Dla zbioru Titanic po przygotowaniu
+dwa klasyfikatory osiągają 100\% trafności, 
+natomiast w przypadku trzeciego możemy 
+zauważyć znaczną poprawę trafności (Tablica 6.3). 
+Przed przygotowaniem w poszczególnych przypadkach 
+można było zauważyć, że klasyfikator radzi sobie niewiele lepiej 
+niż dobierając klasyfikację losowo (50\%), natomiast
+po przygotowaniu dostosowanym do danego zbioru, trafność klasyfikacji jest wysoka (80\%), 
+bądź nawet perfekcyjna (100\%).
 
                                     \begin{table}[H]
                                         \begin{tabular}{|l|l|l|l|l|}
@@ -1184,6 +1195,13 @@ dotyczyło to wypełnienia brakujących wartości.
     \end{table}
 
 
+    Powyżej przedstawiono najlepsze wyniki klasyfikacji dla zbioru Lol Stats (Tablica 6.4)
+    Dla klasyfikatora Random Forest najlepsze wyniki uzyskano przy 
+    kodowaniu wartości kategorycznych (około 90\%), dla
+    xgBoost zarówno kodowanie jak i indywidualne przygotowanie 
+    skutkują idealną klasyfikacją. Dla k-najbliższych sąsiadów najlepsze
+    wyniki uzyskano przy indywidualnym podejściu do zbioru (powyżej 90\%)
+    ====== TO BE AMENDED ======
 
 
                                     \begin{table}[H]
@@ -1205,38 +1223,32 @@ dotyczyło to wypełnienia brakujących wartości.
     \caption{Scenariusze dla zbioru Australian Weather, w któych przygotowanie danych wpłynęło najlepiej na trafność}
     \end{table}
 
+    Częścią przygotowania dostosowanego do zbioru 
+    Australian Weather, było rozbicie kolumny z datą na trzy kolumny,
+    zawierające dzień, miesiąc oraz rok, co skutkowało pogorszeniem 
+    trafności klasyfikacji dla k-najbliższych sąsiadów (Tablica 6.5). 
+    Dla pozostałych klasyfikatorów przygotowanie dostosowane do zbioru
+    pozwoliło uzyskać najlepszy, bądź jeden z najlepszych wyników. Należy
+    zwrócić uwagę na fakt, że różnice w trafności między scenariuszami bez 
+    oraz z przygotowaniem danych, nie były tak znaczne jak dla pozostałych zbiorów. 
 
-\section{Ilość rekordów a wpływ przygotowania danych}
-
-
-\section{Wyniki eksperymentów względem hipotezy}
-
-Przed przeprowadzeniem eksperymentów postawiono hipotezę, że przygotowanie danych w każdym 
-przypadku powinno skutkować lepszymi rezultatami klasyfikacji, jednak podczas eksperymentów 
-zauważono przypadki, w których przygotowanie danych pogorszyło jakość klasyfikacji.
-
-Tabelka z przypadkami
-
-
-
-\section{Podejście dające najlepsze rezultaty}
-
-Drugim założeniem było to, że najlepsze rezultaty 
-uzyskamy dokonując starannego przygotowania danych
-opartego na przestudiowaniu, zrozumieniu zbioru danych, 
-a następnie dostosowaniu metod przygotowania do 
-danego zbioru, co znalazło swoje potwierdzenie w wynikach eksperymentów.
 
 Tabelka z przykładami
 \section{Potencjalne dalsze kierunki badań}
+Z wyników eksperymentów wynika korelacja między wielkością zbioru, a 
+znaczeniem przygotowania danych. Przy niewielkich zbiorach dzięki przygotowaniu danych
+jesteśmy w stanie uzyskać znacznie lepsze wyniki. Natomiast przy większym zbiorze
+uzupełnianie braków może prowadzić do przekłamań, a co za tym idzie
+mniejszej skuteczności klasyfikatora (Tablica 6.2). Stąd zasadnym były by dalsze badania, 
+prowadzone pod kątem zależności między wielkością zbioru, a znaczeniem przygotowania danych.
 
-\section{Wnioski}
+\section{Najlepsze praktyki przygotowania danych}
 
 Z przeprowadzonych eksperymentów wynika, 
-że odpowiednie przygotowanie danych zwiększa w umiarkowanym stopniu trafność 
+że odpowiednie przygotowanie danych zwiększa w umiarkowanym stopniu celność 
 klasyfikatorów. Jeżeli przed analizą danych dogłębnie poznamy i zrozumiemy zbiór danych,
 będziemy mogli wybrać najbardziej odpowiednie metody przygotowania danych dla danego zbioru,
-a co za tym idzie wyniki analizy będą najlepsze.
+a co za tym idzie wyniki analizy będą najbardziej trafne.
 Należy jednak zwrócić uwagę, że nie wszystkie 
 scenariusze skutkowały jednoznaczną poprawą rezultatów, dlatego dobrą praktyką jest
 wieloktorne przygotowywanie danych na różne sposoby tak, aby znaleźć taki, który zwraca najlepsze rezultaty 
