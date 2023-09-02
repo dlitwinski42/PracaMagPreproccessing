@@ -2,7 +2,7 @@ import pandas as pd
 import random
 
 def prepare_to_file(df,work_columns,filename,count):
-    path=r'C:\Users\Darek\Documents\Magisterka\PracaMagPreproccessing\Datasets\Prepared'
+    path=r'E:\Magisterka\PracaMagPreproccessing\Datasets\Prepared'
     for i in range(count):
         df_copy = df.copy()
         df_random_rows = df.sample(frac=0.1)

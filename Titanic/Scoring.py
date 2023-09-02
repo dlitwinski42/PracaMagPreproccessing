@@ -3,7 +3,7 @@ import xgboost
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 
-path=r'C:\Users\Darek\Documents\Magisterka\PracaMagPreproccessing\Results'
+path=r'E:\Magisterka\PracaMagPreproccessing\Results'
 
 
 def initialize_result_file():
