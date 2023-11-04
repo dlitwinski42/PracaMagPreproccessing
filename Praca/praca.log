@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2023.5.31)  3 SEP 2023 23:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2023.5.31)  4 NOV 2023 11:33
 entering extended mode
 **e:/Magisterka/PracaMagPreproccessing/Praca/praca.tex
 (e:/Magisterka/PracaMagPreproccessing/Praca/praca.tex
@@ -299,31 +299,33 @@ File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 \AM@lof@heading=\toks26
 \c@AM@survey=\count303
 \AM@templatesizebox=\box57
-) (C:\Users\Dariusz\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+)
+\@float@every@table=\toks27
+ (C:\Users\Dariusz\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count304
 \l__pdf_internal_box=\box58
 ) (praca.aux)
 \openout1 = `praca.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 \c@lstlisting=\count305
  (C:\Users\Dariusz\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -332,19 +334,19 @@ LaTeX Font Info:    ... okay on input line 23.
 \scratchbox=\box59
 \nofMPsegments=\count307
 \nofMParguments=\count308
-\everyMPshowfont=\toks27
+\everyMPshowfont=\toks28
 \MPscratchCnt=\count309
 \MPscratchDim=\dimen165
 \MPnumerator=\count310
 \makeMPintoPDFobject=\count311
-\everyMPtoPDFconversion=\toks28
+\everyMPtoPDFconversion=\toks29
 ) (C:\Users\Dariusz\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\Dariusz\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 23.
+Package hyperref Info: Link coloring OFF on input line 26.
  (C:\Users\Dariusz\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (C:\Users\Dariusz\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -354,9 +356,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count312
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
  (praca.out) (praca.out)
 \@outlinefile=\write3
 \openout3 = `praca.out'.
@@ -370,35 +372,35 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<DL_Strona_tytulowa.pdf, id=299, 597.19106pt x 846.0408pt>
+<DL_Strona_tytulowa.pdf, id=255, 597.19106pt x 846.0408pt>
 File: DL_Strona_tytulowa.pdf Graphic file (type pdf)
 <use DL_Strona_tytulowa.pdf>
-Package pdftex.def Info: DL_Strona_tytulowa.pdf  used on input line 24.
+Package pdftex.def Info: DL_Strona_tytulowa.pdf  used on input line 27.
 (pdftex.def)             Requested size: 597.1896pt x 846.03874pt.
 File: DL_Strona_tytulowa.pdf Graphic file (type pdf)
 <use DL_Strona_tytulowa.pdf>
-Package pdftex.def Info: DL_Strona_tytulowa.pdf  used on input line 24.
+Package pdftex.def Info: DL_Strona_tytulowa.pdf  used on input line 27.
 (pdftex.def)             Requested size: 597.1896pt x 846.03874pt.
-<DL_Strona_tytulowa.pdf, id=302, page=1, 597.19106pt x 846.0408pt>
+<DL_Strona_tytulowa.pdf, id=258, page=1, 597.19106pt x 846.0408pt>
 File: DL_Strona_tytulowa.pdf Graphic file (type pdf)
 <use DL_Strona_tytulowa.pdf, page 1>
-Package pdftex.def Info: DL_Strona_tytulowa.pdf , page1 used on input line 24.
+Package pdftex.def Info: DL_Strona_tytulowa.pdf , page1 used on input line 27.
 (pdftex.def)             Requested size: 597.1896pt x 846.03874pt.
 File: DL_Strona_tytulowa.pdf Graphic file (type pdf)
 <use DL_Strona_tytulowa.pdf, page 1>
-Package pdftex.def Info: DL_Strona_tytulowa.pdf , page1 used on input line 24.
+Package pdftex.def Info: DL_Strona_tytulowa.pdf , page1 used on input line 27.
 (pdftex.def)             Requested size: 561.15921pt x 794.99446pt.
 File: DL_Strona_tytulowa.pdf Graphic file (type pdf)
 <use DL_Strona_tytulowa.pdf, page 1>
-Package pdftex.def Info: DL_Strona_tytulowa.pdf , page1 used on input line 24.
+Package pdftex.def Info: DL_Strona_tytulowa.pdf , page1 used on input line 27.
 (pdftex.def)             Requested size: 561.15921pt x 794.99446pt.
 File: DL_Strona_tytulowa.pdf Graphic file (type pdf)
 <use DL_Strona_tytulowa.pdf, page 1>
-Package pdftex.def Info: DL_Strona_tytulowa.pdf , page1 used on input line 24.
+Package pdftex.def Info: DL_Strona_tytulowa.pdf , page1 used on input line 27.
 (pdftex.def)             Requested size: 561.15921pt x 794.99446pt.
 File: DL_Strona_tytulowa.pdf Graphic file (type pdf)
 <use DL_Strona_tytulowa.pdf, page 1>
-Package pdftex.def Info: DL_Strona_tytulowa.pdf , page1 used on input line 24.
+Package pdftex.def Info: DL_Strona_tytulowa.pdf , page1 used on input line 27.
 (pdftex.def)             Requested size: 561.15921pt x 794.99446pt.
  [1
 
@@ -413,514 +415,516 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `praca.toc'.
 
- [4]
+ [4] [5
+
+] [6
+
+]
 Rozdzia\l  1.
 
-Overfull \hbox (0.6995pt too wide) in paragraph at lines 51--52
+Overfull \hbox (0.6995pt too wide) in paragraph at lines 79--80
 []\T1/cmr/m/n/10 Zbiera� dane o za-cho-wa-niach u�yt-kow-ni-k�w w trak-cie ko-rzy-sta-nia ze strony
  []
 
-[5
-
-] [6] [7] [8]
+[7] [8] [9] [10]
 Rozdzia\l  2.
-[9
-
-] [10]
-Rozdzia\l  3.
-
-Overfull \hbox (101.29208pt too wide) in paragraph at lines 223--235
-[][] 
- []
-
 [11
 
-] [12] [13] (C:\Users\Dariusz\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+] [12]
+Rozdzia\l  3.
+
+Overfull \hbox (101.29208pt too wide) in paragraph at lines 243--256
+[][]
+ []
+
+[13
+
+] [14] [15] (C:\Users\Dariusz\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [14]
-Overfull \hbox (86.89783pt too wide) in paragraph at lines 362--363
+) [16]
+Overfull \hbox (86.89783pt too wide) in paragraph at lines 382--383
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (8.91628pt too wide) in paragraph at lines 383--384
+Overfull \hbox (8.91628pt too wide) in paragraph at lines 403--404
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (20.91344pt too wide) in paragraph at lines 391--392
+Overfull \hbox (20.91344pt too wide) in paragraph at lines 411--412
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (20.91344pt too wide) in paragraph at lines 393--394
+Overfull \hbox (20.91344pt too wide) in paragraph at lines 413--414
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[15] [16
+[17] [18
 
 ]
 Rozdzia\l  4.
-[17]
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 442--443
+[19]
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 462--463
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.39917pt too wide) in paragraph at lines 476--476
+Overfull \hbox (3.39917pt too wide) in paragraph at lines 496--496
 []\T1/cmr/bx/n/14.4 Wype�eninie bra-ku-j�-cych war-to-�ci mak-si-mum 
  []
 
-[18]
-Overfull \hbox (0.6718pt too wide) in paragraph at lines 489--489
+[20]
+Overfull \hbox (0.6718pt too wide) in paragraph at lines 509--509
 []\T1/cmr/bx/n/14.4 Wype�eninie bra-ku-j�-cych war-to-�ci za po-moc�
  []
 
-[19]
-Overfull \hbox (104.89357pt too wide) in paragraph at lines 546--547
+[21]
+Overfull \hbox (104.89357pt too wide) in paragraph at lines 566--567
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[20]
-Overfull \hbox (6.01318pt too wide) in paragraph at lines 591--591
+[22]
+Overfull \hbox (6.01318pt too wide) in paragraph at lines 611--611
 []\T1/cmr/bx/n/14.4 Kodowanie war-to-�ci ka-te-go-rycz-nych oraz wy-
  []
 
 
-Overfull \hbox (17.794pt too wide) in paragraph at lines 594--594
+Overfull \hbox (17.794pt too wide) in paragraph at lines 614--614
 []\T1/cmr/bx/n/14.4 Scenariusz in-dy-wi-du-al-nego po-dej-�cia do zbioru
  []
 
 
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 612--613
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 632--633
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[21]
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 635--636
+[23]
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 655--656
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (26.91202pt too wide) in paragraph at lines 636--637
+Overfull \hbox (26.91202pt too wide) in paragraph at lines 656--657
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.9177pt too wide) in paragraph at lines 637--638
+Overfull \hbox (2.9177pt too wide) in paragraph at lines 657--658
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 652--653
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 672--673
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[22]
-Overfull \hbox (2.9177pt too wide) in paragraph at lines 678--679
+[24]
+Overfull \hbox (2.9177pt too wide) in paragraph at lines 698--699
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (32.9106pt too wide) in paragraph at lines 679--680
+Overfull \hbox (32.9106pt too wide) in paragraph at lines 699--700
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (32.9106pt too wide) in paragraph at lines 680--681
+Overfull \hbox (32.9106pt too wide) in paragraph at lines 700--701
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (20.91344pt too wide) in paragraph at lines 681--682
+Overfull \hbox (20.91344pt too wide) in paragraph at lines 701--702
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (20.91344pt too wide) in paragraph at lines 682--683
+Overfull \hbox (20.91344pt too wide) in paragraph at lines 702--703
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.90634pt too wide) in paragraph at lines 683--684
+Overfull \hbox (50.90634pt too wide) in paragraph at lines 703--704
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.9177pt too wide) in paragraph at lines 688--689
+Overfull \hbox (2.9177pt too wide) in paragraph at lines 708--709
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 693--694
+Overfull \hbox (14.91486pt too wide) in paragraph at lines 713--714
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Overfull \hbox (23.4925pt too wide) has occurred while \output is active
-\T1/cmr/m/sl/10 4.12.  SCENARIUSZ INDYWIDUALNEGO PODEJ�CIA DO ZBIORU DANYCH \T1/cmr/m/n/10 23
+\T1/cmr/m/sl/10 4.12.  SCENARIUSZ INDYWIDUALNEGO PODEJ�CIA DO ZBIORU DANYCH \T1/cmr/m/n/10 25
  []
 
-[23] [24
+[25] [26
 
 ]
 Rozdzia\l  5.
 
-Overfull \hbox (147.43433pt too wide) in paragraph at lines 712--731
-[][] 
+Overfull \hbox (147.43433pt too wide) in paragraph at lines 732--752
+[][]
  []
 
-<./Wykresy//Lol_stats_Wypełnienie_brakujących.png, id=761, 606.265pt x 338.26375pt>
+<./Wykresy//Lol_stats_Wypełnienie_brakujących.png, id=728, 606.265pt x 338.26375pt>
 File: ./Wykresy//Lol_stats_Wypełnienie_brakujących.png Graphic file (type png)
 <use ./Wykresy//Lol_stats_Wypełnienie_brakujących.png>
-Package pdftex.def Info: ./Wykresy//Lol_stats_Wypełnienie_brakujących.png  used on input line 736.
+Package pdftex.def Info: ./Wykresy//Lol_stats_Wypełnienie_brakujących.png  used on input line 756.
 (pdftex.def)             Requested size: 485.01266pt x 270.61136pt.
-[25]
-Overfull \hbox (130.6051pt too wide) in paragraph at lines 753--769
-[][] 
+[27]
+Overfull \hbox (130.6051pt too wide) in paragraph at lines 773--790
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26 <./Wykresy//Lol_stats_Wypełnienie_brakujących.png>]
-<./Wykresy//Lol_stats_Standaryzacja.png, id=775, 606.265pt x 373.395pt>
+ [28 <./Wykresy//Lol_stats_Wypełnienie_brakujących.png>]
+<./Wykresy//Lol_stats_Standaryzacja.png, id=741, 606.265pt x 373.395pt>
 File: ./Wykresy//Lol_stats_Standaryzacja.png Graphic file (type png)
 <use ./Wykresy//Lol_stats_Standaryzacja.png>
-Package pdftex.def Info: ./Wykresy//Lol_stats_Standaryzacja.png  used on input line 773.
+Package pdftex.def Info: ./Wykresy//Lol_stats_Standaryzacja.png  used on input line 793.
 (pdftex.def)             Requested size: 485.01266pt x 298.7164pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
-Overfull \hbox (129.0777pt too wide) in paragraph at lines 791--804
-[][] 
+ [29]
+Overfull \hbox (129.0777pt too wide) in paragraph at lines 811--825
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28 <./Wykresy//Lol_stats_Standaryzacja.png>]
-<./Wykresy//Lol_stats_Kodowanie.png, id=787, 606.265pt x 396.48125pt>
+ [30 <./Wykresy//Lol_stats_Standaryzacja.png>]
+<./Wykresy//Lol_stats_Kodowanie.png, id=753, 606.265pt x 396.48125pt>
 File: ./Wykresy//Lol_stats_Kodowanie.png Graphic file (type png)
 <use ./Wykresy//Lol_stats_Kodowanie.png>
-Package pdftex.def Info: ./Wykresy//Lol_stats_Kodowanie.png  used on input line 809.
+Package pdftex.def Info: ./Wykresy//Lol_stats_Kodowanie.png  used on input line 829.
 (pdftex.def)             Requested size: 485.01266pt x 317.18542pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
-Overfull \hbox (110.80438pt too wide) in paragraph at lines 827--837
-[][] 
+ [31]
+Overfull \hbox (110.80438pt too wide) in paragraph at lines 847--858
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30 <./Wykresy//Lol_stats_Kodowanie.png>]
-<./Wykresy//Lol_stats_Custom.png, id=799, 606.265pt x 334.24875pt>
+ [32 <./Wykresy//Lol_stats_Kodowanie.png>]
+<./Wykresy//Lol_stats_Custom.png, id=766, 606.265pt x 334.24875pt>
 File: ./Wykresy//Lol_stats_Custom.png Graphic file (type png)
 <use ./Wykresy//Lol_stats_Custom.png>
-Package pdftex.def Info: ./Wykresy//Lol_stats_Custom.png  used on input line 842.
+Package pdftex.def Info: ./Wykresy//Lol_stats_Custom.png  used on input line 862.
 (pdftex.def)             Requested size: 485.01266pt x 267.39935pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
-Overfull \hbox (150.37805pt too wide) in paragraph at lines 862--881
-[][] 
+ [33]
+Overfull \hbox (150.37805pt too wide) in paragraph at lines 882--902
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32 <./Wykresy//Lol_stats_Custom.png>]
-<./Wykresy//Aus_Weather_Wypełnienie_brakujących.png, id=812, 637.38126pt x 338.26375pt>
+ [34 <./Wykresy//Lol_stats_Custom.png>]
+<./Wykresy//Aus_Weather_Wypełnienie_brakujących.png, id=778, 637.38126pt x 338.26375pt>
 File: ./Wykresy//Aus_Weather_Wypełnienie_brakujących.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_Wypełnienie_brakujących.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_Wypełnienie_brakujących.png  used on input line 885.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_Wypełnienie_brakujących.png  used on input line 905.
 (pdftex.def)             Requested size: 509.9057pt x 270.61136pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33]
-Overfull \hbox (156.32104pt too wide) in paragraph at lines 903--919
-[][] 
+ [35]
+Overfull \hbox (156.32104pt too wide) in paragraph at lines 923--940
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34 <./Wykresy//Aus_Weather_Wypełnienie_brakujących.png>]
-<./Wykresy//Aus_Weather_Standaryzacja.png, id=824, 637.38126pt x 373.395pt>
+ [36 <./Wykresy//Aus_Weather_Wypełnienie_brakujących.png>]
+<./Wykresy//Aus_Weather_Standaryzacja.png, id=790, 637.38126pt x 373.395pt>
 File: ./Wykresy//Aus_Weather_Standaryzacja.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_Standaryzacja.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_Standaryzacja.png  used on input line 923.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_Standaryzacja.png  used on input line 943.
 (pdftex.def)             Requested size: 509.9057pt x 298.7164pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35]
-Overfull \hbox (135.04846pt too wide) in paragraph at lines 938--951
-[][] 
+ [37]
+Overfull \hbox (135.04846pt too wide) in paragraph at lines 958--972
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36 <./Wykresy//Aus_Weather_Standaryzacja.png>]
-<./Wykresy//Aus_Weather_Kodowanie.png, id=836, 637.38126pt x 396.48125pt>
+ [38 <./Wykresy//Aus_Weather_Standaryzacja.png>]
+<./Wykresy//Aus_Weather_Kodowanie.png, id=803, 637.38126pt x 396.48125pt>
 File: ./Wykresy//Aus_Weather_Kodowanie.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_Kodowanie.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_Kodowanie.png  used on input line 956.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_Kodowanie.png  used on input line 976.
 (pdftex.def)             Requested size: 509.9057pt x 317.18542pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37]
-Overfull \hbox (136.52032pt too wide) in paragraph at lines 972--982
-[][] 
+ [39]
+Overfull \hbox (136.52032pt too wide) in paragraph at lines 992--1003
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38 <./Wykresy//Aus_Weather_Kodowanie.png>]
-<./Wykresy//Aus_Weather_Custom.png, id=849, 637.38126pt x 334.24875pt>
+ [40 <./Wykresy//Aus_Weather_Kodowanie.png>]
+<./Wykresy//Aus_Weather_Custom.png, id=815, 637.38126pt x 334.24875pt>
 File: ./Wykresy//Aus_Weather_Custom.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_Custom.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_Custom.png  used on input line 987.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_Custom.png  used on input line 1007.
 (pdftex.def)             Requested size: 509.9057pt x 267.39935pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39]
-Overfull \hbox (139.46405pt too wide) in paragraph at lines 1010--1029
-[][] 
+ [41]
+Overfull \hbox (139.46405pt too wide) in paragraph at lines 1030--1050
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40 <./Wykresy//Aus_Weather_Custom.png>]
-<./Wykresy//Titanic_Wypełnienie_brakujących.png, id=861, 599.23875pt x 338.26375pt>
+ [42 <./Wykresy//Aus_Weather_Custom.png>]
+<./Wykresy//Titanic_Wypełnienie_brakujących.png, id=827, 599.23875pt x 338.26375pt>
 File: ./Wykresy//Titanic_Wypełnienie_brakujących.png Graphic file (type png)
 <use ./Wykresy//Titanic_Wypełnienie_brakujących.png>
-Package pdftex.def Info: ./Wykresy//Titanic_Wypełnienie_brakujących.png  used on input line 1033.
+Package pdftex.def Info: ./Wykresy//Titanic_Wypełnienie_brakujących.png  used on input line 1053.
 (pdftex.def)             Requested size: 479.39165pt x 270.61136pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
-Overfull \hbox (120.77417pt too wide) in paragraph at lines 1051--1067
-[][] 
+ [43]
+Overfull \hbox (120.77417pt too wide) in paragraph at lines 1071--1088
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42 <./Wykresy//Titanic_Wypełnienie_brakujących.png>]
-<./Wykresy//Titanic_Standaryzacja.png, id=873, 599.23875pt x 373.395pt>
+ [44 <./Wykresy//Titanic_Wypełnienie_brakujących.png>]
+<./Wykresy//Titanic_Standaryzacja.png, id=840, 599.23875pt x 373.395pt>
 File: ./Wykresy//Titanic_Standaryzacja.png Graphic file (type png)
 <use ./Wykresy//Titanic_Standaryzacja.png>
-Package pdftex.def Info: ./Wykresy//Titanic_Standaryzacja.png  used on input line 1072.
+Package pdftex.def Info: ./Wykresy//Titanic_Standaryzacja.png  used on input line 1092.
 (pdftex.def)             Requested size: 479.39165pt x 298.7164pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
-Overfull \hbox (101.36224pt too wide) in paragraph at lines 1088--1101
-[][] 
+ [45]
+Overfull \hbox (101.36224pt too wide) in paragraph at lines 1108--1122
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44 <./Wykresy//Titanic_Standaryzacja.png>]
-<./Wykresy//Titanic_Kodowanie.png, id=886, 599.23875pt x 396.48125pt>
+ [46 <./Wykresy//Titanic_Standaryzacja.png>]
+<./Wykresy//Titanic_Kodowanie.png, id=852, 599.23875pt x 396.48125pt>
 File: ./Wykresy//Titanic_Kodowanie.png Graphic file (type png)
 <use ./Wykresy//Titanic_Kodowanie.png>
-Package pdftex.def Info: ./Wykresy//Titanic_Kodowanie.png  used on input line 1106.
+Package pdftex.def Info: ./Wykresy//Titanic_Kodowanie.png  used on input line 1126.
 (pdftex.def)             Requested size: 479.39165pt x 317.18542pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
-Overfull \hbox (102.8341pt too wide) in paragraph at lines 1124--1134
-[][] 
+ [47]
+Overfull \hbox (102.8341pt too wide) in paragraph at lines 1144--1155
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46 <./Wykresy//Titanic_Kodowanie.png>]
-<./Wykresy//Titanic_Custom.png, id=898, 599.23875pt x 334.24875pt>
+ [48 <./Wykresy//Titanic_Kodowanie.png>]
+<./Wykresy//Titanic_Custom.png, id=864, 599.23875pt x 334.24875pt>
 File: ./Wykresy//Titanic_Custom.png Graphic file (type png)
 <use ./Wykresy//Titanic_Custom.png>
-Package pdftex.def Info: ./Wykresy//Titanic_Custom.png  used on input line 1138.
+Package pdftex.def Info: ./Wykresy//Titanic_Custom.png  used on input line 1158.
 (pdftex.def)             Requested size: 479.39165pt x 267.39935pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]
-<./Wykresy//Lol_Stats_Avg_Wypełnienie_brakujących.png, id=904, 548.0475pt x 340.27126pt>
+ [49]
+<./Wykresy//Lol_Stats_Avg_Wypełnienie_brakujących.png, id=871, 548.0475pt x 340.27126pt>
 File: ./Wykresy//Lol_Stats_Avg_Wypełnienie_brakujących.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_Avg_Wypełnienie_brakujących.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg_Wypełnienie_brakujących.png  used on input line 1155.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg_Wypełnienie_brakujących.png  used on input line 1175.
 (pdftex.def)             Requested size: 438.4386pt x 272.21736pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48 <./Wykresy//Titanic_Custom.png>]
-<./Wykresy//Titanic_Avg_Wypełnienie_brakujących.png, id=911, 548.0475pt x 340.27126pt>
+ [50 <./Wykresy//Titanic_Custom.png>]
+<./Wykresy//Titanic_Avg_Wypełnienie_brakujących.png, id=878, 548.0475pt x 340.27126pt>
 File: ./Wykresy//Titanic_Avg_Wypełnienie_brakujących.png Graphic file (type png)
 <use ./Wykresy//Titanic_Avg_Wypełnienie_brakujących.png>
-Package pdftex.def Info: ./Wykresy//Titanic_Avg_Wypełnienie_brakujących.png  used on input line 1162.
+Package pdftex.def Info: ./Wykresy//Titanic_Avg_Wypełnienie_brakujących.png  used on input line 1182.
 (pdftex.def)             Requested size: 438.4386pt x 272.21736pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49 <./Wykresy//Lol_Stats_Avg_Wypełnienie_brakujących.png>]
-<./Wykresy//Aus_Weather_Avg_Wypełnienie_brakujących.png, id=919, 571.13374pt x 340.27126pt>
+ [51 <./Wykresy//Lol_Stats_Avg_Wypełnienie_brakujących.png>]
+<./Wykresy//Aus_Weather_Avg_Wypełnienie_brakujących.png, id=885, 571.13374pt x 340.27126pt>
 File: ./Wykresy//Aus_Weather_Avg_Wypełnienie_brakujących.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_Avg_Wypełnienie_brakujących.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg_Wypełnienie_brakujących.png  used on input line 1169.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg_Wypełnienie_brakujących.png  used on input line 1189.
 (pdftex.def)             Requested size: 456.90762pt x 272.21736pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50 <./Wykresy//Titanic_Avg_Wypełnienie_brakujących.png>]
-<./Wykresy//Lol_Stats_Avg_Standaryzacja.png, id=926, 570.13pt x 375.4025pt>
+ [52 <./Wykresy//Titanic_Avg_Wypełnienie_brakujących.png>]
+<./Wykresy//Lol_Stats_Avg_Standaryzacja.png, id=892, 570.13pt x 375.4025pt>
 File: ./Wykresy//Lol_Stats_Avg_Standaryzacja.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_Avg_Standaryzacja.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg_Standaryzacja.png  used on input line 1183.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg_Standaryzacja.png  used on input line 1203.
 (pdftex.def)             Requested size: 456.10463pt x 300.3224pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51 <./Wykresy//Aus_Weather_Avg_Wypełnienie_brakujących.png>]
-<./Wykresy//Titanic_Avg_Standaryzacja.png, id=933, 570.13pt x 375.4025pt>
+ [53 <./Wykresy//Aus_Weather_Avg_Wypełnienie_brakujących.png>]
+<./Wykresy//Titanic_Avg_Standaryzacja.png, id=899, 570.13pt x 375.4025pt>
 File: ./Wykresy//Titanic_Avg_Standaryzacja.png Graphic file (type png)
 <use ./Wykresy//Titanic_Avg_Standaryzacja.png>
-Package pdftex.def Info: ./Wykresy//Titanic_Avg_Standaryzacja.png  used on input line 1190.
+Package pdftex.def Info: ./Wykresy//Titanic_Avg_Standaryzacja.png  used on input line 1210.
 (pdftex.def)             Requested size: 456.10463pt x 300.3224pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52 <./Wykresy//Lol_Stats_Avg_Standaryzacja.png>]
-<./Wykresy//Aus_Weather_Avg_Standaryzacja.png, id=940, 581.17125pt x 375.4025pt>
+ [54 <./Wykresy//Lol_Stats_Avg_Standaryzacja.png>]
+<./Wykresy//Aus_Weather_Avg_Standaryzacja.png, id=906, 581.17125pt x 375.4025pt>
 File: ./Wykresy//Aus_Weather_Avg_Standaryzacja.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_Avg_Standaryzacja.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg_Standaryzacja.png  used on input line 1197.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg_Standaryzacja.png  used on input line 1217.
 (pdftex.def)             Requested size: 464.93764pt x 300.3224pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53 <./Wykresy//Titanic_Avg_Standaryzacja.png>]
-<./Wykresy//Lol_Stats_Avg_Kodowanie.png, id=947, 588.1975pt x 398.48875pt>
+ [55 <./Wykresy//Titanic_Avg_Standaryzacja.png>]
+<./Wykresy//Lol_Stats_Avg_Kodowanie.png, id=914, 588.1975pt x 398.48875pt>
 File: ./Wykresy//Lol_Stats_Avg_Kodowanie.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_Avg_Kodowanie.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg_Kodowanie.png  used on input line 1212.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg_Kodowanie.png  used on input line 1232.
 (pdftex.def)             Requested size: 470.55864pt x 318.79143pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54 <./Wykresy//Aus_Weather_Avg_Standaryzacja.png>]
-<./Wykresy//Titanic_Avg_Kodowanie.png, id=954, 588.1975pt x 398.48875pt>
+ [56 <./Wykresy//Aus_Weather_Avg_Standaryzacja.png>]
+<./Wykresy//Titanic_Avg_Kodowanie.png, id=921, 588.1975pt x 398.48875pt>
 File: ./Wykresy//Titanic_Avg_Kodowanie.png Graphic file (type png)
 <use ./Wykresy//Titanic_Avg_Kodowanie.png>
-Package pdftex.def Info: ./Wykresy//Titanic_Avg_Kodowanie.png  used on input line 1219.
+Package pdftex.def Info: ./Wykresy//Titanic_Avg_Kodowanie.png  used on input line 1239.
 (pdftex.def)             Requested size: 470.55864pt x 318.79143pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55 <./Wykresy//Lol_Stats_Avg_Kodowanie.png>]
-<./Wykresy//Aus_Weather_Avg_Kodowanie.png, id=962, 601.24625pt x 398.48875pt>
+ [57 <./Wykresy//Lol_Stats_Avg_Kodowanie.png>]
+<./Wykresy//Aus_Weather_Avg_Kodowanie.png, id=928, 601.24625pt x 398.48875pt>
 File: ./Wykresy//Aus_Weather_Avg_Kodowanie.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_Avg_Kodowanie.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg_Kodowanie.png  used on input line 1226.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg_Kodowanie.png  used on input line 1246.
 (pdftex.def)             Requested size: 480.99763pt x 318.79143pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [56 <./Wykresy//Titanic_Avg_Kodowanie.png>]
-<./Wykresy//Lol_Stats_Avg_Custom.png, id=969, 546.04pt x 336.25626pt>
+ [58 <./Wykresy//Titanic_Avg_Kodowanie.png>]
+<./Wykresy//Lol_Stats_Avg_Custom.png, id=935, 546.04pt x 336.25626pt>
 File: ./Wykresy//Lol_Stats_Avg_Custom.png Graphic file (type png)
 <use ./Wykresy//Lol_Stats_Avg_Custom.png>
-Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg_Custom.png  used on input line 1247.
+Package pdftex.def Info: ./Wykresy//Lol_Stats_Avg_Custom.png  used on input line 1267.
 (pdftex.def)             Requested size: 436.8326pt x 269.00537pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57 <./Wykresy//Aus_Weather_Avg_Kodowanie.png>]
-<./Wykresy//Titanic_Avg_Custom.png, id=976, 546.04pt x 336.25626pt>
+ [59 <./Wykresy//Aus_Weather_Avg_Kodowanie.png>]
+<./Wykresy//Titanic_Avg_Custom.png, id=942, 546.04pt x 336.25626pt>
 File: ./Wykresy//Titanic_Avg_Custom.png Graphic file (type png)
 <use ./Wykresy//Titanic_Avg_Custom.png>
-Package pdftex.def Info: ./Wykresy//Titanic_Avg_Custom.png  used on input line 1254.
+Package pdftex.def Info: ./Wykresy//Titanic_Avg_Custom.png  used on input line 1274.
 (pdftex.def)             Requested size: 436.8326pt x 269.00537pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58 <./Wykresy//Lol_Stats_Avg_Custom.png>]
-<./Wykresy//Aus_Weather_Avg_Custom.png, id=983, 571.13374pt x 336.25626pt>
+ [60 <./Wykresy//Lol_Stats_Avg_Custom.png>]
+<./Wykresy//Aus_Weather_Avg_Custom.png, id=949, 571.13374pt x 336.25626pt>
 File: ./Wykresy//Aus_Weather_Avg_Custom.png Graphic file (type png)
 <use ./Wykresy//Aus_Weather_Avg_Custom.png>
-Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg_Custom.png  used on input line 1261.
+Package pdftex.def Info: ./Wykresy//Aus_Weather_Avg_Custom.png  used on input line 1281.
 (pdftex.def)             Requested size: 456.90762pt x 269.00537pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59 <./Wykresy//Titanic_Avg_Custom.png>] [60 <./Wykresy//Aus_Weather_Avg_Custom.png>]
+ [61 <./Wykresy//Titanic_Avg_Custom.png>] [62 <./Wykresy//Aus_Weather_Avg_Custom.png>]
 Rozdzia\l  6.
-[61
+[63
 
 ]
-Overfull \hbox (20.9925pt too wide) in paragraph at lines 1308--1318
-[][] 
+Overfull \hbox (20.9925pt too wide) in paragraph at lines 1328--1339
+[][]
  []
 
 
-Overfull \hbox (61.37152pt too wide) in paragraph at lines 1332--1345
-[][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [62]
-Overfull \hbox (69.3418pt too wide) in paragraph at lines 1361--1374
-[][] 
+Overfull \hbox (61.37152pt too wide) in paragraph at lines 1352--1366
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
-Overfull \hbox (20.9925pt too wide) in paragraph at lines 1388--1401
-[][] 
+ [64]
+Overfull \hbox (69.3418pt too wide) in paragraph at lines 1381--1395
+[][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64] [65] [66] [67
+ [65]
+Overfull \hbox (20.9925pt too wide) in paragraph at lines 1408--1422
+[][]
+ []
 
-] [68] (praca.aux)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [66] [67] [68] [69
+
+] [70] (praca.aux)
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: EB2675B08023C5D96D22593E0341EB09;14605.
+(rerunfilecheck)             Checksum: DCCE103580694799E24669CC2D50714C;12383.
  ) 
 Here is how much of TeX's memory you used:
- 13447 strings out of 478927
- 207460 string characters out of 2851587
- 738070 words of memory out of 3000000
- 30702 multiletter control sequences out of 15000+600000
+ 13444 strings out of 478927
+ 207355 string characters out of 2851587
+ 738000 words of memory out of 3000000
+ 30695 multiletter control sequences out of 15000+600000
  412988 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,66p,757b,1858s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1000.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk>
-Output written on praca.pdf (68 pages, 903192 bytes).
+ <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1000.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Dariusz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk>
+Output written on praca.pdf (70 pages, 900269 bytes).
 PDF statistics:
- 1552 PDF objects out of 1728 (max. 8388607)
- 422 named destinations out of 1000 (max. 500000)
- 733 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1522 PDF objects out of 1728 (max. 8388607)
+ 426 named destinations out of 1000 (max. 500000)
+ 645 words of extra memory for PDF output out of 10000 (max. 10000000)
 

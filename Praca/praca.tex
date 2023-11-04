@@ -11,6 +11,9 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{textcomp}
 \usepackage{pdfpages}
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
 \graphicspath{ {./Wykresy/} }
 
 
@@ -27,19 +30,44 @@
 
 
 
+\chapter*{Wstęp}
+
+\section*{Wprowadzenie do problemu}
+Analiza danych to proces, 
+w którym przekształcamy surowe dane w wiedzę i 
+wnioski, dzięki którym jesteśmy w stanie podejmować lepsze decyzje \cite{data_analysis_def}.
+Im dokładniejsza analiza, tym trafniejsze decyzje będziemy w 
+stanie podjąć na jej podstawie, dlatego powinno się ten proces wielokrotnie powtarzać, 
+za każdym razem próbując uzyskać lepsze rezultaty. Skupiając się na przygotowaniu danych można uzyskać 
+znaczącą poprawę wyników, ponieważ dane bardzo często zawierają wartości brakujące, nieodpowiednio zakodowane, bądź
+można uzyskać dodatkowe informacje poprzed odopowiednie ich spreparowanie.
+Decyzja jakie środki przygotowania danych zastosować bywa trudna i wymaga czasu oraz zbadania zbioru danych, a także
+bardzo często nie daje aż tak wymiernych rezultatów jakich się spodziewamy.
+
+\section*{Cel pracy}
+Celem pracy jest sprawdzenie, jak poszczególne metody przygotowania danych
+wpływają na jakość analizy danych, konkretnie modelowania klasyfikatorów. Przeprowadzono 
+eksperymenty z użyciem wielu metod przygotowania danych, a następnie porównano trafność klasyfikacji 
+względem klasyfikatora bez przygotowania danych. Za brak przygotowania danych uznaje się usunięcie 
+wszystkich rekordów z brakującymi wartościami oraz wszystkich kolumn nieliczbowych.
+Rozpoczynając prace postawiono hipotezę, że najlepszym sposobem na przygotowanie danych jest dogłębne 
+ich zrozumienie, a następnie dostosowanie do nich użytych metod, jak i rówież fakt, że jakiekoliwek przygotowanie 
+danych powinno wpłynąć pozytywnie na jakość analizy danych.
+
+\section*{Zawartość pracy}
+W pracy krótko przedstawiono problem analizy danych, wyliczono 
+typy metod przygotowania danych, opisano wykonane eksperymenty, 
+zarówno środowisko w jakim je przeprowadzono, jak i to na czym polegały.
+Ostatnią część pracy stanowią wyniki eksperymentów wraz z ich podsumowaniem
 
 \chapter{Problem Analizy Danych}
 
 
 
+W poniższym rozdziale wymieniono oraz opisano fazy procesu analizy danych, wprowadzono
+pojęcie jakości danych oraz omówiono problemy jakie mogą wystąpić przy pracy z danymi
 
-\section{Analiza Danych}
-Analiza danych to proces, 
-w którym przekształcamy surowe dane w wiedzę i 
-wnioski, dzięki którym jesteśmy w stanie podejmować lepsze decyzje \cite{data_analysis_def}. 
-Wewnątrz tego procesu można wyróżnić następujące fazy:
-
-\subsection{Pozyskiwanie: gromadzenie danych}
+\subsection*{Pozyskiwanie: gromadzenie danych}
 Zanim analiza danych będzie możliwa należy pozyskać dane, 
 jest to istotna cześć procesu, ponieważ to od niej zależy to, 
 jak trafne wnioski będziemy mogli wysnuć na późniejszych etapach.
@@ -58,7 +86,7 @@ będzie odpowiednie ich sformatowanie, bądź nawet ich cyfryzacja, jeśli były
 by przechowywane w formie fizycznej, na przykład jako papierowe archiwa
 
 
-\subsection{Przygotowanie: przetwarzanie danych}
+\subsection*{Przygotowanie: przetwarzanie danych}
 Aby móc w pełni korzystać ze zgromadzonych danych, 
 należy je przygotować, odpowiednio sformatować. 
 Poza przygotowaniem odpowiedniego formatu danych, 
@@ -73,7 +101,7 @@ a co za tym idzie wnioski do których dojdziemy w trakcie procesu będą
 trafniejsze i przyniosą lepsze rezultaty
 
 
-\subsection{Analiza: modelowanie danych}
+\subsection*{Analiza: modelowanie danych}
 Mając do dyspozycji przygotowane dane możemy przejść do ich właściwej analizy, 
 na podstawie której tworzymy modele, klasyfikatory \cite{classifiers}, systemy rekomendacji 
 \cite{recomendation_systems}, dokonujemy klasteryzacji \cite{clustering}. 
@@ -84,7 +112,7 @@ w takim przypadku możemy rozważyć dodatkowe przygotowanie danych, aby uzyska�
 Po dobrze przeprowadzonej analizie, jesteśmy w stanie 
 wykorzystać stworzone na tym etapie narzędzia do rozwiązywania rzeczywistych problemów.
 
-\subsection{Działanie: podejmowanie decyzji}
+\subsection*{Działanie: podejmowanie decyzji}
 Mając gotowe narzędzia będące wynikiem modelowania danych, możemy je wykorzystać aby podjąć 
 konkretne decyzje w prawdziwym świecie: Wykorzystać stworzony 
 klasyfikator w diagnostyce chorób, wdrożyć system rekomendacji 
@@ -151,33 +179,25 @@ wiedzę, jaką można z nich pozyskać. Nie jest to jednak konieczne,
 gdyż istnieją sposoby, aby zamienić te dane na postać liczbową za 
 pomocą kodowania \cite{enconding}
 
-\section{Cel pracy}
-Celem pracy jest sprawdzenie, jak poszczególne metody przygotowania danych
-wpływają na jakość analizy danych, konkretnie modelowania klasyfikatorów. Przeprowadzono 
-eksperymenty z użyciem wielu metod przygotowania danych, a następnie porównano trafność klasyfikacji 
-względem klasyfikatora bez przygotowania danych. Za brak przygotowania danych uznaje się usunięcie 
-wszystkich rekordów z brakującymi wartościami oraz wszystkich kolumn nieliczbowych.
-Rozpoczynając prace postawiono hipotezę, że najlepszym sposobem na przygotowanie danych jest dogłębne 
-ich zrozumienie, a następnie dostosowanie do nich użytych metod, jak i rówież fakt, że jakiekoliwek przygotowanie 
-danych powinno wpłynąć pozytywnie na jakość analizy danych.
+
 
 \chapter{Metody Przygotowania Danych}
 Istnieje kilka najczęściej używanych metod przygotowania danych, 
 które dzielą się na następujące grupy:
 
-\section{Uzupełnianie brakujących wartości}
+\subsection*{Uzupełnianie brakujących wartości}
 Najczęściej brakujące wartości w zbiorach danych uzupełnia się średnią 
 lub najczęściej występującą wartością, jednak może zdarzyć się tak, 
 że najlepszym rozwiązaniem jest uzupełnienie braków minimum, maksimum, 
 zerem bądź inną arbitralnie wybraną wartością
-\section{Wykrywanie wartości odstających}
+\subsection*{Wykrywanie wartości odstających}
 Do wykrywania wartości odstających możemy wykorzystać manualne metody, 
 ale również i algorytmy, które wykryją te wartości za nas. 
 Do manualnych metod możemy zaliczyć: Wykrywanie za pomocą rozkładu 
 normalnego, Z-score, IQR, wykrywanie za pomocą percentyli. 
 Natomiast spośród automatycznych metod mamy do dyspozycji między innymi 
 Las Izolacji lub Local Outlier Factor
-\section{Kodowanie wartości kategorycznych}
+\subsection*{Kodowanie wartości kategorycznych}
 Jeżeli znamy zależności między klasami i możemy je uporządkować, 
 wtedy jesteśmy w stanie dokonać kodowania ręcznie, na przykład 
 najmniejszą wartość dla edukacji podstawowej, a najwyższą dla 
@@ -189,7 +209,7 @@ tworzy osobną kolumnę z wartością logiczną opisującą, czy dany
 rekord należy do tej klasy. Powoduje to wygenerowanie sporej 
 ilości kolumn, jednak mamy wtedy pewność, że nie stworzymy 
 nowych zależności między klasami
-\section{Standaryzacja}
+\subsection*{Standaryzacja}
 Standaryzacja jest procesem, po zakończeniu którego zmienna 
 ma średnią wartość oczekiwaną zero oraz odchylenie standardowe 
 równe jeden, dzięki czemu zyskujemy większą przejrzystość w 
@@ -205,7 +225,7 @@ wpływ na zmienną po standaryzacji
 W poniższym rozdziale przedstawione zostało środowisko wykonawcze, 
 w jakim przeprowadzono eksperymenty, a także opisano zbiory danych, 
 na których je przeprowadzono
-\section{Specyfikacja sprzetowa, system i środowisko}
+\subsection*{Specyfikacja sprzetowa, system i środowisko}
 Sprzęt: Laptop wyposażony w procesor Intel Core i5-1135G7 
 (2.4Ghz) ze zintegrowaną grafiką oraz 16GB pamięci RAM
 System operacyjny: Windows 10 Education
