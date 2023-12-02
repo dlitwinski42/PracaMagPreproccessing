@@ -1,64 +1,68 @@
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{\numberline {1}Problem Analizy Danych}{7}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Jakość Danych}{8}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Problemy z Danymi}{9}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Brakujące wartości}{9}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Wartości odstające}{9}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Kolumny kategoryczne}{10}{subsection.1.2.3}%
-\contentsline {chapter}{\numberline {2}Metody Przygotowania Danych}{11}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Środowisko wykonawcze}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Zbiory danych}{13}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}League of Legends stats}{13}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Australian Rain Forecast}{14}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Titanic Survival}{15}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Przygotowanie danych do eksperymentów}{16}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Część wspólna dla wszystkich zbiorów danych}{16}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Zbiór danych Titanic}{16}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Zbiór danych Lol Stats}{17}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Zbiór danych Australian Rain Forecast}{17}{subsection.3.2.4}%
-\contentsline {chapter}{\numberline {4}Wykonane Eksperymenty}{19}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Użyte klasyfikatory}{19}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}xgBoost}{19}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Las Losowy}{19}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}k-Najbliższych Sąsiadów}{19}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Brak Preprocessingu}{20}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Wypełeninie brakujących wartości średnią}{20}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Wypełeninie brakujących wartości minimum}{20}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Wypełeninie brakujących wartości maksimum}{21}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Wypełeninie brakujących wartości za pomocą regresji liniowej}{21}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Standaryzacja}{21}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Standaryzacja oraz skalowanie do przedziału (0,1)}{22}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Skalowanie do przedziału (0,1) oraz usunięcie wartości odstających}{22}{section.4.9}%
-\contentsline {section}{\numberline {4.10}Kodowanie wartości kategorycznych}{23}{section.4.10}%
-\contentsline {section}{\numberline {4.11}Kodowanie wartości kategorycznych oraz wypełnienie brakujących wartości średnią}{23}{section.4.11}%
-\contentsline {section}{\numberline {4.12}Scenariusz indywidualnego podejścia do zbioru danych}{23}{section.4.12}%
-\contentsline {subsection}{\numberline {4.12.1}League of Legends stats}{23}{subsection.4.12.1}%
-\contentsline {subsection}{\numberline {4.12.2}Australian Rain Forecast}{24}{subsection.4.12.2}%
-\contentsline {subsection}{\numberline {4.12.3}Titanic Survival}{25}{subsection.4.12.3}%
-\contentsline {chapter}{\numberline {5}Wyniki Eksperymentów}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}League of Legends stats}{27}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Wypełnienie brakujących wartości}{27}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Standaryzacja}{29}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Kodowanie}{31}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Indywidualne podejście}{33}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Australian Rain Forecast}{35}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Wypełnienie brakujących wartości}{35}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Standaryzacja}{37}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Kodowanie}{39}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Indywidualne podejście}{41}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Titanic Survival}{43}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Wypełnienie brakujących wartości}{43}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Standaryzacja}{45}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Kodowanie}{47}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Indywidualne podejście}{49}{subsection.5.3.4}%
-\contentsline {section}{\numberline {5.4}Średnie wyniki}{51}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Wypełnienie brakujących wartości}{51}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Standaryzacja}{54}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Kodowanie}{57}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}Indywidualne podejście}{60}{subsection.5.4.4}%
-\contentsline {chapter}{\numberline {6}Podsumowanie}{63}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Konieczność przygotowania danych}{63}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Wpływ źle dobranych sposobów przygotowania danych}{64}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Najlepsze wyniki po przygotowaniu danych}{65}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Potencjalne dalsze kierunki badań}{67}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Najlepsze praktyki przygotowania danych}{68}{section.6.5}%
+\contentsline {chapter}{Wstęp}{4}{chapter*.2}%
+\contentsline {section}{Cel pracy}{4}{section*.3}%
+\contentsline {section}{Zawartość pracy}{5}{section*.4}%
+\contentsline {chapter}{\numberline {1}Problem Analizy Danych}{6}{chapter.1}%
+\contentsline {subsection}{Pozyskiwanie: gromadzenie danych}{6}{section*.5}%
+\contentsline {subsection}{Przygotowanie: przetwarzanie danych}{6}{section*.6}%
+\contentsline {subsection}{Analiza: modelowanie danych}{7}{section*.7}%
+\contentsline {subsection}{Działanie: podejmowanie decyzji}{7}{section*.8}%
+\contentsline {section}{\numberline {1.1}Jakość Danych}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Problemy z Danymi}{8}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Metody Przygotowania Danych}{10}{chapter.2}%
+\contentsline {subsection}{Uzupełnianie brakujących wartości}{10}{section*.9}%
+\contentsline {subsubsection}{Wypełnianie średnią}{10}{section*.10}%
+\contentsline {subsubsection}{Wypełnianie modą}{10}{section*.11}%
+\contentsline {subsubsection}{Wypełnianie minimum bądź maksimum}{11}{section*.12}%
+\contentsline {subsection}{Wykrywanie wartości odstających}{11}{section*.14}%
+\contentsline {subsubsection}{Z-score}{11}{section*.15}%
+\contentsline {subsubsection}{IQR - przedział międzykwartylowy}{12}{section*.16}%
+\contentsline {subsection}{Kodowanie wartości kategorycznych}{13}{section*.19}%
+\contentsline {subsection}{Standaryzacja}{14}{section*.22}%
+\contentsline {chapter}{\numberline {3}Środowisko wykonawcze}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Zbiory danych}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}League of Legends stats}{16}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Australian Rain Forecast}{16}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Titanic Survival}{17}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Przygotowanie danych do eksperymentów}{18}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Zbiór danych Titanic}{18}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Zbiór danych Lol Stats}{18}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Zbiór danych Australian Rain Forecast}{19}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Część wspólna dla wszystkich zbiorów danych}{19}{subsection.3.2.4}%
+\contentsline {chapter}{\numberline {4}Wykonane Eksperymenty}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Klasyfikatory wykorzystane w eksperymentach}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Scenariusze przygotowania danych}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Scenariusze indywidualnego podejścia do zbioru danych}{25}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Wyniki Eksperymentów}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}League of Legends stats}{28}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Wypełnienie brakujących wartości}{28}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Standaryzacja}{30}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Kodowanie}{32}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Indywidualne podejście}{34}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Australian Rain Forecast}{36}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Wypełnienie brakujących wartości}{36}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Standaryzacja}{38}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Kodowanie}{40}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Indywidualne podejście}{42}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Titanic Survival}{44}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Wypełnienie brakujących wartości}{44}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Standaryzacja}{46}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Kodowanie}{48}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Indywidualne podejście}{50}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Średnie wyniki}{52}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Wypełnienie brakujących wartości}{52}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Standaryzacja}{55}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Kodowanie}{58}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Indywidualne podejście}{61}{subsection.5.4.4}%
+\contentsline {chapter}{\numberline {6}Podsumowanie Eksperymentów}{65}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Konieczność przygotowania danych}{65}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Wpływ źle dobranych sposobów przygotowania danych}{66}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Najlepsze wyniki po przygotowaniu danych}{67}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Potencjalne dalsze kierunki badań}{69}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Najlepsze praktyki przygotowania danych}{70}{section.6.5}%
+\contentsline {chapter}{Zakończenie}{71}{chapter*.48}%
+\contentsline {section}{Cel pracy oraz przeprowadzone eksperymenty}{71}{section*.49}%
+\contentsline {section}{Realizacja celu}{71}{section*.50}%
+\contentsline {chapter}{Spis rysunków}{75}{chapter*.52}%
+\contentsline {chapter}{Spis tablic}{77}{chapter*.53}%
+\contentsline {chapter}{Spis przykładów}{78}{chapter*.54}%
